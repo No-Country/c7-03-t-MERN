@@ -1,0 +1,8 @@
+Color naranja principal: #AD4827
+Color naranja secundario: #FF7F56
+Color naranja terciario: #FD9C7C
+Color naranja cuaternario: #C05533
+Color letra gris: #282828
+
+
+paquetes de react instalados: npm install react-router-dom
