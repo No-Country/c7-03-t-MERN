@@ -1,0 +1,53 @@
+.card__cancha .card__img {
+  width: 357px;
+  height: 266px;
+}
+
+.card__container{
+    padding: 0 10px;
+}
+
+.card__cancha h4 {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__cancha .card__vector {
+  width: 31.6px;
+  height: 31.6px;
+}
+
+.card__location {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #282828;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.card__vector2 {
+  width: 20px;
+  height: 25px;
+}
+
+.btn__card {
+  background-color: #ff7f56;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  width: 328px;
+  height: 60px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 20px auto 0;
+}
