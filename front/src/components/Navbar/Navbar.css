@@ -1,13 +1,49 @@
-.navbarContainer{
-    display: flex;
-    margin-top: 50px;
-    margin-left: 90px;
-    align-items: center;
+* {
+  font-family: "Poppins", sans-serif;
+}
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  box-shadow: inset 24px 0px 200px 0px black;
+  padding: 25px 90px 25px;
+  width: 100%;
 }
 .logo {
-    margin-right: 40px;
+  margin-right: 40px;
 }
-.menuNavegacion .nav{
-    margin-top: 20px;
-    margin-right: 60px;
+.menuNavegacion .nav {
+  margin-top: 20px;
+  margin-right: 60px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.menuNavegacion{
+    margin-left: 10px;
+    display: flex;
+    flex: none;
+}
+.containerBtnMain {
+  width: 58%;
+}
+.containerBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+.inicioSesion {
+  margin-right: 23px;
+  padding: 14px 15px 14px 15px;
+  background: #ffffff;
+  border: 2px solid #ad4827;
+  border-radius: 7px;
+  color: #ad4827;
+}
+.registrarse {
+  /* margin-right: 52px; */
+  padding: 14px 20px 14px 20px;
+  background: #AD4827;
+  border: 2px solid #ad4827;
+  border-radius: 7px;
+  color: white;
 }
