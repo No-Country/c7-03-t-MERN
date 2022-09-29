@@ -1,0 +1,143 @@
+.rectangle-div {
+    position: absolute;
+    top: 1556px;
+    left: 0;
+    background-color: #ff7f56;
+    width: 1723px;
+    height: 955px;
+  }
+  .siempre-pensando-en-nuestros-c {
+    margin: 0;
+    position: absolute;
+    top: 567px;
+    left: 874px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ff7549;
+    display: inline-block;
+  }
+  .con-solo-un-click,
+  .sobre-nosotros-h2 {
+    margin: 0;
+    position: absolute;
+    font-size: 60px;
+    font-weight: 600;
+    font-family: inherit;
+    display: inline-block;
+  }
+  .sobre-nosotros-h2 {
+    top: 111px;
+    left: 635px;
+    color: #121212;
+  }
+  .con-solo-un-click {
+    top: 1740px;
+    left: 127px;
+  }
+  .cancha-de-tens-futbol-basqu,
+  .reservala-desde-la-comodidad-d {
+    margin: 0;
+    position: absolute;
+    top: 1898px;
+    left: 226px;
+    display: inline-block;
+    width: 619px;
+  }
+  .reservala-desde-la-comodidad-d {
+    top: 1989px;
+  }
+  .buscamos-facilitarte-la-vida,
+  .canchas-muy-cerca-de-tu-locali,
+  .invita-a-tus-amigos-a-pasar-un {
+    margin: 0;
+    position: absolute;
+    top: 2080px;
+    left: 226px;
+    display: inline-block;
+    width: 619px;
+  }
+  .buscamos-facilitarte-la-vida,
+  .canchas-muy-cerca-de-tu-locali {
+    top: 2171px;
+  }
+  .buscamos-facilitarte-la-vida {
+    top: 582px;
+    left: 874px;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: inherit;
+    color: #000;
+    width: 710px;
+  }
+  .lorem-ipsum-dolor {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  .dui-porta-vestibulum {
+    margin: 0;
+  }
+  .lorem-ipsum-dolor-sit-amet-co {
+    margin: 0;
+    position: absolute;
+    top: 673px;
+    left: 874px;
+    font-size: 22px;
+    line-height: 35px;
+    color: #282828;
+    display: inline-block;
+    width: 628px;
+    height: 391px;
+  }
+  .imagen-icon {
+    position: absolute;
+    top: 285px;
+    left: 120px;
+    width: 687px;
+    height: 1140px;
+    object-fit: cover;
+  }
+  .renith-r-a9vpotrpr1k-unsplash-icon {
+    position: absolute;
+    top: 1556px;
+    left: 876px;
+    width: 847px;
+    height: 955px;
+    object-fit: cover;
+  }
+  .epsuccess-filled-icon {
+    position: absolute;
+    top: 1883px;
+    left: 127px;
+    width: 68px;
+    height: 68px;
+    overflow: hidden;
+  }
+  .epsuccess-filled-icon1,
+  .epsuccess-filled-icon2,
+  .epsuccess-filled-icon3 {
+    position: absolute;
+    top: 1974px;
+    left: 127px;
+    width: 68px;
+    height: 68px;
+    overflow: hidden;
+  }
+  .epsuccess-filled-icon2,
+  .epsuccess-filled-icon3 {
+    top: 2065px;
+  }
+  .epsuccess-filled-icon3 {
+    top: 2156px;
+  }
+  .home-div {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 5982px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 25px;
+    color: #fff;
+    font-family: Poppins;
+  }
+  
