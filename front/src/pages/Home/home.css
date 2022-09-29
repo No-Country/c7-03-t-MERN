@@ -1,0 +1,21 @@
+.canchas__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.canchas__title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 90px;
+  text-align: center;
+  color: #121212;
+}
+
+.canchas__list {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 20px;
+}
