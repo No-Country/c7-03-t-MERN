@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
-import "./Home.css";
+import "./Header.css";
 import videoFutbol from "../../assets/videos/futbolHome.mp4";
 import Map from "../../assets/icons/map.svg";
 import Calendary from "../../assets/icons/calendary.svg";
 import Basket from "../../assets/icons/basketBall.svg";
 import Search from "../../assets/icons/search.svg";
 
-const Home = () => {
+const Header = () => {
   return (
     <div>
       <div>
@@ -71,4 +71,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Header;

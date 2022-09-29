@@ -1,11 +1,10 @@
 import React from "react";
 import "./Navbar.css";
 import Logo from "../../assets/icons/rugbyBall.svg";
-import { Link, BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <BrowserRouter>
       <div>
         <div className="navbarContainer">
           <Link to="/">
@@ -24,7 +23,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </BrowserRouter>
   );
 };
 
