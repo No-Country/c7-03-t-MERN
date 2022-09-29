@@ -1,23 +1,21 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
+.header__container{
+ max-width: 1070px;
+ margin: auto;
 }
+
 .contenedorVideo {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
+
 .contenedorVideo .videoHome {
   min-width: 100%;
   min-height: 100%;
 }
 .header-overlay {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -29,7 +27,6 @@
   position: absolute;
   z-index: 2;
   top: 30%;
-  margin-left: 94px;
   width: 44%;
   font-size: 22px;
 }
@@ -63,12 +60,14 @@
     color: white;
 }
 .textoHome{
+  padding-right: 100px;
     padding-bottom: 40px;
     color: white;
+    font-size: 17px;
 }
 .containerBotonesSubtitulos{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 .containerBuscador{
     width: 42%;

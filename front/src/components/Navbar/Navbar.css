@@ -1,32 +1,39 @@
-* {
-  font-family: "Poppins", sans-serif;
+.nav-main{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+z-index: 100;
 }
 .navbarContainer {
   display: flex;
   align-items: center;
-  position: absolute;
+  justify-content: space-between;
   z-index: 2;
-  box-shadow: inset 24px 0px 200px 0px black;
-  padding: 25px 90px 25px;
+  padding: 25px 0px ;
   width: 100%;
+  max-width: 1070px;
 }
 .logo {
-  margin-right: 40px;
+  width: 50px;
 }
 .menuNavegacion .nav {
-  margin-top: 20px;
-  margin-right: 60px;
+
   color: #ffffff;
   text-decoration: none;
 }
 .menuNavegacion{
-    margin-left: 10px;
+    height: 100%;
+    margin-left: 30px;
     display: flex;
     flex: none;
+    align-items: center;
+    gap: 25px;
 }
-.containerBtnMain {
-  width: 58%;
-}
+
 .containerBtn {
   display: flex;
   justify-content: flex-end;

@@ -4,7 +4,7 @@
   justify-content: center;
   flex-direction: column;
   max-width: 1050px;
-  margin: auto;
+  margin: 80px auto;
 }
 
 .contenedor-descripcion {
@@ -13,7 +13,6 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  
 }
 
 .icono-descripcion {
@@ -24,7 +23,6 @@
 .titulo-descripcion {
   font-weight: 600;
   font-size: 40px;
-  line-height: 90px;
   align-self: flex-start;
   color: #121212;
 }
@@ -49,4 +47,12 @@
 .parrafo {
   text-align: center;
   padding: 5px;
+}
+
+.subtitle__descripcion {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  align-self: flex-start;
+  color: #ff7549;
 }

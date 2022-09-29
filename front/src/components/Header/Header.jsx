@@ -7,18 +7,20 @@ import Map from "../../assets/icons/map.svg";
 const Header = () => {
   return (
     <div>
-      <div>
+      <div className="contenedorVideo">
+        <video
+          src={videoFutbol}
+          className="videoHome"
+          autoPlay
+          loop
+          muted
+        ></video>
+        <div className="header-overlay"></div>
+        {/* Esto es para hacer el video más opaco así no se pierden las letras */}
+      </div>
+      <div className="header__container">
         <Navbar />
-        <div className="contenedorVideo">
-          <video
-            src={videoFutbol}
-            className="videoHome"
-            autoPlay
-            loop
-            muted
-          ></video>
-          <div className="header-overlay"></div>{/* Esto es para hacer el video más opaco así no se pierden las letras */}
-        </div>
+
         <div className="containerTextoHome">
           <div className="containerSubtitulos">
             <p className="subtitulo">
@@ -46,9 +48,10 @@ const Header = () => {
             pero lo voy a solucionar */}
           </div>
         </div>
-         <div className="containerBuscador">{/* BUSCAR UNA API PARA SU FUNCIONALIDAD */}
+        <div className="containerBuscador">
+          {/* BUSCAR UNA API PARA SU FUNCIONALIDAD */}
           <div>
-            <img src={Map} className='map' />
+            <img src={Map} className="map" />
             <input type="text" className="buscador" placeholder="Zona" />
           </div>
           <div>
@@ -61,7 +64,6 @@ const Header = () => {
               placeholder="Día y fecha"
             />
           </div>
-
         </div>
       </div>
     </div>
