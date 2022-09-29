@@ -1,4 +1,4 @@
-import { CardCancha } from "../../components";
+import { CardCancha,Footer } from "../../components";
 import data from "../../utils/canchas.json";
 import React from "react";
 import "./home.css";

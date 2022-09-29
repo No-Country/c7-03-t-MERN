@@ -1,6 +1,6 @@
-import img from "../../assets/images/cancha1.jpg";
 import React from "react";
 import "./CardCancha.css";
+import img from "../../assets/images/cancha1.jpg";
 import vectorBall from "../../assets/icons/basketBall.svg";
 import vectorMap from "../../assets/icons/map.svg";
 import vectorDollar from "../../assets/icons/dollar.svg";
