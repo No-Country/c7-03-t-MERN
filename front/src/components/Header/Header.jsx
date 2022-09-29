@@ -3,9 +3,6 @@ import Navbar from "../Navbar/Navbar";
 import "./Header.css";
 import videoFutbol from "../../assets/videos/futbolHome.mp4";
 import Map from "../../assets/icons/map.svg";
-import Calendary from "../../assets/icons/calendary.svg";
-import Basket from "../../assets/icons/basketBall.svg";
-import Search from "../../assets/icons/search.svg";
 
 const Header = () => {
   return (
