@@ -1,4 +1,4 @@
-import { CardCancha,Footer } from "../../components";
+import { CardCancha, Footer, Description } from "../../components";
 import data from "../../utils/canchas.json";
 import React from "react";
 import "./home.css";
@@ -6,6 +6,7 @@ import "./home.css";
 function Home() {
   return (
     <div className="Home">
+      <Description />
       <div className="canchas__container">
         <h2 className="canchas__title">Canchas destacadas</h2>
         <div className="canchas__list">
@@ -19,6 +20,7 @@ function Home() {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
