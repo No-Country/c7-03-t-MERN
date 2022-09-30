@@ -1,9 +1,11 @@
 .question__container {
   width: 100%;
-  padding: 150px 0px 100px;
+  padding: 150px 0px 300px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  background-color: aliceblue;
 }
 
 .question__first__card {
@@ -13,6 +15,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 2;
 }
 
 .question__title {
@@ -36,4 +39,16 @@
   align-items: center;
   flex-direction: column;
   gap: 20px;
+}
+
+.question__background{
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/images/fondoQuestion.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  z-index: 1;
 }

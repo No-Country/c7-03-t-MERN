@@ -51,7 +51,7 @@ const Header = () => {
         <div className="containerBuscador">
           {/* BUSCAR UNA API PARA SU FUNCIONALIDAD */}
           <div>
-            <img src={Map} className="map" />
+            <img src={Map} className="map" alt="Map"/>
             <input type="text" className="buscador" placeholder="Zona" />
           </div>
           <div>
