@@ -13,52 +13,52 @@ const Register = () => {
   return (
     <section>
       <div className="containerMainRegister">
-        <div className="containerCasillas">
+        <form action="/register" method="POST" className="containerCasillas">
           <div className="casillas">
             <img src={Logo} alt="Logo" className="logo" />
             <div className="containerNombre">
-              <label>
+              <label for='user'>
                 <img src={User} />
                 <input
                   type="text"
                   id="Name"
-                  name="Name"
+                  name="user"
                   placeholder="Usuario"
                   className="name"
                 />
               </label>
             </div>
             <div className="containerCorreo">
-              <label>
+              <label for='email'>
                 <img src={EmailBold} />
                 <input
                   type="email"
                   id="Email"
-                  name="Email"
+                  name="email"
                   placeholder="correo@correo.com"
                   className="email"
                 />
               </label>
             </div>
             <div className="containerPass">
-              <label>
+              <label for='password'>
                 <img src={Candado} />
                 <input
                   type="password"
                   id="Password"
-                  name="Password"
+                  name="password"
                   placeholder="Contraseña"
                   className="pass"
                 />
               </label>
             </div>
             <div className="containerConfirmPass">
-              <label>
+              <label for='confirmPassword'>
                 <img src={Candado} />
                 <input
                   type="password"
                   id="ConfirmPassword"
-                  name="ConfirmPassword"
+                  name="confirmPassword"
                   placeholder="Confirmar Contraseña"
                   className="confirmPass"
                 />
@@ -68,7 +68,7 @@ const Register = () => {
               Registrarse
             </button>
           </div>
-        </div>
+        </form>
         <div className="containerFotoMain">
           <div className="containerFoto">
                 <img src={Fondo} alt="Foto Fondo" className="fotoFondo" />
