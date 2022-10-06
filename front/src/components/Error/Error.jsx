@@ -7,7 +7,7 @@ const Error = () => {
     // Agregar los componentes navbar y header
     <section>
       <div className="containerError">
-        <img src={ErrorImg} className="imgError" alt="Error image" />
+        <img src={ErrorImg} className="imgError" alt="Error_image" />
       </div>
       <div className="containerTitle">
         <h1>¡Ups! No pudimos encontrar la página :(</h1>
