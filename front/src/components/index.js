@@ -6,3 +6,5 @@ export { default as Header } from "./Header/Header";
 export { default as Navbar } from "./Navbar/Navbar";
 export { default as QuestionCard } from "./QuestionCard/QuestionCard";
 export { default as ModalCancha } from "./ModalCancha/ModalCancha";
+export { default as Error } from "./Error/Error";
+export {default as Register} from "./Register/Register"

@@ -7,6 +7,9 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+.imgError{
+    width: 700px;
+}
 section{
     text-align: center;
 }
