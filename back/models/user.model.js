@@ -10,14 +10,11 @@ const userSchema = new mongoose.Schema({
     required: [true, 'Please enter your email'],
     unique: true,
   },
-  phone: {
-    type: String,
-    required: [true, 'Please enter your phone'],
-  },
   password: {
     type: String,
     required: [true, 'Please enter your password'],
   },
+  /*
   location: {
     lat: {
       type: Number,
@@ -27,6 +24,10 @@ const userSchema = new mongoose.Schema({
       type: Number,
       required: [true, 'Please enter a valid longitude'],
     },
+  },*/
+  role:{
+    type:String,
+    default: 'client',
   },
   status: {
     type: String,
