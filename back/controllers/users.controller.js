@@ -12,26 +12,21 @@ const { AppError } = require('../utils/appError.util');
 dotenv.config({ path: './config.env' });
 
 const createUser = catchAsync(async (req, res, next) => {
-  const { username, email, phone, password, lat, long } = req.body;
+  const { userName, email, password} = req.body;
 
-  const userExist = await User.findOne({ email });
+ /* const userExist = await User.findOne({ email });
 
   if (userExist) {
     return next(new AppError('Email already taken', 400));
   }
-
+*/
   const salt = await bcrypt.genSalt(12);
   const hashPassword = await bcrypt.hash(password, salt);
 
   const newUser = await User.create({
-    userName: username,
+    userName,
     email,
-    phone,
     password: hashPassword,
-    location: {
-      lat,
-      long,
-    },
   });
 
   newUser.password = undefined;
@@ -84,4 +79,7 @@ const deleteUser = catchAsync(async (req, res, next) => {
   res.status(204).json({ status: 'success' });
 });
 
-module.exports = { createUser, login, updateUser, deleteUser };
+const checkToken = catchAsync(async(req,res,next)=>{
+  res.status(200).json({user: req.sessionUser})
+})
+module.exports = { createUser, login, updateUser, deleteUser,checkToken };

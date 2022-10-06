@@ -33,7 +33,6 @@ const protectSession = catchAsync(async (req, res, next) => {
       new AppError("The owner of this token doesnt exist anymore", 403)
     );
   }
-
   req.sessionUser = user;
   next();
 });

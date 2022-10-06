@@ -17,7 +17,7 @@ const checkResult = (req, res, next) => {
 };
 
 const createUserValidator = [
-  body('username').notEmpty().withMessage('Name cannot be empty'),
+  body('userName').notEmpty().withMessage('Name cannot be empty'),
   body('email').isEmail().withMessage('Must provide a valid email'),
   body('password')
     .isLength({ min: 8 })
