@@ -15,9 +15,7 @@ function Home() {
           {data.canchas.map((e) => (
             <CardCancha
               key={e.id}
-              name={e.name}
-              location={e.location}
-              price={e.price}
+              data={e}
             />
           ))}
         </div>

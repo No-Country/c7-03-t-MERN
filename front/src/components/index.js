@@ -5,3 +5,4 @@ export { default as Footer } from "./Footer/Footer";
 export { default as Header } from "./Header/Header";
 export { default as Navbar } from "./Navbar/Navbar";
 export { default as QuestionCard } from "./QuestionCard/QuestionCard";
+export { default as ModalCancha } from "./ModalCancha/ModalCancha";
