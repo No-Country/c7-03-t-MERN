@@ -37,7 +37,7 @@ function Login() {
           </div>
           <input type="text" placeholder="             Ingrese su usuario" />
           <div className="imgs">
-            <img src={vector1} alt="" />
+          <i class="fa-solid fa-user"></i>
           </div>
           <input
             type="password"
