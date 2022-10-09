@@ -8,6 +8,7 @@ import IconoHouse from "../../assets/icons/house.svg";
 function Descripcion() {
   return (
     <div className="contenedor-principal">
+      <span className="subtitle__descripcion">NUESTROS SERVISIOS</span>
       <h2 className="titulo-descripcion">Que ofrecemos</h2>
       <div className="contenedor-descripcion">
         <div className="contenedor-carta">
