@@ -1,0 +1,107 @@
+.contenedor-principal-click {
+    /* display:block; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    /* max-width: 1050px; */
+  }
+
+.click-div {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 583px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+  font-family: var(--font-poppins);
+}
+.rectangle-div {
+    background-color: #ff7f56;
+    /* width: 1050px; */
+    height: 583px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1050px;
+  margin: auto;
+  }
+  .click-titulo {
+    margin: 0;
+    position: absolute;
+    top: 112px;
+    left: 78px;
+    font-size: 32px;
+    font-weight: 600;
+    font-family: inherit;
+    display: inline-block;
+    width: 312px;
+    height: 55px;
+  }
+  .click-p1 {
+    margin: 0;
+    position: absolute;
+    top: 209px;
+    left: 137px;
+    display: inline-block;
+    width: 378px;
+    height: 24px;
+  }
+  
+  .click-p2,.click-p3,.click-p4 {
+    margin: 0;
+    position: absolute;
+    top: 265px;
+    left: 137px;
+    display: inline-block;
+    width: 378px;
+    height: 22px;
+  }
+  .click-p2,
+  .click-p3 {
+    top: 320px;
+    height: 24px;
+  }
+  .click-p2 {
+    top: 376px;
+    left: 136px;
+    height: 22px;
+  }
+  .click-img {
+    position: absolute;
+    top: 0;
+    left: 534px;
+    width: 516px;
+    height: 583px;
+    object-fit: cover;
+  }
+  .click-icon-1 {
+    position: absolute;
+    top: 199px;
+    left: 78px;
+    width: 41px;
+    height: 43px;
+    overflow: hidden;
+  }
+  .click-icon-2,
+  .click-icon-3,
+  .click-icon-4 {
+    position: absolute;
+    top: 255px;
+    left: 78px;
+    width: 41px;
+    height: 42px;
+    overflow: hidden;
+  }
+  .click-icon-3,
+  .click-icon-4 {
+    top: 310px;
+    height: 43px;
+  }
+  .click-icon-4 {
+    top: 366px;
+    height: 42px;
+  }
+  
