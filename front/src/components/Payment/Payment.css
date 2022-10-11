@@ -1,0 +1,56 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.containerCasillas {
+    display: flex;
+    flex-direction: column;
+}
+.subtitle{
+    margin-bottom: 15px;
+}
+.labelCard{
+    display: flex;
+    align-items: center;
+}
+form{
+    margin-top: 21%;
+    margin-left: 8%;
+}
+form label{
+    width: 35%;
+    border: 1px solid #E9E5E5;
+    padding: 9px;
+    margin-bottom: 10px;
+}
+.cards{
+    display: flex;
+    width: 68%;
+    justify-content: flex-end;
+}
+.cards img{
+    width: 11%;
+    margin-left: 13px ;
+}
+span{
+    font-size: 12px;
+    margin-left: 8px;
+}
+label input{
+    margin-right: 8px;
+}
+.casillasDatos{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+.casillasDatos input{
+    padding: 9px;
+    margin-bottom: 10px;
+}
+.subtitleDatos{
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
