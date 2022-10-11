@@ -5,6 +5,7 @@ import {
   Header,
   Nosotros,
   Click,
+  PagoProceso,
 } from "../../components";
 import data from "../../utils/canchas.json";
 import React from "react";
@@ -17,6 +18,7 @@ function Home() {
       <Description />
       <Nosotros />
       <Click />
+      <PagoProceso />
       <div className="canchas__container">
         <h2 className="canchas__title">Canchas destacadas</h2>
         <div className="canchas__list">
