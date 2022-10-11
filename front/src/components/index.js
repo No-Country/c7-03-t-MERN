@@ -9,3 +9,4 @@ export { default as ModalCancha } from "./ModalCancha/ModalCancha";
 export { default as Error } from "./Error/Error";
 export { default as Register } from "./Register/Register";
 export { default as Click } from "./Click/Click";
+export { default as ContactUs } from "./ContactUs/ContactUs";

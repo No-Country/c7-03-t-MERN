@@ -7,6 +7,7 @@ import dollar from "../../assets/icons/dollar_orange.svg";
 import person from "../../assets/icons/person.svg";
 import share from "../../assets/icons/share.svg";
 import user from "../../assets/icons/user.svg";
+import { motion } from "framer-motion";
 import "./modalCancha.css";
 
 function ModalCancha() {
@@ -19,7 +20,7 @@ function ModalCancha() {
 
   return (
     <div className="backdrop_modal">
-      <div className="modal__container">
+      <motion.div initial={{x: "200%"}} animate={{x: "0"}} className="modal__container">
         <div className="images__cancha">
           <img src={img} alt="" />
         </div>
@@ -58,7 +59,7 @@ function ModalCancha() {
             <img src={share} alt="Share_icon" />
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
