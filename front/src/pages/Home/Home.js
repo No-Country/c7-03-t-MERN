@@ -5,7 +5,6 @@ import {
   Header,
   Nosotros,
   Click,
-  PagoProceso,
 } from "../../components";
 import data from "../../utils/canchas.json";
 import React from "react";
