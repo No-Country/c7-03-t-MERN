@@ -10,7 +10,7 @@ const Error = () => {
         <img src={ErrorImg} alt='Error image' className='imgError' />
       </div>
       <div className='containerTitle'>
-        <h1>¡Ups! No pudimos encontrar la página :(</h1>
+        <h1>¡Ups! No pudimos encontrar la página! Vuelve a intentarlo :)!</h1>
       </div>
     </section>
     // Agregar el componente footer
