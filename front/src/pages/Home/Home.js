@@ -18,7 +18,6 @@ function Home() {
       <Description />
       <Nosotros />
       <Click />
-      <PagoProceso />
       <div className="canchas__container">
         <h2 className="canchas__title">Canchas destacadas</h2>
         <div className="canchas__list">

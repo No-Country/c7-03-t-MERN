@@ -7,38 +7,37 @@ function PagoProceso() {
       <div className="pago-card">
         <img className="pago-proceso-img" alt="" src={img} />
         <h2 className="pago-proceso-titulo">Cancha Toledo</h2>
+        <p className="reserva-textos">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+          volutpat libero ut pharetra rutrum. Fusce vel ligula ligula.
+          Suspendisse iaculis tellus non dui porta vestibulum. Proin nisl erat,
+          pharetra hendrerit enim eu.
+        </p>
+        <hr className="line-1"></hr>
+        <hr className="line-2"></hr>
+        <hr className="line-3"></hr>
+        <hr className="line-4"></hr>
+
+        <p className="pago-fecha" texto>
+          Fecha y Horario
+        </p>
+        <p className="pago-fecha-texto">00 diciembre 2050, 00:00</p>
+
+        <p className="pago-hora" texto>
+          Horas
+        </p>
+        <p className="pago-hora-texto"> 5</p>
+
+        <p className="pago-total" texto>
+          TOTAL
+        </p>
+        <i className="pago-horas">(Según la cantidad de horas)</i>
+        <p className="pago-total-texto">$5000</p>
+        <button className="pago-continuar">Continuar</button>
 
         {/*
-          <p className="reserva-texto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            volutpat libero ut pharetra rutrum. Fusce vel ligula ligula.
-            Suspendisse iaculis tellus non dui porta vestibulum. Proin nisl
-            erat, pharetra hendrerit enim eu.
-          </p>
-          <div className="line-div" />
-          <div className="line-div1" />
-          <div className="line-div2" />
-          <div className="line-div3" />
-          <div className="line-div4" />
-          <button className="button" />
           <div className="continuar-div">Continuar</div>
-          <div className="line-div" />
-          <div className="line-div1" />
-          <p className="total-p" texto>
-            TOTAL
-          </p>
-          <p className="horas-p" texto>
-            Horas
-          </p>
-          <p className="fecha-y-horario" texto>
-            Fecha y Horario
-          </p>
-          <div className="sin-definir-div">Sin Definir</div>
-          <div className="sin-definir-div1">Sin definir</div>
-          <div className="sin-definir-div2">Sin definir</div>
-          <i className="segn-la-cantidad-de-horas">
-            (Según la cantidad de horas)
-          </i> */}
+          */}
       </div>
     </div>
   );
