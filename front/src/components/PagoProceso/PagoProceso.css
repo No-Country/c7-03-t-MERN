@@ -1,0 +1,141 @@
+.container-pago {
+  top: 50px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  max-width: 1050px;
+  height: 900px;
+  font-size: 15px;
+  font-family: Poppins;
+  margin: auto;
+}
+
+.pago-card {
+  position:absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 10%;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 5px 30px 5px rgba(0, 0, 0, 0.25);
+    width: 642px;
+    height: 716px;
+  }  
+
+  .pago-proceso-img {
+    position: absolute;
+    top: 26.95px;
+    left: 26px;
+    border-radius: 9px 0 0 10px;
+    width: 260px;
+    height: 362.81px;
+    object-fit: cover;
+}
+
+.pago-proceso-titulo {
+  position: absolute;
+  left: 300px;
+  top:27px;
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 600;
+    font-family: inherit;
+    color: #121212;
+  }
+  .reserva-textos {
+    position: absolute;
+    top: 85.65px;
+    left: 300px;
+    font-size: 16px;
+    line-height: 35px;
+    font-weight: 500;
+    color: #000000;
+    width: 308px;
+    /* border: solid 1px blueviolet; */
+  }
+  .line-1,
+  .line-2,
+  .line-3,
+  .line-4 {
+    position: absolute;
+    top: 450px;
+    border-top: 1px solid #b4b4b4;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .line-2,
+  .line-3,
+  .line-4 {
+    top: 500px;
+  }
+
+  .line-3,
+  .line-4 {
+    top: 550px;
+  }
+
+  .line-4 {
+    top: 600px;
+  }
+
+  .pago-fecha, .pago-hora,
+  .pago-total {
+    position: absolute;
+    font-weight:bold;
+    font-size: 22px;
+    display: inline-block;
+    top: 460px;
+    left: 23px;
+  }
+
+  .pago-hora {
+    top: 510px;
+  }
+  .pago-total {
+    font-size: 25px;
+    top: 560px;
+  }
+  
+  .pago-horas {
+    top: 565px;
+    left: 110px;
+    color: #615e5e;
+    position: absolute;
+    font-weight: 500;
+  }
+  
+  .pago-fecha-texto, .pago-hora-texto,
+  .pago-total-texto {
+    position: absolute;
+    font-weight:bold;
+    font-size: 20px;
+    display: inline-block;
+    top: 460px;
+    left: 350px;
+  }
+  .pago-hora-texto {
+    top: 510px;
+  }
+  .pago-total-texto {
+    font-size: 25px;
+    top: 560px;
+  }
+
+  .pago-continuar {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: #e06138;
+    position: absolute;
+    top: 622.65px;
+    left: 94px;
+    border-radius: 15px;
+    width: 431px;
+    height: 69.29px;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  
+  /* ******************************* */
