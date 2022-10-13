@@ -9,27 +9,26 @@ function InputCards() {
   };
 
   return (
-    <div className="contenedor-inputs-main">
-      <div className="card-inputs">
-        <h3 className ="title-inputs" >Rellenar datos</h3>
-        <form onSubmit={handleSubmit(submit)}>
-          <input
+    <div>
+      <p className="title-inputs">Rellenar datos:</p>
+      <div>
+        <form className="dataBox" onSubmit={handleSubmit(submit)}>
+          <input 
             {...register("cardNumber")}
             type="number"
             placeholder="Numero de la tarjeta de credito"
-            className="cardNumber"/>
+          />
           <input
             {...register("dateExpire")}
-            type="month"
-            placeholder="Fecha de Expiracion mm/yy"
-            className="dateExpire"/>
-
-          <input {...register("cuv")}
-           type="number" 
-           placeholder="CUV" 
-           className="cuv"/>
-
-          <button >Enviar Form</button>
+            type="text"
+            placeholder="Fecha de Expiracion MM/YY"
+          />
+          <input
+            {...register("cvn")}
+            type="number"
+            placeholder="CVN"
+          />
+  
         </form>
       </div>
     </div>
