@@ -1,0 +1,80 @@
+.click-div {
+  /* centrar elementos en padre */
+  display: flex;
+  align-items: center;
+  margin: auto;
+  /* fin centrar elementos en padre */
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  max-width: 1050px;
+  height: 700px;
+  font-size: 15px;
+  font-family: Poppins;
+  color: white;
+}
+.rectangle-div {
+  position: absolute;
+  background-color: #e06138;
+  width: 1050px;
+  height: 583px;
+}
+.click-titulo {
+  position: absolute;
+  top: 112px;
+  left: 78px;
+  font-size: 32px;
+  font-weight: 600;
+  width: 312px;
+  height: 55px;
+}
+.click-p1, .click-p2, .click-p3, .click-p4 {
+  position: absolute;
+  top: 209px;
+  left: 137px;
+  width: 378px;
+  height: 24px;
+}
+
+.click-p2,
+.click-p3,
+.click-p4 {
+  margin: 0;
+  top: 265px;
+  left: 137px;
+  width: 378px;
+  height: 22px;
+}
+.click-p2,
+.click-p3 {
+  top: 320px;
+}
+.click-p2 {
+  top: 376px;
+}
+.click-img {
+  position: absolute;
+  top: 0;
+  left: 534px;
+  width: 516px;
+  height: 583px;
+  object-fit: cover;
+}
+.click-icon-1, .click-icon-2, .click-icon-3, .click-icon-4 {
+  position: absolute;
+  top: 199px;
+  left: 78px;
+  width: 41px;
+  height: 43px;
+}
+.click-icon-2,
+.click-icon-3,
+.click-icon-4 {
+  top: 255px;
+}
+.click-icon-3,
+.click-icon-4 {
+  top: 310px;
+}
+.click-icon-4 {
+  top: 366px;
+}

@@ -1,0 +1,118 @@
+.contactus__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 160px;
+  width: 100%;
+  position: relative;
+}
+
+.contactus__container > h3 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+
+.contactus__container > p {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #525252;
+}
+
+.contactus__card {
+  width: 100%;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.45);
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  max-width: 1050px;
+margin: auto;
+z-index: 20;
+}
+
+.contactus__card__div > img {
+  width: 100%;
+}
+
+.contactus__card__ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contactus__card__ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.contactus__card__ul li span {
+  padding: 20px;
+  object-fit: 1;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+}
+
+.contactus__card__ul li span img {
+  width: 30px;
+  height: 30px;
+}
+
+.contactus__form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 0px 0px 0px 30px;
+}
+
+.contactus__form > input,
+.contactus__form > textarea {
+  width: 100%;
+  padding: 20px;
+  font-size: 19px;
+  border-radius: 5px;
+  background: #ffffff;
+  border: 1px solid rgba(191, 182, 182, 0.6);
+}
+
+.contactus__form > textarea {
+  height: 300px;
+  resize: none;
+}
+
+.btn__form {
+  width: 80%;
+  height: 72px;
+  background: #ff7f56;
+  border-radius: 10px;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+}
+
+.background__contactus {
+  position: absolute;
+  bottom: -31px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #c05533;
+  clip-path: polygon(100% 15%, 0% 100%, 100% 100%);
+}
