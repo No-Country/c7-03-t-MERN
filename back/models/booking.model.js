@@ -9,6 +9,10 @@ const bookingSchema = new mongoose.Schema({
         type:Object,
         required: [true, 'Please enter your scenery id'],
     },
+    fildId:{
+        type:String,
+        require: [true, 'Please enter fild of the scenery'],
+    },
     price: {
         type: Number,
     },
