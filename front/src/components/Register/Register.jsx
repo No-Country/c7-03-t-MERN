@@ -7,18 +7,18 @@ import Candado from "../../assets/icons/candado.svg";
 import Facebook from "../../assets/icons/facebook.svg";
 import Fondo from "../../assets/images/imagenRegister.png";
 import "./Register.css";
-import { Link } from 'react-router-dom'
+import { BrowserRouter, Link } from 'react-router-dom'
 
 const Register = () => {
   return (
-    <section className="register_container">
+    <section>
       <div className="containerMainRegister">
-        <form className="containerCasillas">
+        <form action="/register" method="POST" className="containerCasillas">
           <div className="casillas">
             <img src={Logo} alt="Logo" className="logo" />
             <div className="containerNombre">
-              <label htmlFor='user'>
-                <img src={User} alt="User_image" />
+              <label for='user'>
+                <img src={User} />
                 <input
                   type="text"
                   id="Name"
@@ -30,7 +30,7 @@ const Register = () => {
             </div>
             <div className="containerCorreo">
               <label for='email'>
-                <img src={EmailBold} alt="Email"/>
+                <img src={EmailBold} />
                 <input
                   type="email"
                   id="Email"
@@ -42,7 +42,7 @@ const Register = () => {
             </div>
             <div className="containerPass">
               <label for='password'>
-                <img src={Candado} alt="Candado"/>
+                <img src={Candado} />
                 <input
                   type="password"
                   id="Password"
@@ -54,7 +54,7 @@ const Register = () => {
             </div>
             <div className="containerConfirmPass">
               <label for='confirmPassword'>
-                <img src={Candado} alt="Candado"/>
+                <img src={Candado} />
                 <input
                   type="password"
                   id="ConfirmPassword"
@@ -88,11 +88,13 @@ const Register = () => {
               </div>
               <div className="containerInicioSesion">
                 <p className="parrafoInicioSesion">¿Ya tienes una cuenta?</p>
+                <BrowserRouter>
                 <Link to='/login'>
                 <button type="submit" className="iniciarSesionBtn">
                   ¡Inicia Sesion!
                 </button>
                 </Link>
+                </BrowserRouter>
               </div>
             </div>
           </div>
