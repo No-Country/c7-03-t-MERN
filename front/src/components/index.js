@@ -9,7 +9,4 @@ export { default as ModalCancha } from "./ModalCancha/ModalCancha";
 export { default as Error } from "./Error/Error";
 export { default as Register } from "./Register/Register";
 export { default as Click } from "./Click/Click";
-export { default as PagoProceso } from "./PagoProceso/PagoProceso";
-export { default as PagoCheck } from "./PagoCheck/PagoCheck";
-export { default as PagoError } from "./PagoError/PagoError";
-export { default as PasosReserva } from "./PasosReserva/PasosReserva";
+
