@@ -1,7 +1,16 @@
-import { CardCancha, Footer, Description, Header,Nosotros } from "../../components";
+import {
+  CardCancha,
+  Footer,
+  Description,
+  Header,
+  Nosotros,
+  Click,
+} from "../../components";
 import data from "../../utils/canchas.json";
 import React from "react";
 import "./home.css";
+
+
 
 function Home() {
   return (
@@ -9,16 +18,12 @@ function Home() {
       <Header />
       <Description />
       <Nosotros />
+      <Click />
       <div className="canchas__container">
         <h2 className="canchas__title">Canchas destacadas</h2>
         <div className="canchas__list">
           {data.canchas.map((e) => (
-            <CardCancha
-              key={e.id}
-              name={e.name}
-              location={e.location}
-              price={e.price}
-            />
+            <CardCancha key={e.id} data={e} />
           ))}
         </div>
       </div>

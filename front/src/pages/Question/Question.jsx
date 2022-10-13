@@ -18,7 +18,7 @@ function Question() {
           </p>
           <div className="question__list">
             {questions.questions.map((question) => (
-              <QuestionCard question={question.question} key={question.id} />
+              <QuestionCard question={question} key={question.id} />
             ))}
           </div>
         </div>

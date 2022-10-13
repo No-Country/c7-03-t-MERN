@@ -1,0 +1,51 @@
+.container-check {
+    top: 50px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    max-width: 1050px;
+    height: 600px;
+    font-size: 15px;
+    font-family: Poppins;
+    margin: auto;
+    text-align: center;
+  }
+
+  .card-check {
+    position: absolute;
+    margin: auto;
+    width: 467.07px;
+    height: 520.91px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 10px 5px 30px 5px rgba(0, 0, 0, 0.25);
+  }
+
+  .icon-check {
+    position: absolute;
+    top: 61.11px;
+    left: 159px;
+    width: 149.14px;
+    height: 148.41px;
+    
+  }
+  .texto-check {
+    position: absolute;
+    top: 256.82px;
+    left: 44.38px;
+    width: 341.21px;
+    height: 110.58px;
+  }
+  .boton-check {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: #2eac2c;
+    position: absolute;
+    top: 414.91px;
+    left: 61px;
+    border-radius: 10px;
+    width: 307.02px;
+    height: 59.66px;
+    font-size: 16px;
+    color: #fff;
+  }
