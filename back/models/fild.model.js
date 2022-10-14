@@ -18,6 +18,14 @@ const fildScheme = new mongoose.Schema({
         type:String,
         require: [true, 'Please entre the image']
       },
+      acountPerson:{
+        type: Number,
+        require: [true, 'Please entre person']
+      },
+      description:{
+        type: String,
+        require:[true, 'Please entre description']
+      },
     rating:{
         type:Number,
         required: [true, 'Please enter your rating scenery'],
