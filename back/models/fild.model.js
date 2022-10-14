@@ -12,19 +12,19 @@ const fildScheme = new mongoose.Schema({
     }, 
     sportId:{
         type:String,
-        require: [true, 'Please entre the sportId']
+        require: [true, 'Please enter the sportId'],
     },
     fildImgUrl:{
         type:String,
-        require: [true, 'Please entre the image']
+        require: [true, 'Please enter the image'],
       },
       accountPerson:{
         type: Number,
-        require: [true, 'Please entre person']
+        require: [true, 'Please enter person'],
       },
       description:{
         type: String,
-        require:[true, 'Please entre description']
+        require:[true, 'Please enter description'],
       },
     rating:{
         type:Number,
