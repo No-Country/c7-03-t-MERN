@@ -1,0 +1,50 @@
+form{
+    text-align: center;
+}
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.containerCasillas{
+    display: flex;
+    flex-direction: column;
+}
+.containerCasillas label{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    background-color: #E9E5E5;
+    padding: 10px;
+    border-radius: 5px;
+    color: gray;
+}
+.containerCasillas img {
+    width: 7%;
+    margin-right: 10px;
+}
+.containerCasillas input{
+    padding: 14px;
+    border: none;
+    background-color: #E9E5E5;
+    margin-left: 100px;
+}
+.hour{
+    display: flex;
+    width: 100%;
+    text-align: end;
+}
+.time{
+    display: flex;
+    width: 34%;
+    text-align: end;
+}
+.bookingBtn{
+    padding: 19px 118px;
+    border-radius: 6px;
+    border: none;
+    box-shadow: inset 0px -28px 15px -27px white;
+    background: #fc6537;
+    color: white;
+    margin-top: 25px;
+}

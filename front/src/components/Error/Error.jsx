@@ -5,7 +5,7 @@ import "./Error.css";
 const Error = () => {
   return (
     // Agregar los componentes navbar y header
-    <section>
+    <section className="section_error">
       <div className="containerError">
         <img src={ErrorImg} className="imgError" alt="Error_image" />
       </div>

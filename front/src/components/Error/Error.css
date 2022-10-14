@@ -1,17 +1,10 @@
-* {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-body {
-    font-family: 'Poppins', sans-serif;
-}
+
 .imgError{
     width: 700px;
 }
-section{
+.section_error{
     text-align: center;
+    min-height: 70vh;
 }
 .containerError{
     padding-top: 80px;

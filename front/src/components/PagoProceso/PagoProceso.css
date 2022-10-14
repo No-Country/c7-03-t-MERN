@@ -1,0 +1,45 @@
+.pago-card {
+  background: #ffffff;
+  box-shadow: 10px 5px 30px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.pago-card-description {
+  display: flex;
+  gap: 20px;
+}
+
+.pago-card-description > div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.pago-card-description > div p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 35px;
+  color: #646464;
+}
+
+.pago-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.pago-card-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+  border-top: 1px solid #64646450;
+}
+
+.pago-data-p {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 35px;
+  color: #000000;
+}

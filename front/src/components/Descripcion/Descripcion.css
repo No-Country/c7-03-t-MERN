@@ -30,11 +30,13 @@
 .contenedor-carta {
   padding: 20px 30px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   gap: 10px;
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.25);
+  max-width: 32%;
+  min-height: 350px;
 }
 
 .vector {
@@ -42,6 +44,7 @@
   height: 5px;
   background-color: #ff7f56;
   border-radius: 30px;
+  margin: 10px 0px;
 }
 
 .parrafo {

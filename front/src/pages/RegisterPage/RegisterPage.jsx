@@ -1,12 +1,11 @@
-import { Footer, Navbar, Register } from "../../components";
+import { Register } from "../../components";
+import { motion } from "framer-motion";
 
 function RegisterPage() {
   return (
-    <>
-      <Navbar />
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <Register />
-      <Footer />
-    </>
+    </motion.div>
   );
 }
 

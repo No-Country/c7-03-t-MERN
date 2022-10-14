@@ -16,23 +16,23 @@ function Nosotros() {
             SIEMPRE PENSANDO EN NUESTROS CLIENTES
           </p>
           <h2 className="subtitulo-nosotros">Buscamos facilitarte la vida</h2>
-          <p className="parrafo-nosotros">
+          <div className="parrafo-nosotros">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum volutpat libero ut pharetra rutrum. Fusce vel ligula
-              ligula. Suspendisse iaculis tellus non dui porta vestibulum. Proin
-              nisl erat, pharetra hendrerit enim eu, ultrices malesuada risus.
-              Morbi eu quam nisl. Sed sem justo, tempor ac ultricies at, dapibus
-              vel sapien. Phasellus rutrum volutpat ligula, ultricies condimen.
+              Somo un equipo que se le ocurrió la brillante idea de crear una
+              pagina web sobre alquiler de campos deportivos. Sabemos de primera
+              mano lo tedioso que puede ser alquilar una cancha para jugar con
+              amigos, por lo tanto, nuestra intención con esta aplicación web es
+              ahorrarte tiempo y que puedas alquilar desde donde sea que estes,
+              sin importar estar en el trabajo o la escuela.
             </p>
             <p>&nbsp;</p>
             <p>
-              dui porta vestibulum. Proin nisl erat, pharetra hendrerit enim eu,
-              ultrices malesuada risus. Morbi eu quam nisl. Sed sem justo,
-              tempor ac ultricies at, dapibus vel sapien. Phasellus rutrum
-              volutpat ligula, ultricies condimen.
+              Todos los integrantes estamos comprometidos a brindarte los
+              mejores servicios, así que cualquier duda o problema no dudes en
+              hacérnoslo saber, poseemos una pagina de contactos donde puedes
+              escribirnos.
             </p>
-          </p>
+          </div>
         </div>
       </div>
     </div>

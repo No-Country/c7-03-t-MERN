@@ -15,22 +15,19 @@ function Descripcion() {
           <img className="icono-descripcion" src={Iconoball} alt="iconoball" />
           <div className="vector"></div>
           <p className="parrafo">
-          we help you to be the bridge between your sports moments and the highest quality facilities, you can find courts from soccer to tennis, try it free for 30 days and see how easy we are
-          </p>
+          Busca y alquila la cancha que más te guste y que se adapte al deporte que quieras practicar, nuestra idea es brindarte un servicio que sea fácil y rápido. Sin complicarte mucho la cabeza.          </p>
         </div>
         <div className="contenedor-carta">
           <img className="icono-descripcion" src={IconoCalend} alt="iconocalend" />
           <div className="vector"></div>
           <p className="parrafo">
-          we help you to be the bridge between your sports moments and the highest quality facilities, you can find courts from soccer to tennis, try it free for 30 days and see how easy we are
-          </p>
+          Contamos con numerosas fechas disponibles, cada cancha tiene fechas disponibles. Podras elegir la que más se adapte a tu disponibilidad horaria.          </p>
         </div>
         <div className="contenedor-carta">
           <img className="icono-descripcion" src={IconoHouse} alt="iconohouse" />
           <div className="vector"></div>
           <p className="parrafo">
-          we help you to be the bridge between your sports moments and the highest quality facilities, you can find courts from soccer to tennis, try it free for 30 days and see how easy we are
-          </p>
+          Con nuestro sencillo servicio puedes alquilar una cancha desde la comodidad de tu casa. Se acabo lo de tener que ir a hablar con x persona para hacer una reserva. En esta web te ofrecemos la posibilidad de reservar con una enorme variedad de campos deportivos.          </p>
         </div>
         
       </div>

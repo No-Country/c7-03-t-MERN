@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className="nav-main">
       <div className="navbarContainer">
         <Link to="/">
-          <img src={Logo} alt="Logo" className="logo" />
+          <img src={Logo} alt="Logo" className="logo_nav" />
         </Link>
         <div className="menuNavegacion">
           <Link to="/" className="nav">

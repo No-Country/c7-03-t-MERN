@@ -13,7 +13,7 @@ const Register = () => {
   return (
     <section className="register_container">
       <div className="containerMainRegister">
-        <form className="containerCasillas">
+        <form className="containerCasillas__register">
           <div className="casillas">
             <img src={Logo} alt="Logo" className="logo" />
             <div className="containerNombre">
@@ -29,7 +29,7 @@ const Register = () => {
               </label>
             </div>
             <div className="containerCorreo">
-              <label for='email'>
+              <label htmlFor='email'>
                 <img src={EmailBold} alt="Email"/>
                 <input
                   type="email"
@@ -41,7 +41,7 @@ const Register = () => {
               </label>
             </div>
             <div className="containerPass">
-              <label for='password'>
+              <label htmlFor='password'>
                 <img src={Candado} alt="Candado"/>
                 <input
                   type="password"
@@ -53,7 +53,7 @@ const Register = () => {
               </label>
             </div>
             <div className="containerConfirmPass">
-              <label for='confirmPassword'>
+              <label htmlFor='confirmPassword'>
                 <img src={Candado} alt="Candado"/>
                 <input
                   type="password"

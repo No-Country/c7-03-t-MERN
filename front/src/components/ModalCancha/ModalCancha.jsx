@@ -7,19 +7,27 @@ import dollar from "../../assets/icons/dollar_orange.svg";
 import person from "../../assets/icons/person.svg";
 import share from "../../assets/icons/share.svg";
 import user from "../../assets/icons/user.svg";
+import { motion } from "framer-motion";
+import {useNavigate} from "react-router-dom"
 import "./modalCancha.css";
 
 function ModalCancha() {
   const modalData = useSelector((state) => state.chanchaModal);
   const dispatch = useDispatch();
+  const navigate = useNavigate()
 
   const closeModal = () => {
     dispatch(setCanchaMondal(null));
   };
 
+  const changePage = () => {
+    closeModal()
+    navigate("/booking")
+  }
+
   return (
     <div className="backdrop_modal">
-      <div className="modal__container">
+      <motion.div initial={{x: "200%"}} animate={{x: "0"}} className="modal__container">
         <div className="images__cancha">
           <img src={img} alt="" />
         </div>
@@ -29,7 +37,7 @@ function ModalCancha() {
           </button>
           <div className="cancha__data__part1">
             <h3>Cancha de {modalData.category}</h3>
-            <button>Reservar cancha</button>
+            <button onClick={changePage}>Reservar cancha</button>
           </div>
           <h3>
             <img src={location} alt="Location icon" />
@@ -58,7 +66,7 @@ function ModalCancha() {
             <img src={share} alt="Share_icon" />
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
