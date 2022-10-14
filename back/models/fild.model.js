@@ -18,7 +18,7 @@ const fildScheme = new mongoose.Schema({
         type:String,
         require: [true, 'Please entre the image']
       },
-      acountPerson:{
+      accountPerson:{
         type: Number,
         require: [true, 'Please entre person']
       },
