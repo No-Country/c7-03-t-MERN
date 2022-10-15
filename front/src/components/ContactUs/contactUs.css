@@ -16,6 +16,7 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: #000000;
+  z-index: 2;
 }
 
 .contactus__container > p {
@@ -25,6 +26,7 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: #525252;
+  z-index: 2;
 }
 
 .contactus__card {
@@ -32,9 +34,9 @@
   box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.45);
   padding: 50px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
+  grid-template-columns: repeat(2, 1fr);
   background-color: #fff;
   max-width: 1050px;
   margin: auto;
@@ -115,4 +117,22 @@
   height: 100vh;
   background: #c05533;
   clip-path: polygon(100% 15%, 0% 100%, 100% 100%);
+}
+
+@media (max-width: 768px) {
+  .contactus__container > h3 {
+    font-size: 40px;
+    line-height: normal;
+  }
+
+  .contactus__container > p {
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  .contactus__card {
+    width: 95%;
+    gap: 30px;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
