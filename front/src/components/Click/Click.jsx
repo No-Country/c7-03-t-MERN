@@ -5,7 +5,7 @@ import icon from "../../assets/icons/tilde.svg";
 
 function Click() {
   return (
-    <div className="click-div">
+    <div className="click-contenedor">
       <div className="rectangle-div">
         <h2 className="click-titulo">Con solo un click</h2>
         <ul className="click-list">
@@ -31,7 +31,9 @@ function Click() {
           </li>
         </ul>
       </div>
-      <img className="click-img" alt="" src={img} />
+      <div>
+        <img className="click-img" alt="" src={img} />
+      </div>
     </div>
   );
 }

@@ -1,17 +1,19 @@
-.click-div {
+.click-contenedor {
   display: grid;
-  align-items: center;
-  justify-content: center;
   grid-template-columns: repeat(2, 1fr);
-  margin: 40px auto -30px;
-  max-width: 1050px;
-  font-size: 15px;
+  /* grid-template-rows: repeat(2, auto);*/
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  margin: 40px auto;
+  max-width: 75em;
+  font-size: 1em;
   color: white;
 }
 
 .rectangle-div {
-  height: 100%;
-  background-color: #e06138;
+  grid-column: 1;
+  /* height: 100%; */
+  background-color: #ff7f56;
   padding: 100px 60px;
 }
 .click-list{
@@ -26,16 +28,46 @@
   gap: 20px;
 }
 
-.click-titulo {
+s.click-titulo {
   font-size: 32px;
   font-weight: 600;
 }
 
-.click-img {
-  object-fit: cover;
+
+div .click-img {
+  grid-column: 2;
+
+  /* display: flex; */
+  /* align-items: center; */
+  /* align-items: baseline; */
+  /* margin: auto; */
 }
 
 .click-icon{
   width: 40px;
   height: 40px;
+}
+
+
+
+@media screen and (max-width: 576px) {
+  .rectangle-div{
+    background: #4803b8;
+    grid-column: 1 / -1;
+    padding: 20px 20px;
+  }
+  .click-img{
+    grid-column: 1/ -1;
+    margin: auto;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .click-icon{
+    width: 20px;
+    height: 20px;
+  }
 }
