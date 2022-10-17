@@ -31,7 +31,7 @@ function Click() {
           </li>
         </ul>
       </div>
-      <div>
+      <div className="cantainer-img">
         <img className="click-img" alt="" src={img} />
       </div>
     </div>
