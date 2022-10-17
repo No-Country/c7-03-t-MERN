@@ -5,7 +5,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
     padding: 40px 0 30px;
 }
 
@@ -43,3 +42,4 @@
 .footer__reserved > h5{
     color: #fff;
 }
+
