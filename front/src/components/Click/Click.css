@@ -39,3 +39,13 @@
   width: 40px;
   height: 40px;
 }
+
+@media (max-width: 768px) {
+  .click-img{
+    display: none;
+  }
+
+  .rectangle-div{
+    width: 100%;
+  }
+}

@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 import videoFutbol from "../../assets/videos/futbolHome.mp4";
 import Map from "../../assets/icons/map.svg";
+import Filter from "../Filter/Filter"
 
 const Header = () => {
   return (
@@ -43,23 +44,7 @@ const Header = () => {
             pero lo voy a solucionar */}
           </div>
         </div>
-        <div className="containerBuscador">
-          {/* BUSCAR UNA API PARA SU FUNCIONALIDAD */}
-          <div>
-            <img src={Map} className="map" alt="Map" />
-            <input type="text" className="buscador" placeholder="Zona" />
-          </div>
-          <div>
-            <input type="text" className="deporte" placeholder="Deporte" />
-          </div>
-          <div>
-            <input
-              type="date"
-              className="calendario"
-              placeholder="Día y fecha"
-            />
-          </div>
-        </div>
+        <Filter />
       </div>
     </div>
   );

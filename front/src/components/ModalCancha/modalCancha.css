@@ -160,3 +160,19 @@
   font-size: 17px;
   color: #000000;
 }
+
+@media (max-width: 860px) {
+  .modal__container {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: #fff;
+    padding: 40px 20px 20px;
+    margin-top: 300px;
+    overflow-y: scroll;
+  }
+
+  .images__cancha img {
+    width: 100%;
+    height: 200px;
+  }
+}

@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
 z-index: 100;
+background-color: #ad4827;
 }
 .navbarContainer {
   display: flex;
@@ -53,4 +54,10 @@ z-index: 100;
   border: 2px solid #ad4827;
   border-radius: 7px;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .containerBtn{
+    display: none;
+  }
 }

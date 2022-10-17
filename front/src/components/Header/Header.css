@@ -69,27 +69,3 @@
     display: flex;
     justify-content: flex-start;
 }
-.containerBuscador{
-    width: 42%;
-    position: absolute;
-    z-index: 2;
-    bottom: 8%;
-    right: 30%;
-    background: #FF7F56;
-    padding: 10px 30px;
-    border-radius: 9px;
-    display: flex;
-    justify-content: space-around;
-}
-.containerBuscador input{
-    padding: 2px;
-    border-radius: 6px;
-    border: none;
-    text-align: center;
-}
-.map{
-    position: absolute;
-    bottom: 48px;
-    width: 27px;
-    margin-left: 71px;
-}
