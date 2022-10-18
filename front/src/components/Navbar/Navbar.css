@@ -15,7 +15,7 @@
   width: 100%;
   padding: 19px 19px;
   background: #ad4827;
-  gap: 81%;
+  gap: 70%;
 }
 
 .logo {
@@ -65,7 +65,7 @@
 
 @media(min-width: 483px) {
   .navbarContainer {
-    gap: 89%;
+    gap: 77%;
   }
 
 }
