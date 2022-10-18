@@ -10,6 +10,13 @@ body {
 section{
     text-align: center;
 }
+.imgError{
+    width: 700px;
+}
+.section_error{
+    text-align: center;
+    min-height: 70vh;
+}
 .containerError{
     padding-top: 80px;
     padding-bottom: 120px;
