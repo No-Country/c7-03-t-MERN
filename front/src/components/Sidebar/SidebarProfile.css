@@ -1,0 +1,39 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.containerProfilePic{
+    display: flex;
+    flex-direction: column;
+    /* width: 28%; */
+}
+.profilePic{
+    width: 15%;
+    z-index: 1;
+    margin-left: 100px;
+    margin-top: 134px;
+}
+.containerData{
+    margin-left: 90px;
+}
+.user{
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+.born{
+    display: flex;
+}
+.gmail{
+    display: flex;
+}
+.sport{
+    display: flex;
+}
+.courts{
+    display: flex;
+}
+.containerData div{
+    margin-bottom: 20px;
+}
