@@ -1,13 +1,105 @@
-.navbarContainer{
-    display: flex;
-    margin-top: 50px;
-    margin-left: 90px;
-    align-items: center;
+.nav-main {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
 }
+
+.navbarContainer {
+  /* AGREGUE ESTO */
+  display: flex;
+  width: 100%;
+  padding: 19px 19px;
+  background: #ad4827;
+  gap: 81%;
+}
+
 .logo {
-    margin-right: 40px;
+  /* AGREGUE ESTO  */
+  width: 31px;
 }
-.menuNavegacion .nav{
-    margin-top: 20px;
-    margin-right: 60px;
+
+.menuNavegacion .nav {
+  color: #9b9b9b;
+  text-decoration: none;
+}
+
+.menuNavegacion {
+  height: 100%;
+  margin-left: 30px;
+  display: none;
+  /* flex: none; */
+  align-items: center;
+  gap: 25px;
+  /* AGREGUE ESTO */
+}
+
+.containerBtn {
+  /* display: flex; */
+  justify-content: flex-end;
+  /* AGREGUE ESTO */
+  display: none;
+}
+
+.inicioSesion {
+  margin-right: 23px;
+  padding: 14px 15px 14px 15px;
+  background: #ffffff;
+  border: 2px solid #ad4827;
+  border-radius: 7px;
+  color: #ad4827;
+}
+
+.registrarse {
+  /* margin-right: 52px; */
+  padding: 14px 20px 14px 20px;
+  background: #AD4827;
+  border: 2px solid #ad4827;
+  border-radius: 7px;
+  color: white;
+}
+
+
+@media(min-width: 483px) {
+  .navbarContainer {
+    gap: 89%;
+  }
+
+}
+
+@media (min-width: 1023px){
+  .containerBtn{
+    display: flex;
+  }
+  .menuNavegacion{
+    display: flex; 
+    height: 100%;
+    margin-left: 30px;
+    align-items: center;
+  gap: 25px;
+  }
+  .navbarContainer{
+    gap: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1070px;
+    justify-content: space-around;
+  }
+  .hamburgerBtn{
+    display: none;
+  }
+  .logo{
+    width: 56px;
+  }
+
+  /* .containerBtnMain{
+    display: flex;
+  } */
+
 }

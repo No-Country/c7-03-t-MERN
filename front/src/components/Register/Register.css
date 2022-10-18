@@ -1,135 +1,133 @@
-* {
-    font-family: "Poppins", sans-serif;
-  }
-  @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-  .containerMainRegister {
-    display: flex;
-    align-items: center;
-    width: 85%;
-    text-align: center;
-    box-shadow: 0px 0px 28px -6px;
-    border-radius: 12px;
-    position: relative;
-    overflow: hidden;
-    margin: auto;
-  }
-  section {
-    padding: 89px 0px 89px 0px;
-  }
-  .logo {
-    width: 90px;
-    margin-bottom: 6%;
-  }
-  .containerCasillas {
-    padding: 112px;
-    display: flex;
-      width: 50%;
-      margin-left: 20px;
-  }
-  .casillas {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    padding-top: 6%;
-    width: 124%;
-  }
-  .containerNombre {
-    background: #e9e5e5;
-    padding: 4px 5px 4px 5px;
-    width: 55%;
-    display: flex;
-    border-radius: 4px;
-  }
-  .casillas div {
-    background: #e9e5e5;
-    padding: 4px 5px 4px 5px;
-    width: 110%;
-    display: flex;
-    border-radius: 4px;
-    margin-bottom: 50px;
-  }
-  .casillas label {
-    width: 100%;
-    display: flex;
-    background: #e9e5e5;
-  }
-  .casillas div img {
-    width: 7%;
-  }
-  .casillas input {
-    width: 87%;
-    padding: 18px;
-    border: none;
-    background: #e9e5e5;
-  }
-  .remember {
-    display: flex;
-    margin-bottom: 55px;
-  }
-  .buttonRegister {
-    padding: 19px 118px;
-    border-radius: 12px;
-    border: none;
-    box-shadow: inset 0px -30px 15px -27px white;
-    background: #fc6537;
-    color: white;
-  }
-  .containerFotoMain {
-    width: 50%;
-  }
-  .containerFoto {
-    /* padding-left: 748px; */
-    height: 100%;
-    position: absolute;
-    /* width: 100%; */
-    top: 0;
-    right: 0;
-  }
-  .fotoFondo {
-    right: 0px;
-    /* width: 53%; */
-    position: absolute;
-    /* top: 0; */
-    z-index: -1;
-    height: 100%;
-  }
-  .containerFaceMail {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    z-index: 1;
-    top: 40%;
-    right: 50%;
-  }
-  .contenedorIcons {
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 70px;
-    margin: 35px 0px;
-  }
-  .contenedorIcons .circulo {
-    background-color: #d9d9d9;
-    padding: 15px;
-    display: flex;
-    border-radius: 58px;
-  }
-  .emailLogo {
-    width: 100%;
-  }
-  .textoAuth {
-    color: white;
-    font-size: 17px;
-  }
-  .parrafoInicioSesion {
-    color: white;
-    margin-bottom: 50px;
-    font-size: 17px;
-  }
-  .iniciarSesionBtn {
-    padding: 19px 118px;
-    border-radius: 12px;
-    border: none;
-    /* box-shadow: inset 0px -30px 15px -27px white; */
-    background: #fc6537;
-    color: white;
-  }
+.containerMainRegister {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 700px;
+  box-shadow: 0px 0px 28px -6px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  max-width: 1070px;
+}
+.register_container {
+  padding: 150px 0px 50px 0px;
+}
+.logo {
+  width: 90px;
+  margin-bottom: 6%;
+}
+.containerCasillas__register {
+  padding: 80px;
+  display: flex;
+  margin-left: 20px;
+}
+.casillas {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 6%;
+  width: 124%;
+}
+.containerNombre {
+  background: #e9e5e5;
+  padding: 4px 5px 4px 5px;
+  width: 55%;
+  display: flex;
+  border-radius: 4px;
+}
+.casillas div {
+  background: #e9e5e5;
+  padding: 4px 5px 4px 5px;
+  width: 110%;
+  display: flex;
+  border-radius: 4px;
+  margin-bottom: 50px;
+}
+.casillas label {
+  width: 100%;
+  display: flex;
+  background: #e9e5e5;
+  padding: 5px;
+}
+.casillas div img {
+  width: 7%;
+}
+.casillas input {
+  width: 87%;
+  padding: 18px;
+  border: none;
+  background: #e9e5e5;
+}
+.remember {
+  display: flex;
+  margin-bottom: 55px;
+}
+.buttonRegister {
+  padding: 19px 118px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: inset 0px -30px 15px -27px white;
+  background: #fc6537;
+  color: white;
+}
+.containerFotoMain {
+  width: 50%;
+}
+.containerFoto {
+  /* padding-left: 748px; */
+  height: 100%;
+  position: absolute;
+  /* width: 100%; */
+  top: 0;
+  right: 0;
+}
+.fotoFondo {
+  right: 0px;
+  /* width: 53%; */
+  position: absolute;
+  /* top: 0; */
+  z-index: -1;
+  height: 100%;
+}
+.containerFaceMail {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  top: 30%;
+  right: 40%;
+}
+.contenedorIcons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 70px;
+  margin: 35px 0px;
+}
+.contenedorIcons .circulo {
+  background-color: #d9d9d9;
+  padding: 15px;
+  display: flex;
+  border-radius: 58px;
+}
+.emailLogo {
+  width: 100%;
+}
+.textoAuth {
+  color: white;
+  font-size: 17px;
+}
+.parrafoInicioSesion {
+  color: white;
+  margin-bottom: 50px;
+  font-size: 17px;
+}
+.iniciarSesionBtn {
+  padding: 19px 118px;
+  border-radius: 12px;
+  border: none;
+  /* box-shadow: inset 0px -30px 15px -27px white; */
+  background: #fc6537;
+  color: white;
+}

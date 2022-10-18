@@ -1,56 +1,28 @@
-* {
-    font-family: "Poppins", sans-serif;
+.mainContainer_payment{
+    margin-top: 30px;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-.containerCasillas {
-    display: flex;
-    flex-direction: column;
-}
-.subtitle{
+.mainContainer_payment .subtitle{
     margin-bottom: 15px;
+    text-align: justify;
 }
-.labelCard{
+
+.mainContainer_payment > form{
+    padding: 0px 40px 0px 0px;
+}
+
+.mainContainer_payment > form > label{
+    width: 100%;
+    height: 70px;
     display: flex;
     align-items: center;
+    gap: 30px;
+    padding: 10px;
+    border: 1px solid #64646450;
+    color: #64646480;
 }
-form{
-    margin-top: 21%;
-    margin-left: 8%;
-}
-form label{
-    width: 35%;
-    border: 1px solid #E9E5E5;
-    padding: 9px;
-    margin-bottom: 10px;
-}
-.cards{
-    display: flex;
-    width: 68%;
-    justify-content: flex-end;
-}
-.cards img{
-    width: 11%;
-    margin-left: 13px ;
-}
-span{
-    font-size: 12px;
-    margin-left: 8px;
-}
-label input{
-    margin-right: 8px;
-}
-.casillasDatos{
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-}
-.casillasDatos input{
-    padding: 9px;
-    margin-bottom: 10px;
-}
-.subtitleDatos{
-    margin-top: 50px;
-    margin-bottom: 15px;
+
+.mainContainer_payment > form > label input{
+    width: 40px;
+    aspect-ratio: 1;
 }

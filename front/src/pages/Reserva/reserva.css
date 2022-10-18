@@ -1,0 +1,13 @@
+.reserva{
+    max-width: 1050px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 100px auto;
+}
+
+.reserva__form{
+    height: 100%;
+    padding: 50px 0px;
+}

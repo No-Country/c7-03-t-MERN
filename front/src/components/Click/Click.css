@@ -1,0 +1,41 @@
+.click-div {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 40px auto -30px;
+  max-width: 1050px;
+  font-size: 15px;
+  color: white;
+}
+
+.rectangle-div {
+  height: 100%;
+  background-color: #e06138;
+  padding: 100px 60px;
+}
+.click-list{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.click-list li{
+  display: flex;
+  gap: 20px;
+}
+
+.click-titulo {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.click-img {
+  object-fit: cover;
+}
+
+.click-icon{
+  width: 40px;
+  height: 40px;
+}

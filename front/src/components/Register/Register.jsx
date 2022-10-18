@@ -7,18 +7,18 @@ import Candado from "../../assets/icons/candado.svg";
 import Facebook from "../../assets/icons/facebook.svg";
 import Fondo from "../../assets/images/imagenRegister.png";
 import "./Register.css";
-import { BrowserRouter, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Register = () => {
   return (
-    <section>
+    <section className="register_container">
       <div className="containerMainRegister">
-        <form action="/register" method="POST" className="containerCasillas">
+        <form className="containerCasillas__register">
           <div className="casillas">
             <img src={Logo} alt="Logo" className="logo" />
             <div className="containerNombre">
-              <label for='user'>
-                <img src={User} />
+              <label htmlFor='user'>
+                <img src={User} alt="User_image" />
                 <input
                   type="text"
                   id="Name"
@@ -29,8 +29,8 @@ const Register = () => {
               </label>
             </div>
             <div className="containerCorreo">
-              <label for='email'>
-                <img src={EmailBold} />
+              <label htmlFor='email'>
+                <img src={EmailBold} alt="Email"/>
                 <input
                   type="email"
                   id="Email"
@@ -41,8 +41,8 @@ const Register = () => {
               </label>
             </div>
             <div className="containerPass">
-              <label for='password'>
-                <img src={Candado} />
+              <label htmlFor='password'>
+                <img src={Candado} alt="Candado"/>
                 <input
                   type="password"
                   id="Password"
@@ -53,8 +53,8 @@ const Register = () => {
               </label>
             </div>
             <div className="containerConfirmPass">
-              <label for='confirmPassword'>
-                <img src={Candado} />
+              <label htmlFor='confirmPassword'>
+                <img src={Candado} alt="Candado"/>
                 <input
                   type="password"
                   id="ConfirmPassword"
@@ -88,13 +88,11 @@ const Register = () => {
               </div>
               <div className="containerInicioSesion">
                 <p className="parrafoInicioSesion">¿Ya tienes una cuenta?</p>
-                <BrowserRouter>
                 <Link to='/login'>
                 <button type="submit" className="iniciarSesionBtn">
                   ¡Inicia Sesion!
                 </button>
                 </Link>
-                </BrowserRouter>
               </div>
             </div>
           </div>

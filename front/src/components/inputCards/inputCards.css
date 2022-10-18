@@ -1,0 +1,17 @@
+.title-inputs {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+.dataBox{
+  display: flex;
+  flex-direction: column;
+  width: 92%;
+ 
+}
+
+.dataBox input {
+  padding: 9px;
+  margin-bottom: 10px;
+  border: none;
+  background: #E9E5E5;
+}

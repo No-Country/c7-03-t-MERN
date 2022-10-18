@@ -1,0 +1,93 @@
+{
+  "status": "success",
+  "canchas": [
+    {
+      "id": 1,
+      "name": "Cancha Prado, Progreso",
+      "image": "./assets/images/cancha1.jpg",
+      "location": "Ribot, Montevideo",
+      "price": 1200,
+      "category": "Futbol",
+      "usuarios": 10,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt cupiditate magnam quam molestiae saepe consequuntur dolor obcaecati non dignissimos quos? Iure dolorum reprehenderit nihil quibusdam, ad deserunt atque alias nam?",
+      "dueño": "Bizarrap"
+    },
+    {
+      "id": 2,
+      "name": "Cancha Prado, Progreso",
+      "image": "./assets/images/cancha2.jpg",
+      "location": "Ribot, Montevideo",
+      "price": 1200,
+      "category": "Futbol",
+      "usuarios": 10,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt cupiditate magnam quam molestiae saepe consequuntur dolor obcaecati non dignissimos quos? Iure dolorum reprehenderit nihil quibusdam, ad deserunt atque alias nam?",
+      "dueño": "Bizarrap"
+    },
+    {
+      "id": 3,
+      "name": "Cancha Prado, Progreso",
+      "image": "./assets/images/cancha3.jpg",
+      "location": "Ribot, Montevideo",
+      "price": 1200,
+      "category": "Futbol",
+      "usuarios": 10,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt cupiditate magnam quam molestiae saepe consequuntur dolor obcaecati non dignissimos quos? Iure dolorum reprehenderit nihil quibusdam, ad deserunt atque alias nam?",
+      "dueño": "Bizarrap"
+    },
+    {
+      "id": 4,
+      "name": "Cancha Prado, Progreso",
+      "image": "./assets/images/cancha4.jpg",
+      "location": "Ribot, Montevideo",
+      "price": 1200,
+      "category": "Futbol",
+      "usuarios": 10,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt cupiditate magnam quam molestiae saepe consequuntur dolor obcaecati non dignissimos quos? Iure dolorum reprehenderit nihil quibusdam, ad deserunt atque alias nam?",
+      "dueño": "Bizarrap"
+    },
+    {
+      "id": 5,
+      "name": "Cancha Prado, Progreso",
+      "image": "./assets/images/cancha5.jpg",
+      "location": "Ribot, Montevideo",
+      "price": 1200,
+      "category": "Futbol",
+      "usuarios": 10,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt cupiditate magnam quam molestiae saepe consequuntur dolor obcaecati non dignissimos quos? Iure dolorum reprehenderit nihil quibusdam, ad deserunt atque alias nam?",
+      "dueño": "Bizarrap"
+    },
+    {
+      "id": 6,
+      "name": "Cancha Prado, Progreso",
+      "image": "./assets/images/cancha6.jpg",
+      "location": "Ribot, Montevideo",
+      "price": 1200,
+      "category": "Futbol",
+      "usuarios": 10,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt cupiditate magnam quam molestiae saepe consequuntur dolor obcaecati non dignissimos quos? Iure dolorum reprehenderit nihil quibusdam, ad deserunt atque alias nam?",
+      "dueño": "Bizarrap"
+    },
+    {
+      "id": 7,
+      "name": "Cancha Prado, Progreso",
+      "image": "./assets/images/cancha7.jpg",
+      "location": "Ribot, Montevideo",
+      "price": 1200,
+      "category": "Futbol",
+      "usuarios": 10,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt cupiditate magnam quam molestiae saepe consequuntur dolor obcaecati non dignissimos quos? Iure dolorum reprehenderit nihil quibusdam, ad deserunt atque alias nam?",
+      "dueño": "Bizarrap"
+    },
+    {
+      "id": 8,
+      "name": "Cancha Prado, Progreso",
+      "image": "./assets/images/cancha8.jpg",
+      "location": "Ribot, Montevideo",
+      "price": 1200,
+      "category": "Futbol",
+      "usuarios": 10,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt cupiditate magnam quam molestiae saepe consequuntur dolor obcaecati non dignissimos quos? Iure dolorum reprehenderit nihil quibusdam, ad deserunt atque alias nam?",
+      "dueño": "Bizarrap"
+    }
+  ]
+}

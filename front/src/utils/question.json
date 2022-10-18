@@ -1,0 +1,25 @@
+{
+  "status": "success",
+  "questions": [
+    {
+      "id": 1,
+      "question": "¿Cómo puedo alquilar una cancha?",
+      "res": "Para alquilar una cancha debes, primero que nada, elegir una; puedes hacerlo desde el buscador o desde el propio inicio. Una vez elegida, solo falta rellenar los datos correspondientes, cordinar el método de pago y listo."
+    },
+    {
+      "id": 2,
+      "question": "¿Cómo contactarnos?",
+      "res": "Existe un formulario de contacto, es una se las secciones de la página. Solo rellena tus datos y hazno tus consulta, el equipo se pondrá en contacto contigo lo antes posible."
+    },
+    {
+      "id": 3,
+      "question": "No tengo tarjeta de crédito, ¿cómo puedo pagar?",
+      "res": "Contamos con dos métodos de pago, con tarjeta y efectivo. El método de efectivo no necesito ningún pago previo, harás el pago en persona. Confiamos en tu responsabilidad."
+    },
+    {
+      "id": 4,
+      "question": "¿Puedo alquilar una cancha si soy menor de edad?",
+      "res": "Nuestra idea es llegar es poder ayudar a tpdas las edades, desde adolescentes hasta adultos. No poseemos requisitos de mayoría de edad."
+    }
+  ]
+}

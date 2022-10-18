@@ -1,16 +1,10 @@
-* {
-    font-family: "Poppins", sans-serif;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
 form{
     text-align: center;
 }
 .mainContainer{
     display: flex;
-    margin-top: 21%;
-    margin-left: 12%;
+    justify-content: center;
+    margin-top: 20px;
 }
 .containerCasillas{
     display: flex;
