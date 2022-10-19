@@ -7,11 +7,16 @@ const { catchAsync } = require('../utils/catchAsync.util');
 const { AppError } = require('../utils/appError.util');
 
 //Middleware
-
+const { ref, uploadBytes, getDownloadURL } = require('firebase/storage');
+const { storage } = require('../utils/firebase');
 
 const createScenery = catchAsync(async(req, res, next) => {
 
     const { sceneryName, location:{ lat, long }, description, rating } = req.body;
+
+    const imgScenerysRef = ref(storage, `scenerys/${req.file.originalname}`);
+    const imgScenerys = await uploadBytes(imgScenerysRef, req.file.buffer);
+
 
     const { sessionUser } = req;
     const user = await User.findById(sessionUser._id);
@@ -28,6 +33,7 @@ const createScenery = catchAsync(async(req, res, next) => {
         sceneryName,
         location:{ lat, long },
         description,
+        sceneryImgUrl: imgScenerys.metadata.fullPath,
         rating,
         user
     });

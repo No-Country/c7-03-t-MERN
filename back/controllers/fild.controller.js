@@ -19,8 +19,6 @@ const createFild = catchAsync(async (req, res, next) => {
     const imgFildRef = ref(storage, `filds/${req.file.originalname}`);
     const imgUpload = await uploadBytes(imgFildRef, req.file.buffer);
 
-
-
     const sceneryExist = await Scenery.findById(sceneryId);
     const sportExist = await Sport.findById(sportId);
 
