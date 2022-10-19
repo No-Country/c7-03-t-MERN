@@ -101,7 +101,7 @@ section{
       margin-bottom: 6px;
     }
     .basket{
-      width: 7%;
+      width: 6%;
     }
     .deporte{
       width: 89%;
@@ -112,6 +112,7 @@ section{
     }
     .containerBuscador div{
       width: 42%;
+      gap: 15px;
     }
     .containerBuscador input{
       padding-top: 0px;
