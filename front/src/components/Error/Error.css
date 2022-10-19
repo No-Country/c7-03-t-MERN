@@ -1,17 +1,14 @@
-* {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-body {
-    font-family: 'Poppins', sans-serif;
-}
-section{
-    text-align: center;
+.section__error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
 }
 .imgError{
-    width: 700px;
+    width: 100%;
 }
 .section_error{
     text-align: center;
@@ -23,6 +20,6 @@ section{
 }
 .containerTitle{
     text-align: center;
-    font-size: 32px;
+    font-size: 1.5rem;
     padding-bottom: 100px;
 }
