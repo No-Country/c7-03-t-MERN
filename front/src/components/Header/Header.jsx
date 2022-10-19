@@ -21,7 +21,7 @@ const Header = () => {
         {/* Esto es para hacer el video más opaco así no se pierden las letras */}
       </div>
       <div className="header__container">
-        <Navbar />
+        {/* <Navbar /> */}
 
         <div className="containerTextoHome">
           <div className="containerSubtitulos">
