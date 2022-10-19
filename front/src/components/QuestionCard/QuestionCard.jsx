@@ -4,26 +4,34 @@ import masVector from "../../assets/icons/mas_vector.png";
 import { motion, AnimatePresence } from "framer-motion";
 
 function QuestionCard({ question }) {
-  const [openCard, setOpenCard] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOpen = () => setIsOpen(!isOpen);
   return (
-    <>
-      <div className="question__card" onClick={() => setOpenCard(!openCard)}>
+    <motion.li
+      className="question__card__container"
+      layout
+      onClick={toggleOpen}
+      initial={{ borderRadius: 10 }}
+    >
+      <motion.div layout className="question__card">
         <img src={masVector} alt="Mas" />
         <h3 className="question__card__title">{question.question}</h3>
-      </div>
+      </motion.div>
       <AnimatePresence>
-        {openCard && (
+        {isOpen && (
           <motion.div
-            initial={{y: "-100%"}}
-            animate={{y: "0"}}
-            exit={{y: "-100%"}}
+            layout
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="question__card__res"
           >
-            <p>{question.res}</p>
+            {question.res}
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </motion.li>
   );
 }
 

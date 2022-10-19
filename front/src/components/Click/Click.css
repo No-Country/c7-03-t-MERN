@@ -58,18 +58,3 @@
   height: 40px;
 }
 
-
-
-@media screen and (max-width: 768px) {
-  .rectangle-div{
-    grid-column: 1 / -1;
-    padding: 50px;
-  }
-  .click-img{
-  display: none;
-  }
-  .click-icon{
-    width: 20px;
-    height: 20px;
-  }
-}

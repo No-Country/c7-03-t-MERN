@@ -63,42 +63,4 @@
 }
 
 
-@media(min-width: 483px) {
-  .navbarContainer {
-    gap: 77%;
-  }
-
-}
-
-@media (min-width: 1023px){
-  .containerBtn{
-    display: flex;
-  }
-  .menuNavegacion{
-    display: flex; 
-    height: 100%;
-    margin-left: 30px;
-    align-items: center;
-  gap: 25px;
-  }
-  .navbarContainer{
-    gap: 0;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 1070px;
-    justify-content: space-around;
-  }
-  .hamburgerBtn{
-    display: none;
-  }
-  .logo{
-    width: 56px;
-  }
-
-  /* .containerBtnMain{
-    display: flex;
-  } */
-
 }
