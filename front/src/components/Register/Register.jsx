@@ -31,7 +31,7 @@ const Register = () => {
           onSubmit={handleSubmit(EnviarDatos)}
         >
           <div className="casillas">
-            <img src={Logo} alt="Logo" className="logo" />
+            <img src={Logo} alt="Logo" className="logoRegister" />
             <div className="containerNombre">
               <label htmlFor="user">
                 <img src={User} alt="User_image" />
@@ -84,28 +84,28 @@ const Register = () => {
         <div className="containerFotoMain">
           <div className="containerFoto">
             <img src={Fondo} alt="Foto Fondo" className="fotoFondo" />
-            <div className="containerFaceMail">
-              <p className="textoAuth">También puedes continuar con:</p>
-              <div className="contenedorIcons">
-                <div className="circulo">
-                  <img
-                    src={Facebook}
-                    alt="Facebook Logo"
-                    className="facebookLogo"
-                  />
-                </div>
-                <div className="circulo">
-                  <img src={Email} alt="Email Logo" className="emailLogo" />
-                </div>
+          </div>
+          <div className="containerFaceMailDesktop">
+            <p className="textoAuth">También puedes continuar con:</p>
+            <div className="contenedorIcons">
+              <div className="circulo">
+                <img
+                  src={Facebook}
+                  alt="Facebook Logo"
+                  className="facebookLogo"
+                />
               </div>
-              <div className="containerInicioSesion">
-                <p className="parrafoInicioSesion">¿Ya tienes una cuenta?</p>
-                <Link to="/login">
-                  <button type="submit" className="iniciarSesionBtn">
-                    ¡Inicia Sesion!
-                  </button>
-                </Link>
+              <div className="circulo">
+                <img src={Email} alt="Email Logo" className="emailLogo" />
               </div>
+            </div>
+            <div className="containerInicioSesion">
+              <p className="parrafoInicioSesion">¿Ya tienes una cuenta?</p>
+              <Link to="/login">
+                <button type="submit" className="iniciarSesionBtn">
+                  ¡Inicia Sesion!
+                </button>
+              </Link>
             </div>
           </div>
         </div>
