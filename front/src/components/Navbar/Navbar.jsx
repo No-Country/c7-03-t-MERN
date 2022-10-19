@@ -2,14 +2,16 @@ import React from "react";
 import "./Navbar.css";
 import Logo from "../../assets/icons/rugbyBall.svg";
 import { Link } from "react-router-dom";
+import Menu from '../../assets/icons/menu.svg';
 
 const Navbar = () => {
   return (
     <div className="nav-main">
       <div className="navbarContainer">
         <Link to="/">
-          <img src={Logo} alt="Logo" className="logo_nav" />
+          <img src={Logo} alt="Logo" className="logo" />
         </Link>
+        <img src={Menu} className='hamburgerBtn' alt="hamburger" />
         <div className="menuNavegacion">
           <Link to="/" className="nav">
             <span>Home</span>

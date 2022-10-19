@@ -1,4 +1,4 @@
-.nav-main{
+.nav-main {
   width: 100%;
   position: absolute;
   top: 0;
@@ -6,38 +6,45 @@
   display: flex;
   justify-content: center;
   align-items: center;
-z-index: 100;
+  z-index: 100;
 }
-.navbarContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 2;
-  padding: 25px 0px ;
-  width: 100%;
-  max-width: 1070px;
-}
-.logo_nav {
-  width: 50px;
-}
-.menuNavegacion .nav {
 
+.navbarContainer {
+  /* AGREGUE ESTO */
+  display: flex;
+  width: 100%;
+  padding: 19px 19px;
+  background: #ad4827;
+  gap: 70%;
+}
+
+.logo {
+  /* AGREGUE ESTO  */
+  width: 31px;
+}
+
+.menuNavegacion .nav {
   color: #9b9b9b;
   text-decoration: none;
 }
-.menuNavegacion{
-    height: 100%;
-    margin-left: 30px;
-    display: flex;
-    flex: none;
-    align-items: center;
-    gap: 25px;
+
+.menuNavegacion {
+  height: 100%;
+  margin-left: 30px;
+  display: none;
+  /* flex: none; */
+  align-items: center;
+  gap: 25px;
+  /* AGREGUE ESTO */
 }
 
 .containerBtn {
-  display: flex;
+  /* display: flex; */
   justify-content: flex-end;
+  /* AGREGUE ESTO */
+  display: none;
 }
+
 .inicioSesion {
   margin-right: 23px;
   padding: 14px 15px 14px 15px;
@@ -55,8 +62,5 @@ z-index: 100;
   color: white;
 }
 
-@media (max-width: 768px) {
-  .containerBtn{
-    display: none;
-  }
+
 }

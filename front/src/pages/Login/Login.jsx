@@ -4,8 +4,17 @@ import gmail from "../../assets/icons/email.svg";
 import facebook from "../../assets/icons/facebook.svg";
 import correo_icon from "../../assets/icons/emailBold.svg";
 import candado_icon from "../../assets/icons/candado.svg";
+import { useForm } from "react-hook-form";
+import axios from "axios";
 
 function Login() {
+  const { register, handleSubmit } = useForm();
+  function loginUser(e) {
+    axios
+      .post("http://back-reserva.herokuapp.com/api/v1/users/login", e)
+      .then((res) => console.log(res));
+    //console.log(e);
+  }
   return (
     <div className="login">
       <div className="login-camp">
@@ -27,7 +36,7 @@ function Login() {
             </div>
           </div>
         </div>
-        <div className="camps">
+        <form onSubmit={handleSubmit(loginUser)} className="camps">
           <div className="ball">
             <img src={vector} alt="Vecto" />
           </div>
@@ -35,9 +44,8 @@ function Login() {
             <label htmlFor="email">
               <img src={correo_icon} alt="Correo" />
               <input
+                {...register("email")}
                 type="email"
-                id="Email"
-                name="email"
                 placeholder="correo@correo.com"
                 className="email"
               />
@@ -47,9 +55,8 @@ function Login() {
             <label htmlFor="email">
               <img src={candado_icon} alt="Candado" />
               <input
-                type="email"
-                id="Email"
-                name="email"
+                {...register("password")}
+                type="password"
                 placeholder="*************"
                 className="email"
               />
@@ -61,7 +68,7 @@ function Login() {
           </div>
           <button>Acceder</button>
           <p>Olvide mi constraseña</p>
-        </div>
+        </form>
       </div>
     </div>
   );
