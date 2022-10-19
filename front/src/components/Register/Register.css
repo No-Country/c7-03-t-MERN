@@ -150,7 +150,7 @@
 }
 
 /* TABLET */
-@media (min-width: 767px){
+@media (min-width: 736px){
   .containerFoto{
         height: 100%;
         position: absolute;
