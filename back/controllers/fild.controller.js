@@ -57,14 +57,14 @@ const getFildAll = catchAsync(async (req, res, next) => {
     const findAlls = await Fild.find({});
 
     const fildPromises = findAlls.map(async findAll => {
-        const imgRef = ref(storage, findAll)
+        const imgRef = ref(storage, findAll);
     });
 
     const fildResolved = await Promises.all(fildPromises);
 
     res.status(201).json({
         status: 'success',
-        // fild,
+        findAlls
     })
 });
 
