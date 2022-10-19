@@ -1,8 +1,6 @@
 import React from "react";
 import "./Header.css";
 import videoFutbol from "../../assets/videos/futbolHome.mp4";
-import Map from "../../assets/icons/map.svg";
-import Filter from "../Filter/Filter"
 
 const Header = () => {
   return (
@@ -44,7 +42,6 @@ const Header = () => {
             pero lo voy a solucionar */}
           </div>
         </div>
-        <Filter />
       </div>
     </div>
   );
