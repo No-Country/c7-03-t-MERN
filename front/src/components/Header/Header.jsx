@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "../Navbar/Navbar";
 import "./Header.css";
 import videoFutbol from "../../assets/videos/futbolHome.mp4";
+import imagenHeader from '../../assets/images/imagenPrincipal.png';
+import Search from '../Search/Search';
 
 const Header = () => {
   return (
@@ -43,6 +45,7 @@ const Header = () => {
             {/* En los botones debería haber una redirección a esas secciones. No pude hacer andar el <Link> de react-router-dom, no sé por qué,
             pero lo voy a solucionar */}
           </div>
+          <Search />
         </div>
       </div>
     </section>

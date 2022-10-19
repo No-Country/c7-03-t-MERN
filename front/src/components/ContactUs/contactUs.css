@@ -134,6 +134,28 @@
 
 @media (max-width: 768px) {
   .contactus__container > h3 {
+    display: none;
+  }
+  
+  .contactus__container > p {
+    display: none;
+  }
 
+  .contactus__card{
+    box-shadow: none;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+  
+  .contactus__form{
+    padding: 0;
+  }
+
+  .background__contactus{
+    display: none;
+  }
+
+  .contactus__container{
+    margin-top: 100px;
   }
 }

@@ -113,3 +113,94 @@ section {
   padding-top: 30px;
 }
 
+/* 
+Todavía no se definen propiedades útiles
+.containerBotonesSubtitulos {
+  display: flex;
+  justify-content: flex-start;
+} */
+
+
+
+/* @media (min-width: 767px){
+  .containerBuscador {
+    width: 46%;
+    background: #FF7F56;
+    padding-top: 20px;
+    border-radius: 9px;
+    display: flex;
+    margin-top: 90px;
+  }
+} */
+
+@media(min-width: 1024px) {
+  .subtitulo {
+    font-size: 15px;
+  }
+
+  .subtituloInferior {
+    font-size: 47px;
+    line-height: 90px;
+    padding-bottom: 40px;
+  }
+
+  .subtituloInferior span {
+    border-bottom: 7px solid #FF7F56;
+    border-radius: 3px;
+  }
+  /* .containerBuscador{
+    width: 46%;
+  } */
+  .containerSubtitulos hr{
+    display: none;
+  }
+  .contenedorVideo img{
+    display: none;
+  }
+  .contenedorVideo .videoHome {
+    display: flex;
+  }
+  
+}
+@media(min-width: 1280px){
+  .containerTextoHome{
+    text-align: left;
+  }
+  .textoHome{
+    text-align: left;
+    margin-top: -20px;
+    width: 65%;
+  }
+  .subtituloInferior{
+    font-size: 47px;
+  }
+  .containerBuscador{
+    width: 100%;
+    display: flex;
+    margin-top: 20%;
+    /* justify-content: space-evenly; */
+  }
+  .map{
+    width: 26px;
+  }
+  .search{
+    width: 12%;
+    margin-bottom: 6px;
+  }
+  .basket{
+    width: 7%;
+  }
+  .deporte{
+    width: 89%;
+  }
+  .calendario{
+    width: 88%;
+    margin-right: 17px;
+  }
+  .containerBuscador div{
+    width: 42%;
+  }
+  .containerBuscador input{
+    padding-top: 0px;
+  }
+}
