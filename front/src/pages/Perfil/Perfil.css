@@ -1,0 +1,38 @@
+.canchas__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.canchas__title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 90px;
+  text-align: center;
+  color: #121212;
+}
+
+.canchas__list {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 20px;
+}
+
+@media (max-width: 1090px) {
+  .canchas__list {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (max-width: 590px) {
+  .canchas__list {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .canchas__title{
+    line-height: normal;
+  }
+}

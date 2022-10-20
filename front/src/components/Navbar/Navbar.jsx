@@ -7,8 +7,8 @@ import Close from "../../assets/icons/x.svg";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
-
   const location = useLocation().pathname;
+  const token = localStorage.getItem("tokenUser");
 
   return (
     <div className="nav-main">
@@ -67,12 +67,22 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="containerBtn">
-            <Link onClick={() => setOpenMenu(false)} to="/login">
-              <button className="inicioSesion">Iniciar Sesión</button>
-            </Link>
-            <Link onClick={() => setOpenMenu(false)} to="/register">
-              <button className="registrarse">Registrarse</button>
-            </Link>
+            {token !== null ? (
+              <>
+                <Link onClick={() => setOpenMenu(false)} to="/perfil">
+                  <button className="inicioSesion">Perfil</button>
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link onClick={() => setOpenMenu(false)} to="/login">
+                  <button className="inicioSesion">Iniciar Sesión</button>
+                </Link>
+                <Link onClick={() => setOpenMenu(false)} to="/register">
+                  <button className="registrarse">Registrarse</button>
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>

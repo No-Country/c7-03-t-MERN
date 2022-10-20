@@ -7,6 +7,8 @@ import Search from "../Search/Search";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const token = localStorage.getItem("tokenUser");
+
   return (
     <section>
       <div className="contenedorVideo">
@@ -44,9 +46,15 @@ const Header = () => {
             </p>
           </div>
           <div className="containerBotonesSubtitulos">
-            <button className="comenzarBtn">
-              <Link to="/register">Comenzar</Link>
-            </button>
+            {token !== null ? (
+              <></>
+            ) : (
+              <>
+                <button className="comenzarBtn">
+                  <Link to="/register">Comenzar</Link>
+                </button>
+              </>
+            )}
             <button className="sobreNosotrosBtn">
               <a href="#ancla-1">Sobre Nosotros</a>
             </button>

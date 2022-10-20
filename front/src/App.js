@@ -6,7 +6,8 @@ import {
   RegisterPage,
   Contact,
   Login,
-  Reserva
+  Reserva,
+  Perfil,
 } from "./pages";
 import { useSelector } from "react-redux";
 import { ModalCancha, Navbar, Footer, Modal } from "./components";
@@ -30,6 +31,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/contacto" element={<Contact />} />
         <Route path="/booking" element={<Reserva />} />
+        <Route path="/perfil" element={<Perfil />} />
       </Routes>
       <Footer />
     </BrowserRouter>
