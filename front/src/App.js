@@ -9,15 +9,17 @@ import {
   Reserva
 } from "./pages";
 import { useSelector } from "react-redux";
-import { ModalCancha, Navbar, Footer } from "./components";
+import { ModalCancha, Navbar, Footer, Modal } from "./components";
 import React from "react";
 import "./App.css";
 
 function App() {
   const modalData = useSelector((state) => state.chanchaModal);
+  const modal = useSelector((state) => state.modal);
   return (
     <BrowserRouter>
       <Navbar />
+      {modal !== null && <Modal />}
       {modalData !== null && <ModalCancha />}
       <Routes>
         <Route path="/" element={<Home />} />
