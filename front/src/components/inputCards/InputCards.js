@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import "./inputCards.css";
+import { Link } from 'react-router-dom';
 
 function InputCards() {
   const { register, handleSubmit } = useForm();
@@ -28,6 +29,9 @@ function InputCards() {
             type="number"
             placeholder="CVN"
           />
+          <div className="containerBtnInputCards">
+            <Link to="/PagoCheck" type="submit">Alquilar</Link>
+          </div>
         </form>
       </div>
     </div>
