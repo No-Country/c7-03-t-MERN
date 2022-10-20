@@ -12,7 +12,8 @@ function PagoCheck({ text, to, toName }) {
   };
 
   return (
-    <div className="container-check">
+    <>
+    <div className="contadiviner-check">
       <div className="card-check">
         <img className="icon-check" alt="" src={img} />
         <div className="texto-check">
@@ -33,6 +34,7 @@ function PagoCheck({ text, to, toName }) {
         {toName}
       </Link>
     </motion.div>
+    </>
   );
 }
 
