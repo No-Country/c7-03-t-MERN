@@ -39,3 +39,4 @@ function PagoCheck({ text, to, toName }) {
 }
 
 export default PagoCheck;
+
