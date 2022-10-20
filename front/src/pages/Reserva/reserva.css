@@ -11,3 +11,10 @@
     height: 100%;
     padding: 50px 0px;
 }
+
+@media (max-width: 850px) {
+    .reserva{
+        width: 95%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

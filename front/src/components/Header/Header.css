@@ -1,18 +1,51 @@
-.header__container{
- max-width: 1070px;
- margin: auto;
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* AGREGUE */
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+.header__container {
+  max-width: 1070px;
+  margin: auto;
+  /* AGREGUE */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 200px 20px;
 }
 
 .contenedorVideo {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  position: absolute;
+  /* AGREGUE : */
+  top: 0;
+  left: 0;
+}
+
+/* AGREGUE */
+.contenedorVideo img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  object-position: center center;
 }
 
 .contenedorVideo .videoHome {
   min-width: 100%;
   min-height: 100%;
+  display: none;
 }
+
 .header-overlay {
   height: 100vh;
   width: 100%;
@@ -20,16 +53,21 @@
   top: 0;
   left: 0;
   background: black;
-  z-index: 1;
+  /* CAMBIE EL 1 POR EL 0 */
+  z-index: 0;
   opacity: 0.77;
 }
+
 .containerTextoHome {
-  position: absolute;
+  /* position: absolute;
   z-index: 2;
-  top: 20%;
+  top: 30%;
   width: 44%;
-  font-size: 22px;
+  font-size: 22px; */
+  /* AGREGUE ESTO */
+  text-align: center;
 }
+
 .comenzarBtn {
   margin-right: 23px;
   padding: 14px 40px 14px 40px;
@@ -38,6 +76,7 @@
   border-radius: 7px;
   color: #ad4827;
 }
+
 .sobreNosotrosBtn {
   /* margin-right: 52px; */
   padding: 14px 23px 14px 23px;
@@ -46,50 +85,124 @@
   border-radius: 7px;
   color: white;
 }
-.subtitulo{
-    color: #FF7549;
-    font-size: 15px;
+
+.subtitulo {
+  color: #FF7549;
+  font-size: 10px;
+  line-height: 15px;
 }
-.subtituloInferior span{
-    border-bottom: 7px solid #FF7F56;
-    border-radius: 3px;
-    
+
+.subtituloInferior {
+  font-weight: 700;
+  color: white;
+  font-size: 30px;
+  line-height: 45px;
 }
-.subtituloInferior{
-    padding-bottom: 40px;
-    color: white;
+
+.containerSubtitulos hr {
+  width: 225px;
+  margin: auto;
+  border: 4px solid #FF7F56;
+  border-radius: 14px;
 }
-.textoHome{
-  padding-right: 100px;
-    padding-bottom: 40px;
-    color: white;
-    font-size: 17px;
+
+.textoHome {
+  padding-bottom: 50px;
+  color: white;
+  font-size: 17px;
+  padding-top: 30px;
 }
-.containerBotonesSubtitulos{
-    display: flex;
-    justify-content: flex-start;
-}
-.containerBuscador{
-    width: 42%;
-    position: absolute;
-    z-index: 2;
-    bottom: 8%;
-    right: 30%;
+
+a { color: inherit; } 
+
+/* 
+Todavía no se definen propiedades útiles
+.containerBotonesSubtitulos {
+  display: flex;
+  justify-content: flex-start;
+} */
+
+
+
+/* @media (min-width: 767px){
+  .containerBuscador {
+    width: 46%;
     background: #FF7F56;
-    padding: 10px 30px;
+    padding-top: 20px;
     border-radius: 9px;
     display: flex;
-    justify-content: space-around;
+    margin-top: 90px;
+  }
+} */
+
+@media(min-width: 1024px) {
+  .subtitulo {
+    font-size: 15px;
+  }
+
+  .subtituloInferior {
+    font-size: 47px;
+    line-height: 90px;
+    padding-bottom: 40px;
+  }
+
+  .subtituloInferior span {
+    border-bottom: 7px solid #FF7F56;
+    border-radius: 3px;
+  }
+  /* .containerBuscador{
+    width: 46%;
+  } */
+  .containerSubtitulos hr{
+    display: none;
+  }
+  .contenedorVideo img{
+    display: none;
+  }
+  .contenedorVideo .videoHome {
+    display: flex;
+  }
+  
 }
-.containerBuscador input{
-    padding: 2px;
-    border-radius: 6px;
-    border: none;
-    text-align: center;
-}
-.map{
-    position: absolute;
-    bottom: 48px;
-    width: 27px;
-    margin-left: 71px;
+@media(min-width: 1280px){
+  .containerTextoHome{
+    text-align: left;
+  }
+  .textoHome{
+    text-align: left;
+    margin-top: -20px;
+    width: 65%;
+  }
+  .subtituloInferior{
+    font-size: 47px;
+  }
+  .containerBuscador{
+    width: 100%;
+    display: flex;
+    margin-top: 20%;
+    /* justify-content: space-evenly; */
+  }
+  .map{
+    width: 26px;
+  }
+  .search{
+    width: 12%;
+    margin-bottom: 6px;
+  }
+  .basket{
+    width: 7%;
+  }
+  .deporte{
+    width: 89%;
+  }
+  .calendario{
+    width: 88%;
+    margin-right: 17px;
+  }
+  .containerBuscador div{
+    width: 42%;
+  }
+  .containerBuscador input{
+    padding-top: 0px;
+  }
 }

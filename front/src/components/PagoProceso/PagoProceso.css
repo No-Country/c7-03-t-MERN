@@ -5,6 +5,10 @@
   padding: 20px;
 }
 
+.pago-proceso-img{
+  width: 40%;
+}
+
 .pago-card-description {
   display: flex;
   gap: 20px;
@@ -42,4 +46,18 @@
   font-size: 25px;
   line-height: 35px;
   color: #000000;
+}
+
+@media (max-width: 768px) {
+  .pago-card-description{
+    flex-direction: column;
+  }
+
+  .pago-proceso-img{
+    width: 100%;
+  }
+
+  .pago-card{
+    box-shadow: none;
+  }
 }

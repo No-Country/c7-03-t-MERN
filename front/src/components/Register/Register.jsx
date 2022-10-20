@@ -7,58 +7,70 @@ import Candado from "../../assets/icons/candado.svg";
 import Facebook from "../../assets/icons/facebook.svg";
 import Fondo from "../../assets/images/imagenRegister.png";
 import "./Register.css";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import axios from "axios";
 
 const Register = () => {
+  const { register, handleSubmit } = useForm();
+
+  function EnviarDatos(e) {
+    delete e.password2;
+
+    console.log(e);
+    axios
+      .post("https://back-reserva.herokuapp.com/api/v1/users/signup", e)
+      .then((res) => console.log(res));
+  }
+
   return (
     <section className="register_container">
       <div className="containerMainRegister">
-        <form className="containerCasillas__register">
+        <form
+          className="containerCasillas__register"
+          onSubmit={handleSubmit(EnviarDatos)}
+        >
           <div className="casillas">
-            <img src={Logo} alt="Logo" className="logo" />
+            <img src={Logo} alt="Logo" className="logoRegister" />
             <div className="containerNombre">
-              <label htmlFor='user'>
+              <label htmlFor="user">
                 <img src={User} alt="User_image" />
                 <input
+                  {...register("userName")}
                   type="text"
-                  id="Name"
-                  name="user"
                   placeholder="Usuario"
                   className="name"
                 />
               </label>
             </div>
             <div className="containerCorreo">
-              <label htmlFor='email'>
-                <img src={EmailBold} alt="Email"/>
+              <label htmlFor="email">
+                <img src={EmailBold} alt="Email" />
                 <input
+                  {...register("email")}
                   type="email"
-                  id="Email"
-                  name="email"
                   placeholder="correo@correo.com"
                   className="email"
                 />
               </label>
             </div>
             <div className="containerPass">
-              <label htmlFor='password'>
-                <img src={Candado} alt="Candado"/>
+              <label htmlFor="password">
+                <img src={Candado} alt="Candado" />
                 <input
+                  {...register("password")}
                   type="password"
-                  id="Password"
-                  name="password"
                   placeholder="Contraseña"
                   className="pass"
                 />
               </label>
             </div>
             <div className="containerConfirmPass">
-              <label htmlFor='confirmPassword'>
-                <img src={Candado} alt="Candado"/>
+              <label htmlFor="confirmPassword">
+                <img src={Candado} alt="Candado" />
                 <input
+                  {...register("password2")}
                   type="password"
-                  id="ConfirmPassword"
-                  name="confirmPassword"
                   placeholder="Confirmar Contraseña"
                   className="confirmPass"
                 />
@@ -71,8 +83,9 @@ const Register = () => {
         </form>
         <div className="containerFotoMain">
           <div className="containerFoto">
-                <img src={Fondo} alt="Foto Fondo" className="fotoFondo" />
-            <div className="containerFaceMail">
+            <img src={Fondo} alt="Foto Fondo" className="fotoFondo" />
+          </div>
+          <div className="containerFaceMailDesktop">
             <p className="textoAuth">También puedes continuar con:</p>
             <div className="contenedorIcons">
               <div className="circulo">
@@ -85,15 +98,14 @@ const Register = () => {
               <div className="circulo">
                 <img src={Email} alt="Email Logo" className="emailLogo" />
               </div>
-              </div>
-              <div className="containerInicioSesion">
-                <p className="parrafoInicioSesion">¿Ya tienes una cuenta?</p>
-                <Link to='/login'>
+            </div>
+            <div className="containerInicioSesion">
+              <p className="parrafoInicioSesion">¿Ya tienes una cuenta?</p>
+              <Link to="/login">
                 <button type="submit" className="iniciarSesionBtn">
                   ¡Inicia Sesion!
                 </button>
-                </Link>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -102,4 +114,4 @@ const Register = () => {
   );
 };
 
-export default Register; 
+export default Register;
