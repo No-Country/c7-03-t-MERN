@@ -15,4 +15,7 @@ export { default as PagoCheck } from "./PagoCheck/PagoCheck";
 export { default as PagoError } from "./PagoError/PagoError";
 export { default as PasosReserva } from "./PasosReserva/PasosReserva";
 export { default as Booking } from "./Booking/Booking";
-export { default as Payment } from "./Payment/Payment"
+export { default as Payment } from "./Payment/Payment";
+export { default as Modal } from "./Modal/Modal";
+export { default as HeaderPerfil } from "./HeaderProfile/HeaderProfile";
+export { default as SidebarPerfil } from "./Sidebar/SidebarProfile";

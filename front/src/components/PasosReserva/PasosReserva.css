@@ -3,11 +3,12 @@
   font-family: Poppins;
   margin: auto;
   color: #9b9b9b;
+  margin-bottom: 80px;
 }
 
 .card-pagos-reserva {
-  display: grid;
-  justify-content: center;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
   position: relative;

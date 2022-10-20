@@ -4,7 +4,7 @@
   justify-content: center;
   flex-direction: column;
   max-width: 1050px;
-  margin: 80px auto;
+  margin: 20px auto;
 }
 
 .contenedor-descripcion {
@@ -58,4 +58,20 @@
   line-height: 21px;
   align-self: flex-start;
   color: #ff7549;
+}
+
+@media (max-width: 768px) {
+  .contenedor-principal {
+    margin: 20px;
+  }
+
+  .contenedor-descripcion {
+    flex-direction: column;
+  
+  }
+  .contenedor-carta {
+    max-width: 90%;
+    min-height: 250px;
+
+  }
 }

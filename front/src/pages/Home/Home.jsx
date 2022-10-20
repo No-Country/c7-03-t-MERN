@@ -6,11 +6,15 @@ import {
   Click,
 } from "../../components";
 import data from "../../utils/canchas.json";
-import React from "react";
+import React, { useEffect } from "react";
 import "./home.css";
 import { motion } from "framer-motion";
+import axios from "axios";
 
 function Home() {
+  useEffect(() => {
+    axios.get("https://reserva-back.herokuapp.com/api/v1/fild/findAll").then((res) => console.log(res.data))
+  })
   return (
       <motion.div
         initial={{ opacity: 0 }}

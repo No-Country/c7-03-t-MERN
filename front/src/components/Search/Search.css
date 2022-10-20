@@ -1,0 +1,121 @@
+section{
+  display: flex;
+    justify-content: center;
+}
+.containerBuscador {
+    /* gap: 41px; */
+    /* width: 95%; */
+    background: #FF7F56;
+    padding-top: 20px;
+    border-radius: 9px;
+    display: flex;
+    margin-top: 90px;
+  }
+  
+  .containerBuscador input {
+    padding-top: 30px;
+    border: none;
+    text-align: center;
+    /* width: 77%; */
+  }
+  
+  .containerBuscador div {
+    display: FLEX;
+    gap: 8px;
+  }
+  
+  .map {
+    position: relative;
+    background: #D9D9D9;
+    border-radius: 7px;
+    width: 16%;
+  }
+  
+  .basket{
+    width: 16%;
+    position: relative;
+    background: #D9D9D9;
+    color: #FF7F56;
+  }
+  
+  .buscador {
+    margin-left: -30px;
+    background: #D9D9D9;
+    width: 96%;
+    margin-left: -22px;
+  }
+  
+  .deporte {
+    margin-left: -38px;
+    background: #D9D9D9;
+    width: 78%;
+  }
+  
+  .calendario {
+    margin-left: -41px;
+    background: #D9D9D9;
+  }
+  
+  .map {
+    position: relative;
+    border-radius: 7px;
+    background: #D9D9D9;
+  }
+  
+  .search{
+    width: 27%;
+    padding-right: 8px;
+  }
+
+  @media (min-width: 767px){
+    .containerBuscador {
+      width: 46%;
+      background: #FF7F56;
+      padding-top: 20px;
+      border-radius: 9px;
+      display: flex;
+      margin-top: 90px;
+    }
+  }
+
+  @media(min-width: 1024px) {
+    .containerBuscador{
+      width: 46%;
+    }
+    section{
+      display: flex;
+    justify-content: center;
+    }
+  }
+
+  @media(min-width: 1280px){
+    .containerBuscador{
+      width: 100%;
+      display: flex;
+      margin-top: 40px;
+    }
+    .map{
+      width: 26px;
+    }
+    .search{
+      width: 12%;
+      margin-bottom: 6px;
+    }
+    .basket{
+      width: 6%;
+    }
+    .deporte{
+      width: 89%;
+    }
+    .calendario{
+      width: 88%;
+      margin-right: 17px;
+    }
+    .containerBuscador div{
+      width: 42%;
+      gap: 15px;
+    }
+    .containerBuscador input{
+      padding-top: 0px;
+    }
+  }

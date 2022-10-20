@@ -3,31 +3,40 @@ import "./Booking.css";
 import Hour from "../../assets/icons/hour.svg";
 import Clock from "../../assets/icons/clock.svg";
 import Day from "../../assets/icons/day.svg";
+import { useForm } from "react-hook-form";
 
 const Booking = ({ changeNextStep }) => {
+
+  const { register, handleSubmit, formState } = useForm();
+
+  const submit = (data) => {
+    console.log(data);
+    changeNextStep(true)
+  };
+
   return (
     <div className="mainContainer">
-      <form action="/booking" method="POST">
+      <form action="/booking" method="POST" onSubmit={handleSubmit(submit)}>
         <div className="containerCasillas">
           <label>
             <img src={Day} alt="date" className="dayIcon" />
             Fecha de reserva
-            <input type="date" className="booking" />
+            <input type="date" id="date" className="booking" required {...register("date" ,{required:true}) } hasError={!!formState.errors?.date} />
           </label>
           <label>
             <img src={Hour} alt="hour" className="hourIcon" />
             Horario
-            <input type="time" className="hour" />
+            <input type="time" id="hour" className="hour" required {...register("hour" ,{required:true})} hasError={!!formState.errors?.hour} />
           </label>
           <label>
             <img src={Clock} alt="time" className="clockIcon" />
             Cantidad de horas
-            <input type="time" className="time" />
+            <input type="time" className="time" id="time" required {...register("time" ,{required:true})} hasError={!!formState.errors?.time} />
           </label>
         </div>
-        <button className="bookingBtn" onClick={() => changeNextStep(true)}>
+        <button type="submit" className="bookingBtn"  >
           Continuar
-        </button>{" "}
+        </button>
       </form>
     </div>
   );

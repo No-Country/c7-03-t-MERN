@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Payment.css";
 import Visa from "../../assets/icons/visa.svg";
 import AmericanCard from "../../assets/icons/americanExpress.svg";

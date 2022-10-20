@@ -1,12 +1,18 @@
 import React from "react";
+import Navbar from "../Navbar/Navbar";
 import "./Header.css";
 import videoFutbol from "../../assets/videos/futbolHome.mp4";
-import Map from "../../assets/icons/map.svg";
+import imagenHeader from "../../assets/images/imagenPrincipal.png";
+import Search from "../Search/Search";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  const token = localStorage.getItem("tokenUser");
+
   return (
-    <div>
+    <section>
       <div className="contenedorVideo">
+        <img src={imagenHeader} alt="header" />
         <video
           src={videoFutbol}
           className="videoHome"
@@ -18,6 +24,8 @@ const Header = () => {
         {/* Esto es para hacer el video más opaco así no se pierden las letras */}
       </div>
       <div className="header__container">
+        {/* <Navbar /> */}
+
         <div className="containerTextoHome">
           <div className="containerSubtitulos">
             <p className="subtitulo">
@@ -25,6 +33,7 @@ const Header = () => {
             </p>
             <h1 className="subtituloInferior">
               <span>¡ALQUILÁ</span> UNA CANCHA!
+              <hr />
             </h1>
           </div>
           <div>
@@ -37,31 +46,25 @@ const Header = () => {
             </p>
           </div>
           <div className="containerBotonesSubtitulos">
-            <button className="comenzarBtn">Comenzar</button>
-            <button className="sobreNosotrosBtn">Sobre Nosotros</button>
+            {token !== null ? (
+              <></>
+            ) : (
+              <>
+                <button className="comenzarBtn">
+                  <Link to="/register">Comenzar</Link>
+                </button>
+              </>
+            )}
+            <button className="sobreNosotrosBtn">
+              <a href="#ancla-1">Sobre Nosotros</a>
+            </button>
             {/* En los botones debería haber una redirección a esas secciones. No pude hacer andar el <Link> de react-router-dom, no sé por qué,
             pero lo voy a solucionar */}
           </div>
-        </div>
-        <div className="containerBuscador">
-          {/* BUSCAR UNA API PARA SU FUNCIONALIDAD */}
-          <div>
-            <img src={Map} className="map" alt="Map" />
-            <input type="text" className="buscador" placeholder="Zona" />
-          </div>
-          <div>
-            <input type="text" className="deporte" placeholder="Deporte" />
-          </div>
-          <div>
-            <input
-              type="date"
-              className="calendario"
-              placeholder="Día y fecha"
-            />
-          </div>
+          <Search />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -26,8 +26,8 @@ function PagoProceso() {
           <p className="pago-fecha-texto">Sin definir</p>
         </li>
         <li>
-          <p className="pago-data-p">TOTAL</p>
-          <i className="pago-horas">(Según la cantidad de horas)</i>
+          <p className="pago-data-p">TOTAL (p/h)</p>
+          {/* <i className="pago-horas">(Según la cantidad de horas)</i> */}
           <p className="pago-fecha-texto">Sin definir</p>
         </li>
       </ul>
