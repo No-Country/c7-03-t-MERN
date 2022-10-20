@@ -23,6 +23,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/preguntas" element={<Question />} />
         <Route path="/error" element={<ErrorPage />} />
+        <Route path="*" element={<ErrorPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/contacto" element={<Contact />} />

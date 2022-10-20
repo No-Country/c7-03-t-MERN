@@ -59,3 +59,15 @@
   align-self: flex-start;
   color: #ff7549;
 }
+
+@media (max-width: 768px) {
+  .contenedor-descripcion {
+    flex-direction: column;
+  
+  }
+  .contenedor-carta {
+    max-width: 90%;
+    min-height: 250px;
+
+  }
+}

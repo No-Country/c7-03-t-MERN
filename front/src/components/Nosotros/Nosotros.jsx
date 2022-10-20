@@ -5,6 +5,7 @@ import img from "../../assets/images/ImagenNosotros1.png";
 function Nosotros() {
   return (
     <div className="contenedor-principal-nosotros">
+      <a name="ancla-1"></a>
       <h2 className="titulo-nosotros">Sobre Nosotros</h2>
       <div className="nosotros-container">
         <div className="nosotros-item">

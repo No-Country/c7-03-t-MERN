@@ -13,7 +13,7 @@ function PasosReserva() {
         </li>
         <li>
           <img className="icon-pagos-reserva-2" alt="" src={img2} />
-          <p className="pagos-reserva-texto-2">Detalles de la reserva</p>
+          <p className="pagos-reserva-texto-2">Detalles</p>
         </li>
         <li>
           <img className="icon-pagos-reserva-3" alt="" src={img1} />

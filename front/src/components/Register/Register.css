@@ -2,33 +2,42 @@
   display: flex;
   align-items: center;
   text-align: center;
-  width: 100%;
+  flex-direction: column-reverse;
+  /* SAQUÉ ESTO -- (PARA DESKTOP)  */
+  /* width: 100%;
   height: 700px;
-  box-shadow: 0px 0px 28px -6px;
   border-radius: 12px;
-  position: relative;
   overflow: hidden;
   margin: auto;
-  max-width: 1070px;
+  max-width: 1070px; */
+  /* box-shadow: 0px 0px 28px -6px; */
+  /* position: relative; */
 }
 .register_container {
   padding: 150px 0px 50px 0px;
 }
-.logo {
-  width: 90px;
-  margin-bottom: 6%;
+.logoRegister {
+  margin-bottom: 41px;
+  width: 36px;
+  /* SAQUÉ ESTO -- (PARA DESKTOP) */
+  /* width: 90px; */
 }
 .containerCasillas__register {
-  padding: 80px;
   display: flex;
-  margin-left: 20px;
+  padding: 80px;
+  /* SAQUÉ ESTO -- (PARA DESKTOP) */
+  /* margin-left: 20px; */
 }
 .casillas {
   display: flex;
   flex-flow: column;
   align-items: center;
-  padding-top: 6%;
-  width: 124%;
+  /* AGREGUÉ ESTO --  */
+  margin-top: 300px;
+  /* SAQUÉ ESTO -- (PARA DESKTOP) */
+  /* padding-top: 6%;
+  width: 124%; */
+
 }
 .containerNombre {
   background: #e9e5e5;
@@ -49,16 +58,16 @@
   width: 100%;
   display: flex;
   background: #e9e5e5;
-  padding: 5px;
+  padding: 10px 14px;
 }
 .casillas div img {
   width: 7%;
 }
 .casillas input {
   width: 87%;
-  padding: 18px;
   border: none;
   background: #e9e5e5;
+  padding-left: 22px;
 }
 .remember {
   display: flex;
@@ -72,47 +81,53 @@
   background: #fc6537;
   color: white;
 }
-.containerFotoMain {
-  width: 50%;
-}
 .containerFoto {
   /* padding-left: 748px; */
-  height: 100%;
+  /* height: 104%;   */
   position: absolute;
-  /* width: 100%; */
+  width: 100%;
   top: 0;
   right: 0;
 }
-.fotoFondo {
-  right: 0px;
-  /* width: 53%; */
-  position: absolute;
-  /* top: 0; */
-  z-index: -1;
-  height: 100%;
+.containerFotoMain{
+  margin-top: 250px;
 }
+.fotoFondo {
+  /* right: 0px; */
+  /* width: 53%; */
+  position: relative;
+  top: 0;
+  z-index: -1;
+  /* height: 85%; */
+}
+.circulo
 .containerFaceMail {
   display: flex;
   flex-direction: column;
-  position: relative;
   z-index: 1;
   top: 30%;
   right: 40%;
+  align-items: center;    
+  padding-top: 100px; 
 }
 .contenedorIcons {
   display: flex;
   justify-content: space-between;
   padding: 0px 70px;
-  margin: 35px 0px;
+  margin: 10px 0px;
+  gap: 10px;
 }
 .contenedorIcons .circulo {
   background-color: #d9d9d9;
-  padding: 15px;
+  padding: 13px;
   display: flex;
   border-radius: 58px;
 }
+.facebookLogo{
+  width: 35px;
+}
 .emailLogo {
-  width: 100%;
+  width: 35px;
 }
 .textoAuth {
   color: white;
@@ -120,14 +135,133 @@
 }
 .parrafoInicioSesion {
   color: white;
-  margin-bottom: 50px;
+  margin-bottom: 12px;
   font-size: 17px;
 }
 .iniciarSesionBtn {
-  padding: 19px 118px;
   border-radius: 12px;
   border: none;
   /* box-shadow: inset 0px -30px 15px -27px white; */
   background: #fc6537;
   color: white;
+  padding: 10px;
+  font-size: 16px;
+  min-width: 295px;
+}
+
+/* TABLET */
+@media (min-width: 736px){
+  .containerFoto{
+        height: 100%;
+        position: absolute;
+        width: 101%;
+        top: 0;
+        right: 0;
+  }
+  .containerFotoMain{
+    margin-top: 230px;
+  }
+  .fotoFondo{
+    /* right: 0px; */
+    width: 100%;
+    /* position: relative; */
+    /* z-index: -1; */
+    height: 61%;
+  }
+  .contenedorIcons{
+    margin: 20px 0px;
+  }
+  .containerCasillas__register{
+    margin-top: 154px;
+  }
+}
+
+/* COMPU */
+@media (min-width: 1024px){
+  .containerMainRegister {
+    flex-direction: row;
+  } 
+  .fotoFondo {
+    height: 100%;
+    left: 255px;
+    width: 55%;
+    position: relative;
+    /* height: 100%;
+    right: 0px;
+    width: 53%;
+    position: absolute; */
+    /* top: 0; */
+    /* z-index: -1; */
+  }
+  .containerFaceMailDesktop{
+    margin-top: 0;
+    margin-bottom: 200px;
+    /* position: relative;
+    padding-top: 0;
+    right:0;    
+    margin-left: 69px;
+    margin-top: 192px; */
+  }
+  .facebookLogo{
+    width: 46px;
+  }
+  .emailLogo {
+    width: 46px;
+  }
+  .contenedorIcons{
+    display: flex;
+    justify-content: center;
+    gap: 34px;
+    margin: 35px 0px;
+  }
+  .contenedorIcons .circulo {
+    padding: 16px;
+  }
+  .iniciarSesionBtn {
+    min-width: 400px;
+  }
+  .containerFotoMain {
+    width: 55%;
+  }
+  .casillas {
+    margin-top: -125;
+  }
+  .parrafoInicioSesion{
+    margin-bottom: 50px;
+  }
+  .casillas input{
+    padding-left: 25px;
+  }
+  .casillas label {
+    padding: 21px;
+  }
+  .containerMainRegister {
+    /* SAQUÉ ESTO -- (PARA DESKTOP)  */
+    width: 100%;
+    height: 700px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: auto;
+    max-width: 1070px;
+    box-shadow: 0px 0px 28px -6px;
+    position: relative;
+  }
+  .register_container {
+    padding: 150px 60px 50px 60px;
+}
+.logoRegister {
+  margin-bottom: 28px;
+  width: 82px;
+}
+.containerCasillas__register {
+  /* SAQUÉ ESTO -- (PARA DESKTOP) */
+  /* padding: 80px;
+  margin-left: 10px; */
+  margin-top: 0;
+  margin-bottom: 300px;
+  margin-left: 10px;
+}
+.casillas div{
+  margin-bottom: 30px;
+}
 }

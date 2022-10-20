@@ -2,7 +2,7 @@ import React from "react";
 import "./question.css";
 import { QuestionCard } from "../../components";
 import questions from "../../utils/question.json";
-import { motion } from "framer-motion";
+import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 
 function Question() {
   return (
@@ -19,11 +19,17 @@ function Question() {
           Solo pincha en la que se te adapte a tu duda para desplegar mas
           informacion.
         </p>
-        <div className="question__list">
-          {questions.questions.map((question) => (
-            <QuestionCard question={question} key={question.id} />
-          ))}
-        </div>
+        <AnimateSharedLayout>
+          <motion.ul
+            layout
+            initial={{ borderRadius: 25 }}
+            className="question__list"
+          >
+            {questions.questions.map((question) => (
+              <QuestionCard question={question} key={question.id} />
+            ))}
+          </motion.ul>
+        </AnimateSharedLayout>
       </div>
     </motion.div>
   );

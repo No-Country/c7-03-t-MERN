@@ -1,0 +1,29 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.banner{
+    width: 100%;
+    position: absolute;
+}
+.containerBtn{
+    position: relative;
+    width: 95%;
+}
+.perfilBtn{
+    background-color: #FF7F56;
+    display: flex;
+    align-items: center;
+    padding: 14px 40px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+}
+.profileIcon{
+    width: 20%;
+    margin-right: 20px;
+}
