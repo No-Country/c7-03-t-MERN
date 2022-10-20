@@ -1,5 +1,6 @@
 import "./PagoCheck.css";
 import img from "../../assets/icons/icon-pago-check.svg";
+import { Link } from "react-router-dom";
 
 function PagoCheck() {
   return (
@@ -10,7 +11,7 @@ function PagoCheck() {
           La cancha se reservó correctamente. Entra a tu perfil para poder ver
           todas las canchas conservadas con su respectiva fecha y horario
         </div>
-        <button className="boton-check"> Ir al perfil</button>
+        <Link to="/" className="boton-check"> Ir al inicio </Link>
       </div>
     </div>
   );

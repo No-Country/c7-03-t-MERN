@@ -21,7 +21,7 @@ function Reserva() {
       className="reserva"
     >
       <div className="reserva__form">
-        <PasosReserva />
+        <PasosReserva nextStep={nextStep}/>
         {nextStep ? <Payment /> : <Booking changeNextStep={changeNextStep} />}
       </div>
       <PagoProceso />

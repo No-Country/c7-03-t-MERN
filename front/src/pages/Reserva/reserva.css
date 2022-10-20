@@ -1,3 +1,11 @@
+
+.reserva__form{
+    margin-top: 140px;
+}
+
+
+/* DESKTOP */
+@media (min-width: 1023px){
 .reserva{
     max-width: 1050px;
     display: grid;
@@ -10,4 +18,5 @@
 .reserva__form{
     height: 100%;
     padding: 50px 0px;
+}
 }
