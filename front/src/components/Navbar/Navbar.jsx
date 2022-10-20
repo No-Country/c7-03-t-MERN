@@ -41,7 +41,7 @@ const Navbar = () => {
               to="/"
               onClick={() => setOpenMenu(false)}
               // className="nav"
-              className={location === "/" ? "link_activo" : "link_inactivo"}
+              className={location === "/" ? "link_activo" : "nav"}
             >
               <span>Home</span>
             </Link>
@@ -50,7 +50,7 @@ const Navbar = () => {
               onClick={() => setOpenMenu(false)}
               // className="nav"
               className={
-                location === "/preguntas" ? "link_activo" : "link_inactivo"
+                location === "/preguntas" ? "link_activo" : "nav"
               }
             >
               Preguntas Frecuentes
@@ -60,7 +60,7 @@ const Navbar = () => {
               onClick={() => setOpenMenu(false)}
               // className="nav"
               className={
-                location === "/contacto" ? "link_activo" : "link_inactivo"
+                location === "/contacto" ? "link_activo" : "nav"
               }
             >
               Contacto
