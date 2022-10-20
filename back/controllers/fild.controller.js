@@ -46,9 +46,9 @@ const createFild = catchAsync(async (req, res, next) => {
 
         const imgUpload = await uploadBytes(imgFildRef, file.buffer);
 
-        return await FildImg.create({ 
-            fildId: newFild._id, 
-            fildUrl: imgUpload.metadata.fullPath 
+        return await FildImg.create({
+            fildId: newFild._id,
+            fildUrl: imgUpload.metadata.fullPath
         })
     });
 
@@ -58,9 +58,10 @@ const createFild = catchAsync(async (req, res, next) => {
         status: 'success',
         newFild,
         fildResolved
-        
+
     })
 });
+
 const getFildAll = catchAsync(async (req, res, next) => {
 
     const findAlls = await Fild.find({});
@@ -86,4 +87,5 @@ const getFildById = catchAsync(async (req, res, next) => {
     })
 });
 
-module.exports = { createFild, getFildById, getFildAll };
+
+    module.exports = { createFild, getFildById, getFildAll };
