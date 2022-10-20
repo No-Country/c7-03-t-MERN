@@ -92,7 +92,7 @@ section{
     .containerBuscador{
       width: 100%;
       display: flex;
-      margin-top: 20%;
+      margin-top: 40px;
     }
     .map{
       width: 26px;
