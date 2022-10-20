@@ -113,6 +113,8 @@ section {
   padding-top: 30px;
 }
 
+a { color: inherit; } 
+
 /* 
 Todavía no se definen propiedades útiles
 .containerBotonesSubtitulos {

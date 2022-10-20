@@ -10,17 +10,32 @@ import "./Register.css";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { setModal } from "../../store/slices/modal.slice.js";
 
 const Register = () => {
   const { register, handleSubmit } = useForm();
+  const dispatch = useDispatch();
 
   function EnviarDatos(e) {
-    delete e.password2;
-
-    console.log(e);
-    axios
-      .post("https://back-reserva.herokuapp.com/api/v1/users/signup", e)
-      .then((res) => console.log(res));
+    if (e.password2 === e.password) {
+      delete e.password2;
+      axios
+        .post("https://back-reserva.herokuapp.com/api/v1/users/signup", e)
+        .then(() =>
+          dispatch(
+            setModal({
+              status: "success",
+              text: "Registro exitos, buena busqueda de canchas",
+              to: "/login",
+              toName: "Inicia sesion",
+            })
+          )
+        )
+        .catch(() => dispatch(setModal("error")));
+    } else {
+      alert("Las contraseñas no coinciden");
+    }
   }
 
   return (

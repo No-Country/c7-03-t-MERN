@@ -15,3 +15,10 @@ input{
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+  box-shadow: 0 0 0 30px #e9e5e5 inset !important;
+}

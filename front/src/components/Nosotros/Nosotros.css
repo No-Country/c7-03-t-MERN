@@ -35,7 +35,7 @@
 }
 
 .nosotros-item:nth-child(2) {
-  width: 605px;
+  width: 100%;
   order: 0;
   flex: 0 1 auto;
   align-self: center;
@@ -83,11 +83,4 @@
   .parrafo-nosotros{
     padding: 20px ;
   }
-
-  .img-nosotros{
-    
-  }
-
-
-  
 }

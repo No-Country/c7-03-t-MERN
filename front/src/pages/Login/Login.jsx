@@ -4,8 +4,30 @@ import gmail from "../../assets/icons/email.svg";
 import facebook from "../../assets/icons/facebook.svg";
 import correo_icon from "../../assets/icons/emailBold.svg";
 import candado_icon from "../../assets/icons/candado.svg";
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import { useDispatch } from "react-redux";
+import { setModal } from "../../store/slices/modal.slice";
 
 function Login() {
+  const { register, handleSubmit } = useForm();
+  const dispatch = useDispatch();
+  function loginUser(e) {
+    axios
+      .post("https://back-reserva.herokuapp.com/api/v1/users/login", e)
+      .then((res) => {
+        dispatch(
+          setModal({
+            status: "success",
+            text: "Inicio de secion exitoso, buena busqueda de canchas",
+            to: "/",
+            toName: "Dirigete a HOME",
+          })
+        );
+        localStorage.setItem("tokenUser", res.data.token)
+      })
+      .catch(() => dispatch(setModal("error")));
+  }
   return (
     <div className="login">
       <div className="login-camp">
@@ -27,7 +49,7 @@ function Login() {
             </div>
           </div>
         </div>
-        <div className="camps">
+        <form onSubmit={handleSubmit(loginUser)} className="camps">
           <div className="ball">
             <img src={vector} alt="Vecto" />
           </div>
@@ -35,9 +57,8 @@ function Login() {
             <label htmlFor="email">
               <img src={correo_icon} alt="Correo" />
               <input
+                {...register("email")}
                 type="email"
-                id="Email"
-                name="email"
                 placeholder="correo@correo.com"
                 className="email"
               />
@@ -47,9 +68,8 @@ function Login() {
             <label htmlFor="email">
               <img src={candado_icon} alt="Candado" />
               <input
-                type="email"
-                id="Email"
-                name="email"
+                {...register("password")}
+                type="password"
                 placeholder="*************"
                 className="email"
               />
@@ -61,7 +81,7 @@ function Login() {
           </div>
           <button>Acceder</button>
           <p>Olvide mi constraseña</p>
-        </div>
+        </form>
       </div>
     </div>
   );

@@ -2,10 +2,13 @@ import React from "react";
 import Navbar from "../Navbar/Navbar";
 import "./Header.css";
 import videoFutbol from "../../assets/videos/futbolHome.mp4";
-import imagenHeader from '../../assets/images/imagenPrincipal.png';
-import Search from '../Search/Search';
+import imagenHeader from "../../assets/images/imagenPrincipal.png";
+import Search from "../Search/Search";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  const token = localStorage.getItem("tokenUser");
+
   return (
     <section>
       <div className="contenedorVideo">
@@ -30,18 +33,31 @@ const Header = () => {
             </p>
             <h1 className="subtituloInferior">
               <span>¡ALQUILÁ</span> UNA CANCHA!
-            <hr />
+              <hr />
             </h1>
-            
           </div>
           <div>
             <p className="textoHome">
-            Estamos centrados en el alquiler de canchas para todas las edades. Ofrecemos una gran cantidad de deportes en los cuales podrás pasar un buen tiempo con compañeros, amigos o familiares. Poseemos canchas en diversos lugares, podrás buscar una cancha en el lugar que más se ajuste a tus necesidades.
+              Estamos centrados en el alquiler de canchas para todas las edades.
+              Ofrecemos una gran cantidad de deportes en los cuales podrás pasar
+              un buen tiempo con compañeros, amigos o familiares. Poseemos
+              canchas en diversos lugares, podrás buscar una cancha en el lugar
+              que más se ajuste a tus necesidades.
             </p>
           </div>
           <div className="containerBotonesSubtitulos">
-            <button className="comenzarBtn">Comenzar</button>
-            <button className="sobreNosotrosBtn">Sobre Nosotros</button>
+            {token !== null ? (
+              <></>
+            ) : (
+              <>
+                <button className="comenzarBtn">
+                  <Link to="/register">Comenzar</Link>
+                </button>
+              </>
+            )}
+            <button className="sobreNosotrosBtn">
+              <a href="#ancla-1">Sobre Nosotros</a>
+            </button>
             {/* En los botones debería haber una redirección a esas secciones. No pude hacer andar el <Link> de react-router-dom, no sé por qué,
             pero lo voy a solucionar */}
           </div>

@@ -6,27 +6,32 @@ import {
   RegisterPage,
   Contact,
   Login,
-  Reserva
+  Reserva,
+  Perfil,
 } from "./pages";
 import { useSelector } from "react-redux";
-import { ModalCancha, Navbar, Footer } from "./components";
+import { ModalCancha, Navbar, Footer, Modal } from "./components";
 import React from "react";
 import "./App.css";
 
 function App() {
   const modalData = useSelector((state) => state.chanchaModal);
+  const modal = useSelector((state) => state.modal);
   return (
     <BrowserRouter>
       <Navbar />
+      {modal !== null && <Modal />}
       {modalData !== null && <ModalCancha />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/preguntas" element={<Question />} />
         <Route path="/error" element={<ErrorPage />} />
+        <Route path="*" element={<ErrorPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/contacto" element={<Contact />} />
         <Route path="/booking" element={<Reserva />} />
+        <Route path="/perfil" element={<Perfil />} />
       </Routes>
       <Footer />
     </BrowserRouter>
