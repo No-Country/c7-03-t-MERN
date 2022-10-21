@@ -32,13 +32,17 @@
   justify-content: space-around;
   padding: 10px 0;
 }
-
+.containerPayFinishBtn{
+  text-align: center;
+}
 .btn__pay__finish{
-  width: 100%;
-  padding: 20px;
-  background-color: #ff7f56;
-  color: #ffffff;
-  font-size: 25px;
+  padding: 19px 118px;
+  border-radius: 6px;
+  border: none;
+  box-shadow: inset 0px -28px 15px -27px white;
+  background: #fc6537;
+  color: white;
+  margin-top: 25px;
 }
 
 /* DESKTOP */
