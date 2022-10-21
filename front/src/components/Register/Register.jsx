@@ -100,7 +100,7 @@ const Register = () => {
           <div className="containerFoto">
             <img src={Fondo} alt="Foto Fondo" className="fotoFondo" />
           </div>
-          <div className="containerFaceMailDesktop">
+          {/* <div className="containerFaceMailDesktop">
             <p className="textoAuth">También puedes continuar con:</p>
             <div className="contenedorIcons">
               <div className="circulo">
@@ -122,7 +122,7 @@ const Register = () => {
                 </button>
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
