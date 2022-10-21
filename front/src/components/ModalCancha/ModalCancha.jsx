@@ -11,12 +11,21 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "./modalCancha.css";
 import {setCanchaReserva} from "../../store/slices/canchaReserva.slice"
+import { useEffect, useState } from "react";
+import axios  from "axios";
 
 function ModalCancha() {
   const modalData = useSelector((state) => state.chanchaModal);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const token = localStorage.getItem("tokenUser")
+  const [imgCancha, setImgCancha] = useState("");
+
+  useEffect(() => {
+    axios
+      .get(`https://back-reserva.herokuapp.com/api/v1/fild/${modalData._id}`)
+      .then((res) => setImgCancha(res.data.fild.fildImgUrl[1].fildUrl));
+  }, []);
 
   const closeModal = () => {
     dispatch(setCanchaMondal(null));
@@ -41,7 +50,7 @@ function ModalCancha() {
         className="modal__container"
       >
         <div className="images__cancha">
-          <img src={img} alt="" />
+          <img src={imgCancha} alt="" />
         </div>
         <div className="cancha__data">
           <button className="close" onClick={closeModal}>

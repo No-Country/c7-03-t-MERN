@@ -1,23 +1,29 @@
 import React, { useEffect, useState } from "react";
 import "./CardCancha.css";
-import img from "../../assets/images/cancha1.jpg";
 import vectorBall from "../../assets/icons/basketBall.svg";
 import vectorMap from "../../assets/icons/map.svg";
 import vectorDollar from "../../assets/icons/dollar.svg";
 import { useDispatch } from "react-redux";
 import { setCanchaMondal } from "../../store/slices/cancha.slice";
-import axios from "axios"
+import axios from "axios";
 
 function CardCancha({ data }) {
+  const [imgCancha, setImgCancha] = useState("");
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    axios
+      .get(`https://back-reserva.herokuapp.com/api/v1/fild/${data._id}`)
+      .then((res) => setImgCancha(res.data.fild.fildImgUrl[0].fildUrl));
+  }, []);
+
   const changeModal = () => {
-    dispatch(setCanchaMondal( data));
+    dispatch(setCanchaMondal(data));
   };
 
   return (
     <div className="card__cancha">
-      <img className="card__img" src={img} alt="img" />
+      <img className="card__img" src={imgCancha} alt="img" />
       <div className="card__container">
         <h4>
           {data.nameFild}{" "}
