@@ -8,6 +8,7 @@ import {
   Login,
   Reserva,
   Perfil,
+  Search
 } from "./pages";
 import { useSelector } from "react-redux";
 import { ModalCancha, Navbar, Footer, Modal } from "./components";
@@ -23,6 +24,7 @@ function App() {
       {modal !== null && <Modal />}
       {modalData !== null && <ModalCancha />}
       <Routes>
+        <Route path="/search" element={<Search />} />
         <Route path="/" element={<Home />} />
         <Route path="/preguntas" element={<Question />} />
         <Route path="/error" element={<ErrorPage />} />

@@ -5,11 +5,16 @@ import { useState } from "react";
 
 function Reserva() {
   const [nextStep, setNextStep] = useState(false);
+  const [btn, setBtn] = useState(false);
 
   window.scroll({
     top: 1,
     behavior: "smooth",
   });
+
+  const showBtn = (e) => {
+    setBtn(e)
+  }
 
   const changeNextStep = (e) => {
     setNextStep(e);
@@ -22,9 +27,9 @@ function Reserva() {
     >
       <div className="reserva__form">
         <PasosReserva nextStep={nextStep}/>
-        {nextStep ? <Payment /> : <Booking changeNextStep={changeNextStep} />}
+        {nextStep ? <Payment showBtn={showBtn}/> : <Booking changeNextStep={changeNextStep} />}
       </div>
-      <PagoProceso />
+      <PagoProceso btn={btn}/>
     </motion.div>
   );
 }

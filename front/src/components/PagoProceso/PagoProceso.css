@@ -33,6 +33,14 @@
   padding: 10px 0;
 }
 
+.btn__pay__finish{
+  width: 100%;
+  padding: 20px;
+  background-color: #ff7f56;
+  color: #ffffff;
+  font-size: 25px;
+}
+
 /* DESKTOP */
 
 @media (min-width: 1023px) {

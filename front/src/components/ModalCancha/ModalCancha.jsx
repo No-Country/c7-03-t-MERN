@@ -15,14 +15,20 @@ function ModalCancha() {
   const modalData = useSelector((state) => state.chanchaModal);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const token = localStorage.getItem("tokenUser")
 
   const closeModal = () => {
     dispatch(setCanchaMondal(null));
   };
 
   const changePage = () => {
-    closeModal();
-    navigate("/booking");
+    if(token !== null) {
+      closeModal();
+      navigate("/booking");
+    }else{
+      closeModal();
+      navigate("/login")
+    }
   };
 
   return (

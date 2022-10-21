@@ -13,30 +13,19 @@ function PagoCheck({ text, to, toName }) {
 
   return (
     <>
-    <div className="contadiviner-check">
-      <div className="card-check">
+      <motion.div
+        initial={{ x: "200%" }}
+        animate={{ x: "0" }}
+        className="card-check"
+      >
         <img className="icon-check" alt="" src={img} />
-        <div className="texto-check">
-          La cancha se reservó correctamente. Entra a tu perfil para poder ver
-          todas las canchas conservadas con su respectiva fecha y horario
-        </div>
-        <Link to="/" className="boton-check"> Ir al inicio </Link>
-      </div>
-    </div>
-    <motion.div
-      initial={{ x: "200%" }}
-      animate={{ x: "0" }}
-      className="card-check"
-    >
-      <img className="icon-check" alt="" src={img} />
-      <div className="texto-check">{text}</div>
-      <Link className="boton-check" to={to} onClick={closeModal}>
-        {toName}
-      </Link>
-    </motion.div>
+        <div className="texto-check">{text}</div>
+        <Link className="boton-check" to={to} onClick={closeModal}>
+          {toName}
+        </Link>
+      </motion.div>
     </>
   );
 }
 
 export default PagoCheck;
-
