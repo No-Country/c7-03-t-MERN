@@ -3,7 +3,7 @@ import img from "../../assets/images/pago-proceso-img.png";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { setModal } from "../../store/slices/modal.slice";
-import {setDon} from "../../store/slices/reservada.slice"
+import { setDon } from "../../store/slices/reservada.slice";
 import axios from "axios";
 
 function PagoProceso({ btn }) {
@@ -36,7 +36,7 @@ function PagoProceso({ btn }) {
       data: dataBook,
     };
     axios(config).then((res) => {
-      dispatch(setDon(res.data.newBooking))
+      dispatch(setDon(res.data.newBooking));
       dispatch(
         setModal({
           status: "success",
