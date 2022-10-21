@@ -1,14 +1,24 @@
 import "./PagoProceso.css";
 import img from "../../assets/images/pago-proceso-img.png";
 import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function PagoProceso({btn}) {
   const canchaReserva = useSelector(state => state.canchaReserva)
   const dataReserva = useSelector((state) => state.dataReserva);
+
+  const [imgCancha, setImgCancha] = useState("");
+
+  useEffect(() => {
+    axios
+      .get(`https://back-reserva.herokuapp.com/api/v1/fild/${canchaReserva._id}`)
+      .then((res) => setImgCancha(res.data.fild.fildImgUrl[1].fildUrl));
+  }, []);
   return (
     <div className="pago-card">
       <div className="pago-card-description">
-        <img className="pago-proceso-img" alt="Imagen card" src={img} />
+        <img className="pago-proceso-img" alt="Imagen card" src={imgCancha} />
         <div>
           <h2 className="pago-proceso-titulo">{canchaReserva.nameFild}</h2>
           <p className="reserva-textos">
@@ -36,7 +46,7 @@ function PagoProceso({btn}) {
           {/* <i className="pago-horas">(Según la cantidad de horas)</i> */}
           <p className="pago-fecha-texto">
             {dataReserva !== null
-              ? +dataReserva.time * 2
+              ? +dataReserva.time * canchaReserva.price
               : "Sin definir"}
           </p>
         </li>
