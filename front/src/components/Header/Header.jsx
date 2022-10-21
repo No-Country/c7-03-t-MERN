@@ -55,13 +55,13 @@ const Header = () => {
                 </button>
               </>
             )}
-            <button className="sobreNosotrosBtn">
-              <a href="#ancla-1">Sobre Nosotros</a>
-            </button>
+            <a href="#ancla-1">
+              <button className="sobreNosotrosBtn">Sobre Nosotros</button>
+            </a>
             {/* En los botones debería haber una redirección a esas secciones. No pude hacer andar el <Link> de react-router-dom, no sé por qué,
             pero lo voy a solucionar */}
           </div>
-          <Search />
+          {/* <Search /> */}
         </div>
       </div>
     </section>

@@ -28,3 +28,12 @@
   color: white;
   margin-top: 25px;
 }
+.verificarBtn{
+  padding: 19px 118px;
+  border-radius: 6px;
+  border: none;
+  box-shadow: inset 0px -28px 15px -27px white;
+  background: #fc6537;
+  color: white;
+  margin-top: 25px;
+}

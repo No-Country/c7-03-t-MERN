@@ -49,9 +49,7 @@ const Navbar = () => {
               to="/preguntas"
               onClick={() => setOpenMenu(false)}
               // className="nav"
-              className={
-                location === "/preguntas" ? "link_activo" : "nav"
-              }
+              className={location === "/preguntas" ? "link_activo" : "nav"}
             >
               Preguntas Frecuentes
             </Link>
@@ -59,9 +57,7 @@ const Navbar = () => {
               to="/contacto"
               onClick={() => setOpenMenu(false)}
               // className="nav"
-              className={
-                location === "/contacto" ? "link_activo" : "nav"
-              }
+              className={location === "/contacto" ? "link_activo" : "nav"}
             >
               Contacto
             </Link>
@@ -78,6 +74,7 @@ const Navbar = () => {
                 <Link onClick={() => setOpenMenu(false)} to="/login">
                   <button className="inicioSesion">Iniciar Sesión</button>
                 </Link>
+
                 <Link onClick={() => setOpenMenu(false)} to="/register">
                   <button className="registrarse">Registrarse</button>
                 </Link>

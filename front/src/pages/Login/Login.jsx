@@ -24,7 +24,7 @@ function Login() {
             toName: "Dirigete a HOME",
           })
         );
-        localStorage.setItem("tokenUser", res.data.token)
+        localStorage.setItem("tokenUser", res.data.token);
       })
       .catch(() => dispatch(setModal("error")));
   }
@@ -79,7 +79,9 @@ function Login() {
             <input type="checkbox" name="Recordarme" />
             <h5>Recordarme</h5>
           </div>
-          <button>Acceder</button>
+          <div className="container_botonAcceder">
+            <button className="botonAcceder">Acceder</button>
+          </div>
           <p>Olvide mi constraseña</p>
         </form>
       </div>

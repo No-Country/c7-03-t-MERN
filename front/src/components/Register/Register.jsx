@@ -22,16 +22,17 @@ const Register = () => {
       delete e.password2;
       axios
         .post("https://back-reserva.herokuapp.com/api/v1/users/signup", e)
-        .then(() =>
+        .then((res =>{
+          localStorage.setItem("id", res.data.newUser._id);
           dispatch(
             setModal({
               status: "success",
               text: "Registro exitos, buena busqueda de canchas",
               to: "/login",
               toName: "Inicia sesion",
-            })
-          )
-        )
+            }))
+          }
+        ))
         .catch(() => dispatch(setModal("error")));
     } else {
       alert("Las contraseñas no coinciden");
@@ -100,7 +101,7 @@ const Register = () => {
           <div className="containerFoto">
             <img src={Fondo} alt="Foto Fondo" className="fotoFondo" />
           </div>
-          <div className="containerFaceMailDesktop">
+          {/* <div className="containerFaceMailDesktop">
             <p className="textoAuth">También puedes continuar con:</p>
             <div className="contenedorIcons">
               <div className="circulo">
@@ -122,7 +123,7 @@ const Register = () => {
                 </button>
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

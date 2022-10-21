@@ -1,39 +1,67 @@
-* {
-    font-family: "Poppins", sans-serif;
+.containerProfilePic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-.containerProfilePic{
-    display: flex;
-    flex-direction: column;
-    /* width: 28%; */
+.profilePic {
+  width: 36%;
+  z-index: 1;
 }
-.profilePic{
-    width: 15%;
-    z-index: 1;
-    margin-left: 100px;
-    margin-top: 134px;
+.containerData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 70px;
 }
-.containerData{
-    margin-left: 90px;
+.user {
+  width: 100%;
+  margin: 20px 0px;
+  text-align: center;
+  margin-bottom: 70px;
+    font-size: 30px;
 }
-.user{
-    margin-bottom: 50px;
-    margin-top: 25px;
+.born {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.born{
-    display: flex;
+.gmail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.gmail{
-    display: flex;
+.sport {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.sport{
-    display: flex;
-}
-.courts{
-    display: flex;
+.courts {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .containerData div{
-    margin-bottom: 20px;
+  margin-bottom: 7px;
+}
+
+@media (min-width: 1023px){
+  .profilePic{
+    width: 71%;
+    border-radius: 13px;
+  }
+  .containerProfilePic{
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+  }
+  .user{
+    display: flex;
+    margin-left: 79px;
+    font-size: 20px;
+  }
+  .containerData{
+    width: 26%;
+  }
+
 }

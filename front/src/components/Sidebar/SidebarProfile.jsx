@@ -6,29 +6,29 @@ import Cancha from '../../assets/icons/canchaBold.svg';
 import Futbol from '../../assets/icons/futbolBall.svg';
 import Gmail from '../../assets/icons/gmail.svg';
 
-const SidebarProfile = () => {
+const SidebarProfile = ({data, book}) => {
     return (
-        <div>
+        <div className='aaa'>
             <div className='containerProfilePic'>
                 <img src={ProfilePic} alt="fotoPerfil" className='profilePic' />
             </div>
             <div className='containerData'>
-                <h2 className='user'>Alejandro Rodriguez</h2>
-                <div className='born'>
+                <h2 className='user'>{data?.userName}</h2>
+                {/* <div className='born'>
                     <img src={Born} alt="born" />
                     <p>6/6/1998</p>
-                </div>
+                </div> */}
                 <div className='gmail'>
                     <img src={Gmail} alt="gmail" />
-                    <p>alejandro@gmail.com</p>
+                    <p>{data?.email}</p>
                 </div>
-                <div className='sport'>
+                {/* <div className='sport'>
                     <img src={Futbol} alt="sport" />
                     <p>Fútbol</p>
-                </div>
+                </div> */}
                 <div className='courts'>
                     <img src={Cancha} alt="courts" />
-                    <p>1</p>
+                    <p>{book?.length}</p>
                 </div>
             </div>
         </div>
