@@ -4,7 +4,7 @@
   align-items: center;
 }
 .profilePic {
-  width: 45%;
+  width: 36%;
   z-index: 1;
 }
 .containerData {
@@ -43,4 +43,25 @@
 }
 .containerData div{
   margin-bottom: 7px;
+}
+
+@media (min-width: 1023px){
+  .profilePic{
+    width: 71%;
+    border-radius: 13px;
+  }
+  .containerProfilePic{
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+  }
+  .user{
+    display: flex;
+    margin-left: 79px;
+    font-size: 20px;
+  }
+  .containerData{
+    width: 26%;
+  }
+
 }
