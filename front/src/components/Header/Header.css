@@ -69,12 +69,24 @@ section {
 }
 
 .comenzarBtn {
+  text-decoration: none;
   margin-right: 23px;
   padding: 14px 40px 14px 40px;
   background: #ffffff;
   border: 2px solid #ad4827;
   border-radius: 7px;
   color: #ad4827;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+
+}
+
+.comenzarBtn:hover {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px #ffffff50;
+  /* Lowering the shadow */
 }
 
 .sobreNosotrosBtn {
@@ -84,6 +96,14 @@ section {
   border: 2px solid #ad4827;
   border-radius: 7px;
   color: white;
+  cursor: pointer;
+}
+
+.sobreNosotrosBtn:hover {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px #ffffff50;
+  /* Lowering the shadow */
 }
 
 .subtitulo {
