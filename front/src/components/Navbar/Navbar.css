@@ -149,11 +149,14 @@
     margin-bottom: 0px;
     margin-top: 0px;
     padding: 12px 33px 12px 33px;
+    cursor: pointer;
   }
   .inicioSesion{
     padding: 12px 30px 12px 30px;
     margin-right: 16px;
+    cursor: pointer;
   }
+
   .logo{
     width: 55px;
   }
