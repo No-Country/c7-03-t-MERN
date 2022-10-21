@@ -71,11 +71,10 @@ const Navbar = () => {
               </>
             ) : (
               <>
-                <button className="inicioSesion">
-                  <Link onClick={() => setOpenMenu(false)} to="/login">
-                    Iniciar Sesión
-                  </Link>
-                </button>
+                <Link onClick={() => setOpenMenu(false)} to="/login">
+                  <button className="inicioSesion">Iniciar Sesión</button>
+                </Link>
+
                 <Link onClick={() => setOpenMenu(false)} to="/register">
                   <button className="registrarse">Registrarse</button>
                 </Link>
