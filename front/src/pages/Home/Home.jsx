@@ -16,9 +16,9 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("https://reserva-back.herokuapp.com/api/v1/fild/findAll")
-      .then((res) => setInfoCanchas(res.data.findAlls));
-  });
+      .get("https://back-reserva.herokuapp.com/api/v1/fild/findAll")
+      .then((res) => setInfoCanchas(res.data.fildAlls));
+  }, []);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -32,7 +32,7 @@ function Home() {
       <div className="canchas__container">
         <h2 className="canchas__title">Canchas destacadas</h2>
         <div className="canchas__list">
-          {data.canchas.map((e) => (
+          {infoCanchas.map((e) => (
             <CardCancha key={e._id} data={e} />
           ))}
         </div>
