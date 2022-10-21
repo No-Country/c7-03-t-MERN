@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./CardCancha.css";
 import img from "../../assets/images/cancha1.jpg";
 import vectorBall from "../../assets/icons/basketBall.svg";
@@ -6,12 +6,13 @@ import vectorMap from "../../assets/icons/map.svg";
 import vectorDollar from "../../assets/icons/dollar.svg";
 import { useDispatch } from "react-redux";
 import { setCanchaMondal } from "../../store/slices/cancha.slice";
+import axios from "axios"
 
 function CardCancha({ data }) {
   const dispatch = useDispatch();
 
   const changeModal = () => {
-    dispatch(setCanchaMondal(data));
+    dispatch(setCanchaMondal( data));
   };
 
   return (
@@ -19,12 +20,12 @@ function CardCancha({ data }) {
       <img className="card__img" src={img} alt="img" />
       <div className="card__container">
         <h4>
-          {data.name}{" "}
+          {data.nameFild}{" "}
           <img className="card__vector" src={vectorBall} alt="certor 1" />
         </h4>
         <div className="card__location">
           <img className="card__vector2" src={vectorMap} alt="certor 2" />
-          {data.location}
+          {data.sceneryId.location}
         </div>
         <div className="card__location">
           <img className="card__vector2" src={vectorDollar} alt="certor 2" />

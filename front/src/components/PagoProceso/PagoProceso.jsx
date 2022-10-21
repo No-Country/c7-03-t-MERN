@@ -3,18 +3,16 @@ import img from "../../assets/images/pago-proceso-img.png";
 import { useSelector } from "react-redux";
 
 function PagoProceso({btn}) {
+  const canchaReserva = useSelector(state => state.canchaReserva)
   const dataReserva = useSelector((state) => state.dataReserva);
   return (
     <div className="pago-card">
       <div className="pago-card-description">
         <img className="pago-proceso-img" alt="Imagen card" src={img} />
         <div>
-          <h2 className="pago-proceso-titulo">Cancha Toledo</h2>
+          <h2 className="pago-proceso-titulo">{canchaReserva.nameFild}</h2>
           <p className="reserva-textos">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            volutpat libero ut pharetra rutrum. Fusce vel ligula ligula.
-            Suspendisse iaculis tellus non dui porta vestibulum. Proin nisl
-            erat, pharetra hendrerit enim eu.
+            {canchaReserva.sceneryId?.description}
           </p>
         </div>
       </div>
