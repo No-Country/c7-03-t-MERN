@@ -7,6 +7,7 @@ import map from "../../assets/icons/map_orange.svg";
 import alarm from "../../assets/icons/alarm.svg";
 import watched from "../../assets/icons/watched.svg";
 import dollar from "../../assets/icons/dollar_orange.svg";
+import canchaAlquilada from '../../assets/images/canchaAlquilada.png';
 
 const Profile = () => {
   return (
@@ -16,12 +17,14 @@ const Profile = () => {
       </section>
       <section className="container__perfil">
         <SidebarProfile />
+        <div className="containerHistory__profile">
         <div className="history__profile">
+          <h2>Canchas Alquiladas</h2>
           <div className="card__profile">
-            <div className="card__profile__img"></div>
+           <img className="canchaAlquiladaImg" src={canchaAlquilada} alt="canchaAlquilada" />
             <div className="card__profile__data">
               <h3>Cancha Puig</h3>
-              <ul>
+              <ul className="containerDataProfile">
                 <li>
                   <img src={map} alt="Map" />
                   <span>16/12/2022</span>
@@ -41,6 +44,7 @@ const Profile = () => {
               </ul>
             </div>
           </div>
+        </div>
         </div>
       </section>
     </>
