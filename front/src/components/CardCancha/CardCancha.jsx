@@ -19,12 +19,12 @@ function CardCancha({ data }) {
       <img className="card__img" src={img} alt="img" />
       <div className="card__container">
         <h4>
-          {data.nameFild}{" "}
+          {data.name}{" "}
           <img className="card__vector" src={vectorBall} alt="certor 1" />
         </h4>
         <div className="card__location">
           <img className="card__vector2" src={vectorMap} alt="certor 2" />
-          {data.sceneryId.sceneryName}
+          {data.location}
         </div>
         <div className="card__location">
           <img className="card__vector2" src={vectorDollar} alt="certor 2" />

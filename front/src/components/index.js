@@ -19,3 +19,4 @@ export { default as Payment } from "./Payment/Payment";
 export { default as Modal } from "./Modal/Modal";
 export { default as HeaderPerfil } from "./HeaderProfile/HeaderProfile";
 export { default as SidebarPerfil } from "./Sidebar/SidebarProfile";
+export { default as Search} from "./Search/Search"
