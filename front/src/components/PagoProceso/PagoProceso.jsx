@@ -1,20 +1,53 @@
 import "./PagoProceso.css";
 import img from "../../assets/images/pago-proceso-img.png";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import { setModal } from "../../store/slices/modal.slice";
+import {setDon} from "../../store/slices/reservada.slice"
 import axios from "axios";
 
-function PagoProceso({btn}) {
-  const canchaReserva = useSelector(state => state.canchaReserva)
+function PagoProceso({ btn }) {
+  const canchaReserva = useSelector((state) => state.canchaReserva);
   const dataReserva = useSelector((state) => state.dataReserva);
+  const dispatch = useDispatch();
 
   const [imgCancha, setImgCancha] = useState("");
 
   useEffect(() => {
     axios
-      .get(`https://back-reserva.herokuapp.com/api/v1/fild/${canchaReserva._id}`)
+      .get(
+        `https://back-reserva.herokuapp.com/api/v1/fild/${canchaReserva._id}`
+      )
       .then((res) => setImgCancha(res.data.fild.fildImgUrl[1].fildUrl));
   }, []);
+
+  const finalizar = () => {
+    const dataBook = {
+      price: dataReserva.time * canchaReserva.price,
+      bookingDate: dataReserva.date,
+      bookingTime: dataReserva.hour,
+      sceneryId: canchaReserva.sceneryId._id,
+      fildId: canchaReserva._id,
+    };
+    var config = {
+      method: "post",
+      url: "https://back-reserva.herokuapp.com/api/v1/bookings",
+      headers: { Authorization: `Bearer ${localStorage.getItem("tokenUser")}` },
+      data: dataBook,
+    };
+    axios(config).then((res) => {
+      dispatch(setDon(res.data.newBooking))
+      dispatch(
+        setModal({
+          status: "success",
+          text: "Cancha reservada con exito",
+          to: "/perfil",
+          toName: "Dirigete a tu perfil",
+        })
+      );
+    });
+  };
+
   return (
     <div className="pago-card">
       <div className="pago-card-description">
@@ -53,7 +86,9 @@ function PagoProceso({btn}) {
       </ul>
       {btn && (
         <div className="containerPayFinishBtn">
-        <button className="btn__pay__finish">Finalizar compra</button>
+          <button className="btn__pay__finish" onClick={finalizar}>
+            Finalizar compra
+          </button>
         </div>
       )}
     </div>
