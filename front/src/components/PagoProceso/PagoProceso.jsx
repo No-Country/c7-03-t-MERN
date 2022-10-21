@@ -4,15 +4,17 @@ import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-function PagoProceso({btn}) {
-  const canchaReserva = useSelector(state => state.canchaReserva)
+function PagoProceso({ btn }) {
+  const canchaReserva = useSelector((state) => state.canchaReserva);
   const dataReserva = useSelector((state) => state.dataReserva);
 
   const [imgCancha, setImgCancha] = useState("");
 
   useEffect(() => {
     axios
-      .get(`https://back-reserva.herokuapp.com/api/v1/fild/${canchaReserva._id}`)
+      .get(
+        `https://back-reserva.herokuapp.com/api/v1/fild/${canchaReserva._id}`
+      )
       .then((res) => setImgCancha(res.data.fild.fildImgUrl[1].fildUrl));
   }, []);
   return (
@@ -53,7 +55,7 @@ function PagoProceso({btn}) {
       </ul>
       {btn && (
         <div className="containerPayFinishBtn">
-        <button className="btn__pay__finish">Finalizar compra</button>
+          <button className="btn__pay__finish">Finalizar compra</button>
         </div>
       )}
     </div>
