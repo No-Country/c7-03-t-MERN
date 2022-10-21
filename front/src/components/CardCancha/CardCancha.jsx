@@ -19,16 +19,16 @@ function CardCancha({ data }) {
       <img className="card__img" src={img} alt="img" />
       <div className="card__container">
         <h4>
-          {data.name}{" "}
+          {data.nameFild}{" "}
           <img className="card__vector" src={vectorBall} alt="certor 1" />
         </h4>
         <div className="card__location">
           <img className="card__vector2" src={vectorMap} alt="certor 2" />
-          {data.location}
+          {data.sceneryId.sceneryName}
         </div>
         <div className="card__location">
           <img className="card__vector2" src={vectorDollar} alt="certor 2" />
-          {data.price + " / hs"}
+          {data.price + " / hs" || "1200"}
         </div>
         <button className="btn__card" onClick={changeModal}>
           Ver mas detalles
