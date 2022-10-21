@@ -40,7 +40,9 @@ function InputCards({showBtn}) {
             maxLength="3"
             required
           />
-          <button>Verificar</button>
+          <div className="containerVerificarBtn">
+          <button className="verificarBtn">Verificar</button>
+          </div>
         </form>
       </div>
     </motion.div>

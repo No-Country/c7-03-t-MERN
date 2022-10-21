@@ -44,7 +44,9 @@ function PagoProceso({btn}) {
         </li>
       </ul>
       {btn && (
+        <div className="containerPayFinishBtn">
         <button className="btn__pay__finish">Finalizar compra</button>
+        </div>
       )}
     </div>
   );
