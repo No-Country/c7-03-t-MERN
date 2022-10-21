@@ -44,6 +44,30 @@ const Profile = () => {
               </ul>
             </div>
           </div>
+          <div className="card__profile">
+           <img className="canchaAlquiladaImg" src={canchaAlquilada} alt="canchaAlquilada" />
+            <div className="card__profile__data">
+              <h3>Cancha Puig</h3>
+              <ul className="containerDataProfile">
+                <li>
+                  <img src={map} alt="Map" />
+                  <span>24/12/2022</span>
+                </li>
+                <li>
+                  <img src={watched} alt="Watched" />
+                  <span>24/12/2022</span>
+                </li>
+                <li>
+                  <img src={alarm} alt="Alarm" />
+                  <span>1 horas</span>
+                </li>
+                <li>
+                  <img src={dollar} alt="Dollar" />
+                  <span>Ya pago</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         </div>
       </section>

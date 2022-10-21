@@ -35,6 +35,7 @@
     width: 100%;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
+    margin-bottom: 50px;
 }
 
 /* .card__profile__img {
@@ -60,4 +61,27 @@
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+@media (min-width: 1023px){
+    .containerHistory__profile{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .container__perfil{
+        display: flex;
+        flex-direction: row;
+        /* margin-top: 0; */
+        justify-content: start;
+        max-width: 1050px;
+        margin: 20px auto;
+
+    }
+    .aaa{
+        border-right: 1px solid gray;
+    }
+    .history__profile{
+        margin-left: 0px;
+    }
 }
