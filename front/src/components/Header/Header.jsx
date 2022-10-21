@@ -61,7 +61,7 @@ const Header = () => {
             {/* En los botones debería haber una redirección a esas secciones. No pude hacer andar el <Link> de react-router-dom, no sé por qué,
             pero lo voy a solucionar */}
           </div>
-          <Search />
+          {/* <Search /> */}
         </div>
       </div>
     </section>
