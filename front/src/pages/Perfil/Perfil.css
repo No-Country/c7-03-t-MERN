@@ -1,4 +1,4 @@
-.canchas__container {
+/* .canchas__container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,7 @@
   gap: 20px;
 }
 
-@media (max-width: 768) {
+@media (max-width: 1090px) {
   .canchas__list {
     grid-template-columns: repeat(2, auto);
   }
@@ -35,4 +35,4 @@
   .canchas__title{
     line-height: normal;
   }
-}
+} */

@@ -1,17 +1,17 @@
-import "./contactUs.css";
-import contact_img from "../../assets/images/contact.svg";
-import message_icon from "../../assets/icons/message.svg";
-import map_icon from "../../assets/icons/map.svg";
-import telephone_icon from "../../assets/icons/telephone.svg";
+import { setModal } from "../../store/slices/modal.slice";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import images from "../../assets/images";
 import emailjs from "@emailjs/browser";
-import { useForm } from "react-hook-form";
 import { useRef } from "react";
+import "./contactUs.css";
 
 function ContactUs() {
   const datosMensaje = useRef();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   function EnviarMensaje(e) {
-    console.log(datosMensaje.current);
     e.preventDefault();
     emailjs
       .sendForm(
@@ -20,7 +20,17 @@ function ContactUs() {
         datosMensaje.current,
         "YhsHRcZuEhWdweoCU"
       )
-      .then(() => alert("Mensaje Enviado"));
+      .then(() =>
+        dispatch(
+          setModal({
+            status: "success",
+            text: "Mensaje enviado con exido, lo revisaremos lo antes posible. DEVERAS.",
+            to: "/",
+            toName: "Ir a home",
+          })
+        )
+      )
+      .catch(() => navigate("/error"));
   }
 
   return (
@@ -29,37 +39,50 @@ function ContactUs() {
       <p>Ponte en contácto con nosotros</p>
       <div className="contactus__card">
         <div className="contactus__card__div">
-          <img src={contact_img} alt="Contact img" />
+          <img src={images.Contact_image} alt="Contact img" />
           <ul className="contactus__card__ul">
             <li>
               <span>
-                <img src={message_icon} alt="Message Icon" />{" "}
+                <img src={images.Message_icon} alt="Message Icon" />{" "}
               </span>
               <p>alquilerdecampos@gmail.com</p>
             </li>
             <li>
               <span>
-                <img src={map_icon} alt="Ubication Icon" />{" "}
+                <img src={images.Vector_map} alt="Ubication Icon" />{" "}
               </span>
               <p>18 de julio, 123, Lima</p>
             </li>
             <li>
               <span>
-                <img src={telephone_icon} alt="Telephone Icon" />{" "}
+                <img src={images.Telephone_icon} alt="Telephone Icon" />{" "}
               </span>
               <p>+591241278942718</p>
             </li>
           </ul>
         </div>
-
         <form
           className="contactus__form"
           onSubmit={EnviarMensaje}
           ref={datosMensaje}
         >
-          <input type="text" placeholder="Andrés Rodriguez" name="name" />
-          <input type="text" placeholder="correo@gmail.com" name="email" />
-          <textarea placeholder="Escribe tu duda aquí" name="message" />
+          <input
+            type="text"
+            placeholder="Andrés Rodriguez"
+            name="name"
+            required
+          />
+          <input
+            type="text"
+            placeholder="correo@gmail.com"
+            name="email"
+            required
+          />
+          <textarea
+            placeholder="Escribe tu duda aquí"
+            name="message"
+            required
+          />
           <button className="btn__form">Enviar</button>
         </form>
       </div>

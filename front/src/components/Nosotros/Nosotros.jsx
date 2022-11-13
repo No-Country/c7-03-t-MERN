@@ -1,6 +1,6 @@
+import images from "../../assets/images";
 import React from "react";
 import "./Nosotros.css";
-import img from "../../assets/images/ImagenNosotros1.png";
 
 function Nosotros() {
   return (
@@ -9,9 +9,8 @@ function Nosotros() {
       <h2 className="titulo-nosotros">Sobre Nosotros</h2>
       <div className="nosotros-container">
         <div className="nosotros-item">
-          <img className="img-nosotros" src={img} alt="img" />
+          <img className="img-nosotros" src={images.Nosotros_image} alt="img" />
         </div>
-
         <div className="nosotros-item">
           <p className="subtitulo-nosotros-2">
             SIEMPRE PENSANDO EN NUESTROS CLIENTES

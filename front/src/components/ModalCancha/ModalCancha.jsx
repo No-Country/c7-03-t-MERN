@@ -1,25 +1,18 @@
 import { setCanchaMondal } from "../../store/slices/cancha.slice";
 import { useDispatch, useSelector } from "react-redux";
-import close_icon from "../../assets/icons/close.svg";
-import img from "../../assets/images/modal_cancha.png";
-import location from "../../assets/icons/map_orange.svg";
-import dollar from "../../assets/icons/dollar_orange.svg";
-import person from "../../assets/icons/person.svg";
-import share from "../../assets/icons/share.svg";
-import user from "../../assets/icons/user.svg";
-import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import "./modalCancha.css";
-import {setCanchaReserva} from "../../store/slices/canchaReserva.slice"
 import { useEffect, useState } from "react";
-import axios  from "axios";
+import images from "../../assets/images"
+import { motion } from "framer-motion";
+import "./modalCancha.css";
+import axios from "axios";
 
 function ModalCancha() {
   const modalData = useSelector((state) => state.chanchaModal);
+  const token = localStorage.getItem("tokenUser");
+  const [imgCancha, setImgCancha] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const token = localStorage.getItem("tokenUser")
-  const [imgCancha, setImgCancha] = useState("");
 
   useEffect(() => {
     axios
@@ -32,13 +25,12 @@ function ModalCancha() {
   };
 
   const changePage = () => {
-    if(token !== null) {
-      dispatch(setCanchaReserva(modalData));
+    if (token !== null) {
       closeModal();
       navigate("/booking");
-    }else{
+    } else {
       closeModal();
-      navigate("/login")
+      navigate("/login");
     }
   };
 
@@ -54,37 +46,37 @@ function ModalCancha() {
         </div>
         <div className="cancha__data">
           <button className="close" onClick={closeModal}>
-            <img src={close_icon} alt="" />
+            <img src={images.Close_icon} alt="" />
           </button>
           <div className="cancha__data__part1">
             <h3>Cancha de {modalData.sportId.nameSport}</h3>
             <button onClick={changePage}>Reservar cancha</button>
           </div>
           <h3>
-            <img src={location} alt="Location icon" />
+            <img src={images.Map_icon_orange} alt="Location icon" />
             {modalData.sceneryId.location}
           </h3>
           <h3>
             {" "}
-            <img src={dollar} alt="Dollar icon" />
+            <img src={images.Dollar_orange} alt="Dollar icon" />
             {modalData.price}/hs
           </h3>
           <h2>{modalData.nameFild}</h2>
           <h4>
             {" "}
-            <img src={person} alt="Person icon" />
+            <img src={images.Person_icon} alt="Person icon" />
             {modalData.accountPerson} max
           </h4>
           <p>{modalData.sceneryId.description}</p>
           <div className="owner__information">
             <div className="owner__information__text">
-              <img src={user} alt="Usuario" />
+              <img src={images.User_icon} alt="Usuario" />
               <div>
                 <h5>Cancha publicada por:</h5>
                 <h4>{modalData.sceneryId.user.userName}</h4>
               </div>
             </div>
-            <img src={share} alt="Share_icon" />
+            <img src={images.Share_icon} alt="Share_icon" />
           </div>
         </div>
       </motion.div>

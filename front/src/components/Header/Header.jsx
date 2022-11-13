@@ -1,10 +1,8 @@
-import React from "react";
-import Navbar from "../Navbar/Navbar";
-import "./Header.css";
-import videoFutbol from "../../assets/videos/futbolHome.mp4";
-import imagenHeader from "../../assets/images/imagenPrincipal.png";
-import Search from "../Search/Search";
+import images from "../../assets/images";
 import { Link } from "react-router-dom";
+import Search from "../Search/Search";
+import React from "react";
+import "./Header.css";
 
 const Header = () => {
   const token = localStorage.getItem("tokenUser");
@@ -12,20 +10,17 @@ const Header = () => {
   return (
     <section>
       <div className="contenedorVideo">
-        <img src={imagenHeader} alt="header" />
+        <img src={images.Image_header} alt="header" />
         <video
-          src={videoFutbol}
+          src={images.Video_header}
           className="videoHome"
           autoPlay
           loop
           muted
         ></video>
         <div className="header-overlay"></div>
-        {/* Esto es para hacer el video más opaco así no se pierden las letras */}
       </div>
       <div className="header__container">
-        {/* <Navbar /> */}
-
         <div className="containerTextoHome">
           <div className="containerSubtitulos">
             <p className="subtitulo">
@@ -46,23 +41,17 @@ const Header = () => {
             </p>
           </div>
           <div className="containerBotonesSubtitulos">
-            {token !== null ? (
-              <></>
-            ) : (
-              <>
-                <button className="comenzarBtn">
-                  <Link to="/register">Comenzar</Link>
-                </button>
-              </>
+            {token === null && (
+              <Link to="/register" className="comenzarBtn">
+                Comenzar
+              </Link>
             )}
             <a href="#ancla-1">
               <button className="sobreNosotrosBtn">Sobre Nosotros</button>
             </a>
-            {/* En los botones debería haber una redirección a esas secciones. No pude hacer andar el <Link> de react-router-dom, no sé por qué,
-            pero lo voy a solucionar */}
           </div>
-          {/* <Search /> */}
         </div>
+        <Search />
       </div>
     </section>
   );

@@ -12,7 +12,7 @@ function Footer() {
       </p>
       <div className="footer__reserved">
         <span>C</span>
-        <h5>Todos los derechos reservados</h5>
+        <h4>Todos los derechos reservados</h4>
       </div>
     </footer>
   );

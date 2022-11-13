@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from "react";
-import "./Payment.css";
-import Visa from "../../assets/icons/visa.svg";
-import AmericanCard from "../../assets/icons/americanExpress.svg";
-import masterCard from "../../assets/icons/masterCard.svg";
 import InputCard from "../inputCards/InputCards";
+import images from "../../assets/images";
+import "./Payment.css";
 
-const Payment = ({showBtn}) => {
+const Payment = ({ showBtn }) => {
   const [cardPayment, setCardPayment] = useState(false);
 
   useEffect(() => {
-    if(cardPayment === "no"){
-      showBtn(true)
-    }else{
-      showBtn(false)
+    if (cardPayment === "no") {
+      showBtn(true);
+    } else {
+      showBtn(false);
     }
-  }, [cardPayment])
+  }, [cardPayment]);
+
   return (
     <div className="mainContainer_payment">
       <p className="subtitle">MÉTODO DE PAGO</p>
@@ -28,9 +27,9 @@ const Payment = ({showBtn}) => {
           />
           Crédito / Débito
           <div className="cards">
-            <img src={Visa} alt="visa" />
-            <img src={AmericanCard} alt="american" />
-            <img src={masterCard} alt="master" />
+            <img src={images.Visa_icon} alt="visa" />
+            <img src={images.American_card_icon} alt="american" />
+            <img src={images.Master_card_icon} alt="master" />
           </div>
         </label>
         <label className="labelEf">

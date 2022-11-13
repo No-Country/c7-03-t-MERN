@@ -25,6 +25,7 @@
   font-size: 40px;
   align-self: flex-start;
   color: #121212;
+  margin-left: 10px;
 }
 
 .contenedor-carta {
@@ -58,6 +59,7 @@
   line-height: 21px;
   align-self: flex-start;
   color: #ff7549;
+  margin-left: 10px;
 }
 
 @media (max-width: 768px) {
@@ -67,11 +69,9 @@
 
   .contenedor-descripcion {
     flex-direction: column;
-  
   }
   .contenedor-carta {
     max-width: 90%;
     min-height: 250px;
-
   }
 }

@@ -1,38 +1,28 @@
-import React from 'react'
-import './SidebarProfile.css';
-import ProfilePic from '../../assets/images/profilePic.png';
-import Born from '../../assets/icons/born.svg';
-import Cancha from '../../assets/icons/canchaBold.svg';
-import Futbol from '../../assets/icons/futbolBall.svg';
-import Gmail from '../../assets/icons/gmail.svg';
+import images from "../../assets/images";
+import "./SidebarProfile.css";
+import React from "react";
 
-const SidebarProfile = ({data, book}) => {
-    return (
-        <div className='aaa'>
-            <div className='containerProfilePic'>
-                <img src={ProfilePic} alt="fotoPerfil" className='profilePic' />
-            </div>
-            <div className='containerData'>
-                <h2 className='user'>{data?.userName}</h2>
-                {/* <div className='born'>
-                    <img src={Born} alt="born" />
-                    <p>6/6/1998</p>
-                </div> */}
-                <div className='gmail'>
-                    <img src={Gmail} alt="gmail" />
-                    <p>{data?.email}</p>
-                </div>
-                {/* <div className='sport'>
-                    <img src={Futbol} alt="sport" />
-                    <p>Fútbol</p>
-                </div> */}
-                <div className='courts'>
-                    <img src={Cancha} alt="courts" />
-                    <p>{book?.length}</p>
-                </div>
-            </div>
+const SidebarProfile = ({ data, book }) => {
+  return (
+    <div className="sidebaProfile">
+      <img
+        src={images.Profile_user_icon}
+        alt="fotoPerfil"
+        className="profilePic"
+      />
+      <h2 className="user">{data?.userName}</h2>
+      <div className="containerData">
+        <div>
+          <img src={images.Gmail_icon_2} alt="gmail" />
+          <p>{data?.email}</p>
         </div>
-    )
-}
+        <div>
+          <img src={images.Cancha_icon} alt="courts" />
+          <p>{book?.length}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default SidebarProfile
+export default SidebarProfile;

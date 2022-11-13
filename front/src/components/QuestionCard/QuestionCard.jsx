@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import "./questionCard.css";
-import masVector from "../../assets/icons/mas_vector.png";
 import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from "react";
+import images from "../../assets/images";
+import "./questionCard.css";
 
 function QuestionCard({ question }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +15,7 @@ function QuestionCard({ question }) {
       initial={{ borderRadius: 10 }}
     >
       <motion.div layout className="question__card">
-        <img src={masVector} alt="Mas" />
+        <img src={images.Mas_icon} alt="Mas" />
         <h3 className="question__card__title">{question.question}</h3>
       </motion.div>
       <AnimatePresence>

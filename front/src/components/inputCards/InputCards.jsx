@@ -1,22 +1,24 @@
 import { useForm } from "react-hook-form";
+import { motion } from "framer-motion";
 import "./inputCards.css";
-import { Link } from 'react-router-dom';
-import {motion} from "framer-motion"
 
-function InputCards({showBtn}) {
+function InputCards({ showBtn }) {
   const { register, handleSubmit } = useForm();
 
   const submit = (data) => {
-    showBtn(true)
+    showBtn(true);
     console.log(data);
   };
 
   return (
-    <motion.div initial={{y: "-50px", opacity: 0}} animate={{y: "0px", opacity: 1}}>
+    <motion.div
+      initial={{ y: "-50px", opacity: 0 }}
+      animate={{ y: "0px", opacity: 1 }}
+    >
       <p className="title-inputs">Rellenar datos:</p>
       <div>
         <form className="dataBox" onSubmit={handleSubmit(submit)}>
-          <input 
+          <input
             {...register("cardNumber")}
             type="number"
             placeholder="Numero de la tarjeta de credito"
@@ -41,7 +43,7 @@ function InputCards({showBtn}) {
             required
           />
           <div className="containerVerificarBtn">
-          <button className="verificarBtn">Verificar</button>
+            <button className="verificarBtn">Verificar</button>
           </div>
         </form>
       </div>

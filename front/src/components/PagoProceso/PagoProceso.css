@@ -32,10 +32,10 @@
   justify-content: space-around;
   padding: 10px 0;
 }
-.containerPayFinishBtn{
+.containerPayFinishBtn {
   text-align: center;
 }
-.btn__pay__finish{
+.btn__pay__finish {
   padding: 19px 118px;
   border-radius: 6px;
   border: none;
@@ -112,7 +112,7 @@
       .pago-card {
         box-shadow: none;
       }
-      .reserva-textos{
+      .reserva-textos {
         text-align: justify;
         margin: auto;
         padding: 20px;
@@ -121,10 +121,7 @@
         margin-block-end: 1em;
         margin-inline-start: 0px;
         margin-inline-end: 0px;
-        
       }
     }
-
-
   }
 }

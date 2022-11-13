@@ -5,11 +5,10 @@ import {
   Nosotros,
   Click,
 } from "../../components";
-import data from "../../utils/canchas.json";
 import React, { useEffect, useState } from "react";
-import "./home.css";
 import { motion } from "framer-motion";
 import axios from "axios";
+import "./home.css";
 
 function Home() {
   const [infoCanchas, setInfoCanchas] = useState([]);
@@ -19,6 +18,7 @@ function Home() {
       .get("https://back-reserva.herokuapp.com/api/v1/fild/findAll")
       .then((res) => setInfoCanchas(res.data.fildAlls));
   }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}

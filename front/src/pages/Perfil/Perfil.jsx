@@ -1,12 +1,9 @@
-import { HeaderPerfil, SidebarPerfil } from "../../components";
+import { HeaderPerfil } from "../../components";
 import React from "react";
-import "./Perfil.css";
 
 function Perfil() {
   return (
-    <>
       <HeaderPerfil />
-    </>
   );
 }
 

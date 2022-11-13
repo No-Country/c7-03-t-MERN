@@ -1,8 +1,8 @@
+import { motion, AnimateSharedLayout } from "framer-motion";
+import questions from "../../utils/question.json";
+import { QuestionCard } from "../../components";
 import React from "react";
 import "./question.css";
-import { QuestionCard } from "../../components";
-import questions from "../../utils/question.json";
-import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 
 function Question() {
   return (

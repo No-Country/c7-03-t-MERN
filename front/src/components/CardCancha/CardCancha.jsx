@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
-import "./CardCancha.css";
-import vectorBall from "../../assets/icons/basketBall.svg";
-import vectorMap from "../../assets/icons/map.svg";
-import vectorDollar from "../../assets/icons/dollar.svg";
-import { useDispatch } from "react-redux";
 import { setCanchaMondal } from "../../store/slices/cancha.slice";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import images from "../../assets/images";
 import axios from "axios";
+import "./CardCancha.css";
 
 function CardCancha({ data }) {
   const [imgCancha, setImgCancha] = useState("");
@@ -27,15 +25,23 @@ function CardCancha({ data }) {
       <div className="card__container">
         <h4>
           {data.nameFild}{" "}
-          <img className="card__vector" src={vectorBall} alt="certor 1" />
+          <img className="card__vector" src={images.Ball_icon} alt="certor 1" />
         </h4>
         <div className="card__location">
-          <img className="card__vector2" src={vectorMap} alt="certor 2" />
+          <img
+            className="card__vector2"
+            src={images.Vector_map}
+            alt="certor 2"
+          />
           {data.sceneryId.location}
         </div>
         <div className="card__location">
-          <img className="card__vector2" src={vectorDollar} alt="certor 2" />
-          {data.price + " / hs" || "1200"}
+          <img
+            className="card__vector2"
+            src={images.Vector_dollar}
+            alt="certor 2"
+          />
+          {data.price + " / hs"}
         </div>
         <button className="btn__card" onClick={changeModal}>
           Ver mas detalles

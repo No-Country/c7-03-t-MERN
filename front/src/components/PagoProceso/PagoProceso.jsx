@@ -1,13 +1,10 @@
-import "./PagoProceso.css";
-import img from "../../assets/images/pago-proceso-img.png";
+import { setModal } from "../../store/slices/modal.slice";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { setModal } from "../../store/slices/modal.slice";
-import { setDon } from "../../store/slices/reservada.slice";
+import "./PagoProceso.css";
 import axios from "axios";
 
 function PagoProceso({ btn }) {
-  const canchaReserva = useSelector((state) => state.canchaReserva);
   const dataReserva = useSelector((state) => state.dataReserva);
   const dispatch = useDispatch();
 
@@ -76,7 +73,6 @@ function PagoProceso({ btn }) {
         </li>
         <li>
           <p className="pago-data-p">TOTAL (p/h)</p>
-          {/* <i className="pago-horas">(Según la cantidad de horas)</i> */}
           <p className="pago-fecha-texto">
             {dataReserva !== null
               ? +dataReserva.time * canchaReserva.price

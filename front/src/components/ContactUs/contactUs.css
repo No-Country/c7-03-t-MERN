@@ -120,6 +120,7 @@
   color: #fff;
   border: none;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .background__contactus {
@@ -128,7 +129,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background: #c05533;
+  background: #ff7f56;
   clip-path: polygon(100% 15%, 0% 100%, 100% 100%);
 }
 
@@ -136,26 +137,26 @@
   .contactus__container > h3 {
     display: none;
   }
-  
+
   .contactus__container > p {
     display: none;
   }
 
-  .contactus__card{
+  .contactus__card {
     box-shadow: none;
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
   }
-  
-  .contactus__form{
+
+  .contactus__form {
     padding: 0;
   }
 
-  .background__contactus{
+  .background__contactus {
     display: none;
   }
 
-  .contactus__container{
+  .contactus__container {
     margin-top: 100px;
   }
 }
