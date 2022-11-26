@@ -1,23 +1,24 @@
 const mongoose = require('mongoose');
 
 const bookingSchema = new mongoose.Schema({
-    userId:{
-        type:Object,
+    userId: {
+        type: Object,
         required: [true, 'Please enter your user id'],
     },
-    sceneryId:{
-        type:Object,
-        required: [true, 'Please enter your scenery id'],
+    fildId: {
+        type: Object,
+        require: [true, 'Please enter fild of the scenery'],
     },
     price: {
         type: Number,
+        require: [true, 'Please enter price'],
     },
-    bookingDate:{
-        type: Date,
-        default: Date.now
+    bookingDate: {
+        type: String,
+        require: [true, 'Please enter date'],
     },
     bookingTime: {
-        type:String,
+        type: String,
         require: [true, 'Please enter your busy time'],
     },
     status: {
@@ -28,4 +29,4 @@ const bookingSchema = new mongoose.Schema({
 
 const Booking = mongoose.model('Booking', bookingSchema);
 
-module.exports = {Booking};
+module.exports = { Booking };

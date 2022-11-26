@@ -1,69 +1,47 @@
-
 // Models
-const { Booking } = require('../models/booking.model');
-const { User } = require('../models/user.model');
-const { Scenery } = require('../models/scenery.model');
+const { Booking } = require("../models/booking.model");
+const { User } = require("../models/user.model");
+const { Fild } = require("../models/fild.model");
 
 // Utils
-const { catchAsync } = require('../utils/catchAsync.util');
-const { AppError } = require('../utils/appError.util');
+const { catchAsync } = require("../utils/catchAsync.util");
+const { AppError } = require("../utils/appError.util");
 
-//middleware
+const createBooking = catchAsync(async (req, res, next) => {
+  const { fildId, price, bookingDate, bookingTime } = req.body;
+  const { sessionUser } = req;
 
+  const user = await User.findById(sessionUser._id);
+  const fild = await Fild.findById(fildId);
 
-const createBooking = catchAsync(async( req, res, next ) => {
-    const { price, bookingDate, bookingTime,  sceneryId, fildId, status } = req.body;
+  const bookingExist = await Booking.findOne({ bookingTime, bookingDate });
 
-    const { sessionUser } = req;
-    
-    const user = await User.findById(sessionUser._id);
-    //Verificar bug
-    const bookingExist = await Booking.findOne({bookingTime });
-    
-    const sceneryExist = await Scenery.findOne({ sceneryId });
+  if (bookingExist) {
+    return next(new AppError("busy booking date", 400));
+  }
 
+  user.password = undefined;
 
-    if(bookingExist){
-        return next(new AppError('busy booking date',400));
-    }
-    
-    if( !sceneryExist ){
-        return next(new AppError('dont exist scenery',404));
-    }
-    user.password = undefined;
-    
-    const newBooking = await Booking.create({
-        userId:user,
-        sceneryId,
-        bookingTime,
-        bookingDate,
-        price,
-        status,
-    });
-    
-    res.status(201).json({
-        status: 'success',
-        newBooking,
-      });
+  const newBooking = await Booking.create({
+    userId: user._id,
+    fildId: fild,
+    bookingTime,
+    bookingDate,
+    price,
+  });
+
+  res.status(201).json({
+    status: "success",
+    newBooking,
+  });
 });
 
-const updateBooking = catchAsync(async (req, res, next) => {
-    
-    const { booking } = req;
-    
-     const { sceneryId, bookingDate, bookingTime, price, status } = req.body;
+const deleteBooking = catchAsync(async (req, res, next) => {
+  const { booking } = req;
 
-     await booking.updateOne({ sceneryId, bookingDate, bookingTime, price, status });
+  await booking.updateOne({ status: "deleted" });
 
-    res.status(204).json({ status: 'success' });
-  });
+  res.status(204).json({ status: "success" });
+});
 
-  const deleteBooking = catchAsync(async (req, res, next) => {
-    const { booking } = req;
-  
-    await booking.update({ status: 'deleted' });
-  
-    res.status(204).json({ status: 'success' });
-  });
-
-module.exports = { createBooking, updateBooking, deleteBooking };
+module.exports = { createBooking, deleteBooking };

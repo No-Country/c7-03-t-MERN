@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 
 // Models
 const { User } = require('../models/user.model');
+const { Booking } = require('../models/booking.model');
 
 // Utils
 const { catchAsync } = require('../utils/catchAsync.util');
@@ -12,14 +13,8 @@ const { AppError } = require('../utils/appError.util');
 dotenv.config({ path: './config.env' });
 
 const createUser = catchAsync(async (req, res, next) => {
-  const { userName, email, password} = req.body;
+  const { userName, email, password } = req.body;
 
- /* const userExist = await User.findOne({ email });
-
-  if (userExist) {
-    return next(new AppError('Email already taken', 400));
-  }
-*/
   const salt = await bcrypt.genSalt(12);
   const hashPassword = await bcrypt.hash(password, salt);
 
@@ -58,28 +53,18 @@ const login = catchAsync(async (req, res, next) => {
 
   res.status(201).json({
     status: 'success',
+    userId: user._id,
     token,
   });
 });
 
-const updateUser = catchAsync(async (req, res, next) => {
+const getUser = catchAsync(async (req, res, next) => {
   const { user } = req;
-  const { name, email } = req.body;
+  user.password = undefined
 
-  await user.update({ userName: name, email });
+  const bookings = await Booking.find({userId: user._id});
 
-  res.status(204).json({ status: 'success' });
+  res.status(200).json({ status: 'success', bookings, user });
 });
 
-const deleteUser = catchAsync(async (req, res, next) => {
-  const { user } = req;
-
-  await user.update({ status: 'disabled' });
-
-  res.status(204).json({ status: 'success' });
-});
-
-const checkToken = catchAsync(async(req,res,next)=>{
-  res.status(200).json({user: req.sessionUser})
-})
-module.exports = { createUser, login, updateUser, deleteUser,checkToken };
+module.exports = { createUser, login, getUser };

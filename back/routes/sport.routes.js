@@ -1,10 +1,12 @@
-const express = require('express');
-
-//Controllers
-const { createSport } = require('../controllers/sport.controller');
-
+const express = require("express");
 const sportRouter = express.Router();
 
-sportRouter.use('/', createSport);
+//Controllers
+const {
+  createSport,
+} = require("../controllers/sport.controller");
+const {createSportValidator} = require("../middlewares/validators.middleware")
+
+sportRouter.post("/", createSportValidator, createSport);
 
 module.exports = { sportRouter };
