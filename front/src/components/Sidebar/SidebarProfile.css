@@ -1,0 +1,26 @@
+.sidebaProfile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 30px;
+  max-width: 390px;
+  margin: auto;
+}
+.profilePic{
+  width: 150px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.containerData{
+  align-self: flex-start;
+}
+
+.containerData > div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+

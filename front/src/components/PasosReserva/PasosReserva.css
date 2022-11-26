@@ -1,0 +1,37 @@
+.container-pagos-reserva {
+  font-size: 16px;
+  font-family: Poppins;
+  margin: auto;
+  color: #9b9b9b;
+  margin-bottom: 80px;
+}
+
+.card-pagos-reserva {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  width: 100%;
+}
+
+.card-pagos-reserva > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-pagos-reserva > li > img {
+  background-color: #fff;
+}
+
+hr {
+  position: absolute;
+  top: 30px;
+  left: 55px;
+  width: 80%;
+  border-top: 3px solid #ff7f56;
+  z-index: -2;
+}

@@ -1,0 +1,45 @@
+import {
+  CardCancha,
+  Description,
+  Header,
+  Nosotros,
+  Click,
+} from "../../components";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import axios from "axios";
+import "./home.css";
+
+function Home() {
+  const [infoCanchas, setInfoCanchas] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://back-reserva.herokuapp.com/api/v1/fild/findAll")
+      .then((res) => setInfoCanchas(res.data.fildAlls));
+  }, []);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="Home"
+    >
+      <Header />
+      <Description />
+      <Nosotros />
+      <div className="canchas__container">
+        <h2 className="canchas__title">Canchas destacadas</h2>
+        <div className="canchas__list">
+          {infoCanchas.map((e) => (
+            <CardCancha key={e._id} data={e} />
+          ))}
+        </div>
+      </div>
+      <Click />
+    </motion.div>
+  );
+}
+
+export default Home;

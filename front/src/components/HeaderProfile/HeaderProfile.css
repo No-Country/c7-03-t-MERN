@@ -1,0 +1,27 @@
+.containerHistory__profile {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.profile_message {
+  color: rgb(236, 125, 20);
+  font-size: 20px;
+  margin: 30px 0px;
+  display: block;
+}
+
+@media (min-width: 1023px) {
+  .container__perfil {
+    display: flex;
+    max-width: 1050px;
+    margin: auto;
+    padding: 30px 0px;
+  }
+  .containerHistory__profile {
+    border-left: 1px solid #000;
+  }
+}

@@ -1,0 +1,189 @@
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+.header__container {
+  max-width: 1070px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.contenedorVideo {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contenedorVideo img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  object-position: center center;
+}
+
+.contenedorVideo .videoHome {
+  min-width: 100%;
+  min-height: 100%;
+  display: none;
+}
+
+.header-overlay {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  z-index: 0;
+  opacity: 0.77;
+}
+
+.containerTextoHome {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.comenzarBtn {
+  text-decoration: none;
+  margin-right: 23px;
+  padding: 14px 40px 14px 40px;
+  background: #ffffff;
+  border: 2px solid #ad4827;
+  border-radius: 7px;
+  color: #ad4827;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+}
+
+.comenzarBtn:hover {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px #ffffff50;
+}
+
+.sobreNosotrosBtn {
+  padding: 14px 23px 14px 23px;
+  background: #ad4827;
+  border: 2px solid #ad4827;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+}
+
+.sobreNosotrosBtn:hover {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px #ffffff50;
+}
+
+.subtitulo {
+  color: #ff7549;
+  font-size: 10px;
+  line-height: 15px;
+}
+
+.subtituloInferior {
+  font-weight: 700;
+  color: white;
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.containerSubtitulos hr {
+  width: 225px;
+  margin: auto;
+  border: 4px solid #ff7f56;
+  border-radius: 14px;
+}
+
+.textoHome {
+  color: white;
+  font-size: 17px;
+  padding: 10px 5px 20px 5px;
+}
+
+a {
+  color: inherit;
+}
+
+@media (min-width: 1024px) {
+  .containerTextoHome {
+    margin-top: 90px;
+  }
+
+  .subtitulo {
+    font-size: 15px;
+  }
+
+  .subtituloInferior {
+    font-size: 47px;
+    line-height: 90px;
+    padding-bottom: 40px;
+  }
+
+  .subtituloInferior span {
+    border-bottom: 7px solid #ff7f56;
+    border-radius: 3px;
+  }
+
+  .containerSubtitulos hr {
+    display: none;
+  }
+
+  .contenedorVideo img {
+    display: none;
+  }
+
+  .contenedorVideo .videoHome {
+    display: flex;
+  }
+}
+@media (min-width: 1280px) {
+  .containerTextoHome {
+    text-align: left;
+  }
+  .textoHome {
+    text-align: left;
+    margin-top: -20px;
+    width: 65%;
+  }
+  .subtituloInferior {
+    font-size: 47px;
+  }
+  .containerBuscador {
+    width: 100%;
+    display: flex;
+  }
+  .map {
+    width: 26px;
+  }
+  .search {
+    width: 12%;
+    margin-bottom: 6px;
+  }
+  .basket {
+    width: 7%;
+  }
+  .deporte {
+    width: 89%;
+  }
+  .calendario {
+    width: 88%;
+    margin-right: 17px;
+  }
+  .containerBuscador div {
+    width: 42%;
+  }
+  .containerBuscador input {
+    padding-top: 0px;
+  }
+}

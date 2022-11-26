@@ -1,0 +1,37 @@
+.card-check {
+  margin: auto;
+  width: 350px;
+  height: 400px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 10px 5px 30px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+}
+
+.icon-check {
+  width: 149.14px;
+  height: 148.41px;
+}
+.texto-check {
+  width: 100%;
+  height: 110.58px;
+  text-align: center;
+}
+
+.boton-check {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: #2eac2c;
+  border-radius: 10px;
+  width: 100%;
+  height: 59.66px;
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0px;
+}

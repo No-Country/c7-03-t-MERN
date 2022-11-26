@@ -1,0 +1,41 @@
+.mainContainer_payment {
+  margin-top: 30px;
+}
+
+.mainContainer_payment .subtitle {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.mainContainer_payment > form {
+  padding: 0px 40px 0px 0px;
+}
+
+.mainContainer_payment > form > label {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+  border: 1px solid #64646450;
+  color: #64646480;
+}
+
+.mainContainer_payment > form > label input {
+  width: 30px;
+  aspect-ratio: 1;
+  color: #000;
+}
+
+.cards {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 20%);
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.cards > img {
+  width: 100%;
+}

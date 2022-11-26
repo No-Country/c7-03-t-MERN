@@ -1,0 +1,77 @@
+.contenedor-principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1050px;
+  margin: 20px auto;
+}
+
+.contenedor-descripcion {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icono-descripcion {
+  width: 36px;
+  height: 36px;
+}
+
+.titulo-descripcion {
+  font-weight: 600;
+  font-size: 40px;
+  align-self: flex-start;
+  color: #121212;
+  margin-left: 10px;
+}
+
+.contenedor-carta {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.25);
+  max-width: 32%;
+  min-height: 350px;
+}
+
+.vector {
+  width: 100%;
+  height: 5px;
+  background-color: #ff7f56;
+  border-radius: 30px;
+  margin: 10px 0px;
+}
+
+.parrafo {
+  text-align: center;
+  padding: 5px;
+}
+
+.subtitle__descripcion {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  align-self: flex-start;
+  color: #ff7549;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .contenedor-principal {
+    margin: 20px;
+  }
+
+  .contenedor-descripcion {
+    flex-direction: column;
+  }
+  .contenedor-carta {
+    max-width: 90%;
+    min-height: 250px;
+  }
+}

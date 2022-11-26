@@ -1,0 +1,43 @@
+.containerBuscador {
+  background: #ff7f56;
+  padding-top: 20px;
+  border-radius: 10px;
+  display: flex;
+  width: 95%;
+  max-width: 700px;
+  overflow: hidden;
+}
+
+.containerBuscador > ul {
+  width: 85%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.containerBuscador > ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.containerBuscador > ul li img {
+  width: 20px;
+}
+
+.containerBuscador > ul li input {
+  width: 60%;
+  background: none;
+  border: none;
+  border-bottom: 3px solid #ff7f56;
+}
+
+.containerBuscador > button {
+  width: 15%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

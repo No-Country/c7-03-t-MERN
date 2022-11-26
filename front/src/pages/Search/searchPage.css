@@ -1,0 +1,7 @@
+.search__page{
+    width: 100%;
+    max-width: 1050px;
+    min-height: 50vh;
+    margin: auto;
+    padding-top: 100px;
+}

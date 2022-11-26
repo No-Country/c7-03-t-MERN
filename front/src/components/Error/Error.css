@@ -1,0 +1,25 @@
+.section__error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+}
+.imgError {
+  width: 100%;
+}
+.section_error {
+  text-align: center;
+  min-height: 70vh;
+}
+.containerError {
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+.containerTitle {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 100px;
+}

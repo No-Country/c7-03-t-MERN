@@ -1,0 +1,127 @@
+.pago-card {
+  margin-top: 100px;
+}
+
+.pago-proceso-img {
+  width: 40%;
+}
+
+.pago-card-description {
+  text-align: center;
+}
+
+.pago-proceso-img {
+  border-radius: 20px;
+  width: 70%;
+  position: relative;
+  width: 450px;
+}
+
+.pago-card-list {
+  max-width: 80%;
+  margin: 40px auto 70px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.pago-card-list li {
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+.containerPayFinishBtn {
+  text-align: center;
+}
+.btn__pay__finish {
+  padding: 19px 118px;
+  border-radius: 6px;
+  border: none;
+  box-shadow: inset 0px -28px 15px -27px white;
+  background: #fc6537;
+  color: white;
+  margin-top: 25px;
+}
+
+/* DESKTOP */
+
+@media (min-width: 1023px) {
+  .pago-card {
+    background: #ffffff;
+    box-shadow: 10px 5px 30px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .pago-card-description {
+    display: flex;
+    gap: 20px;
+  }
+
+  .pago-card-description > div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .pago-card-description > div p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 35px;
+    color: #646464;
+  }
+
+  .pago-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  .pago-card-list li {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid #64646450;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .pago-data-p {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 35px;
+    color: #000000;
+  }
+  .pago-proceso-img {
+    position: initial;
+    width: 70%;
+
+    @media (max-width: 768px) {
+      .pago-card-description {
+        flex-direction: column;
+      }
+
+      .pago-proceso-img {
+        width: 100%;
+      }
+
+      .pago-card {
+        box-shadow: none;
+      }
+      .reserva-textos {
+        text-align: justify;
+        margin: auto;
+        padding: 20px;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+      }
+    }
+  }
+}

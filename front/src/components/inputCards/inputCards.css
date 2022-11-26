@@ -1,0 +1,39 @@
+.title-inputs {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+.dataBox{
+  display: flex;
+  flex-direction: column;
+  width: 92%;
+ 
+}
+
+.dataBox input {
+  padding: 9px;
+  margin-bottom: 10px;
+  border: none;
+  background: #E9E5E5;
+}
+.containerBtnInputCards{
+  width: 100%;
+  margin-top: 45px;
+}
+.containerBtnInputCards a{
+  padding: 19px 118px;
+  border-radius: 6px;
+  border: none;
+  box-shadow: inset 0px -28px 15px -27px white;
+  background: #fc6537;
+  color: white;
+  margin-top: 25px;
+}
+.verificarBtn{
+  padding: 19px 118px;
+  border-radius: 6px;
+  border: none;
+  box-shadow: inset 0px -28px 15px -27px white;
+  background: #fc6537;
+  color: white;
+  margin-top: 25px;
+}
